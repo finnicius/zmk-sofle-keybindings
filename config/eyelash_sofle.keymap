@@ -1,99 +1,98 @@
+#include <dt-bindings/zmk/backlight.h>
+
 / {
     keymap {
         compatible = "zmk,keymap";
 
-        /* ========= LAYER 0: BASE (US-International) =========
-         * Polegares:
-         *  - Esquerdo: Space (tap) / MO(1)=SYM (hold)
-         *  - Direito : Backspace (tap) / MO(2)=NAV (hold)
-         *  - Enter dedicado
-         *  - OSM(Shift) em polegar para facilitar : ? " etc.
-         * C (tap-dance): c / ç / Ç (ver comportamento no behavior abaixo)
-         */
+        // ========= LAYER 0: BASE =========
         layer0 {
             bindings = <
-&kp ESC     &kp N1     &kp N2     &kp N3     &kp N4     &kp N5        &kp N6     &kp N7     &kp N8     &kp N9     &kp N0     &kp EQUAL
+&kp ESC     &kp N1     &kp N2     &kp N3     &kp N4     &kp N5        &kp N6     &kp N7     &kp N8     &kp N9     &kp N0     &kp BSLH
 &kp TAB     &kp Q      &kp W      &kp E      &kp R      &kp T         &kp Y      &kp U      &kp I      &kp O      &kp P      &kp LBKT
 &kp CAPS    &kp A      &kp S      &kp D      &kp F      &kp G         &kp H      &kp J      &kp K      &kp L      &kp SEMI   &kp APOS
-&kp LSHFT   &kp Z      &kp X      &td C_CCED &kp V      &kp B         &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH   &kp RSHFT
-                  &kp C_MUTE  &kp LCTRL  &kp LGUI   &kp LALT      &kp SPACE   &mo 1            &mo 2     &sk LSHFT  &kp ENTER  &kp BSPC
+&kp LSHFT   &kp Z      &kp X      &td c_ced  &kp V      &kp B         &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH   &kp RSHFT
+            &kp C_MUTE &kp LCTRL  &kp LGUI   &kp LALT   &mo 1         &kp SPACE   &kp ENTER  &mo 2      &sk LSHFT  &kp BSPC
             >;
         };
 
-        /* ========= LAYER 1: SÍMBOLOS + DÍGITOS =========
-         * Pares vizinhos: () [] {}  e as versões “shiftadas” em lugares previsíveis.
-         * Acesso rápido ao L3 (acentos) em uma tecla do meio.
-         */
+        // ========= LAYER 1: SÍMBOLOS + DÍGITOS =========
         layer_1 {
             bindings = <
-&kp GRAVE   &kp N1     &kp N2     &kp N3     &kp N4     &kp N5        &kp N6     &kp N7     &kp N8     &kp N9     &kp N0     &kp EQUAL
-&trans      &kp PIPE   &kp BSLH   &kp MINUS  &kp STAR   &kp SLASH     &kp LPAR   &kp RPAR   &kp LBKT   &kp RBKT   &kp LBRC   &kp RBRC
-&trans      &trans     &trans     &trans     &trans     &trans        &trans     &trans     &kp COLON  &kp SEMI   &kp QMARK  &kp DQT
-&trans      &trans     &trans     &mo 3      &trans     &trans        &trans     &trans     &kp LT     &kp GT     &kp SLASH  &kp BSLH
-                  &trans      &trans      &trans      &trans         &trans      &trans           &trans    &trans       &trans      &trans
+&kp GRAVE   &kp N1     &kp N2        &kp N3        &kp N4        &kp N5          &kp N6         &kp N7         &kp N8           &kp N9          &kp N0        &kp EQUAL
+&trans      &kp PIPE   &kp BSLH      &kp MINUS     &kp STAR      &kp FSLH        &kp LBKT       &kp RBKT       &kp LBRC         &kp RBRC        &kp PLUS      &kp UNDER
+&trans      &trans     &trans        &trans        &trans        &trans          &trans         &trans          &kp COLON        &kp SEMI        &kp QMARK     &kp DQT
+&trans      &trans     &trans        &trans        &trans        &trans          &trans         &trans          &kp LT           &kp GT          &kp FSLH      &kp BSLH
+            &trans     &trans        &trans        &trans        &trans          &trans         &trans          &mo 3            &trans          &trans
             >;
         };
 
-        /* ========= LAYER 2: NAVEGAÇÃO / EDIÇÃO / RGB =========
-         * Inclui Print Screen; OSMs para montar atalhos sem segurar; joystick pode assumir setas.
-         */
+        // ========= LAYER 2: NAVEGAÇÃO / EDIÇÃO / BACKLIGHT + PRINT =========
         layer_2 {
             bindings = <
-&trans      &trans      &trans      &trans      &trans      &trans        &trans     &kp HOME  &kp UP    &kp END   &kp PG_UP  &kp PRSC
-&trans      &sk LCTRL   &sk LALT    &sk LGUI    &sk LSHFT   &trans        &word_prev &kp LEFT  &kp DOWN  &kp RIGHT &word_next &kp PG_DN
-&trans      &kp LCTRL   &kp LALT    &kp LGUI    &kp LSHFT   &trans        &kp DEL    &kp BSPC  &kp CUT   &kp COPY  &kp PASTE  &kp UNDO
-&trans      &trans      &trans      &trans      &trans      &trans        &rgb_ug    &rgb_ui   &rgb_mod  &rgb_hui  &rgb_sai   &rgb_vai
-                   &trans      &trans      &trans      &trans         &trans      &trans           &trans    &trans       &trans      &trans
+&trans      &trans      &trans        &trans        &trans        &trans           &trans     &kp HOME   &kp UP     &kp END    &kp PG_UP   &kp PSCRN
+&trans      &sk LCTRL   &sk LALT      &sk LGUI      &sk LSHFT     &trans           &trans     &kp LEFT   &kp DOWN   &kp RIGHT  &trans      &kp PG_DN
+&trans      &kp LCTRL   &kp LALT      &kp LGUI      &kp LSHFT     &trans           &kp DEL    &kp BSPC   &kp CUT    &kp COPY   &kp PASTE   &kp UNDO
+&trans      &trans      &trans        &trans        &trans        &trans           &bl BL_DEC &bl BL_INC &bl BL_TOG &trans      &trans      &trans
+            &trans      &trans        &trans        &trans        &trans           &trans     &trans     &trans     &trans     &trans
             >;
         };
 
-        /* ========= LAYER 3: ACENTOS PT-BR (opcional) =========
-         * Se usar US-Intl, você já tem dead keys; aqui ficam “atalhos grandes”.
-         * Também deixei um atalho redundante para ç/Ç.
-         */
+        // ========= LAYER 3: ACENTOS (OPCIONAL) =========
         layer_3 {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans     &trans   &trans   &trans   &trans   &trans   &trans
-&trans  &kp ACUTE &kp GRAVE &kp TILDE &kp CARET &kp DIAER  &macro_AA &macro_EE &macro_II &macro_OO &macro_UU &trans
-&trans  &macro_Agrave &macro_Atilde &macro_Acirc &macro_Ecirc &macro_Ocirc  &trans   &trans   &trans   &trans   &trans   &trans
-&trans  &trans  &trans  &td C_CCED  &trans  &trans        &trans   &trans   &trans   &trans   &trans   &trans
-                 &trans &trans &trans &trans &trans &trans                 &trans &trans &trans &trans
+&trans  &kp ACUTE &kp GRAVE &kp TILDE &kp CARET &kp DQT   &macro_a_acute &macro_e_acute &macro_i_acute &macro_o_acute &macro_u_acute &trans
+&trans  &macro_a_grave &macro_a_tilde &macro_a_circ &macro_e_circ &macro_o_circ  &trans   &trans   &trans   &trans   &trans   &trans
+&trans  &trans  &trans  &macro_c_ced_win &trans  &trans   &trans   &trans   &trans   &trans   &trans   &trans
+            &trans &trans &trans &trans &trans &trans     &trans &trans &trans &trans
             >;
         };
     };
-};
 
-/* ========= BEHAVIORS (exemplos) =========
- * Tap-dance do C para c/ç/Ç (ajuste ao seu gosto).
- * Macros de acentos opcionais (se quiser enviar diretamente letras acentuadas).
- */
-/ {
+    // ========= BEHAVIORS =========
+
     behaviors {
-        c_tap_dance: c_tap_dance {
+        // Tap-dance: C -> c ; double-tap -> ç (Windows Alt code) ; triple-tap -> Ç (Windows Alt code)
+        c_ced: c_ced {
             compatible = "zmk,behavior-tap-dance";
-            label = "C/Ç TapDance";
+            label = "C_CED_TD";
             #binding-cells = <0>;
-            tapping-term-ms = <180>;
-            bindings = <&kp C>, <&kp CEDILLA>, <&kp CEDILLA>;
+            tapping-term-ms = <200>;
+            bindings = <&kp C>, <&macro_c_ced_win>, <&macro_C_ced_win>;
         };
     };
 
     macros {
-        macro_AA: macro_AA { label = "á/Á";  bindings = <&kp APOSTROPHE>, <&kp A>; };
-        macro_EE: macro_EE { label = "é/É";  bindings = <&kp APOSTROPHE>, <&kp E>; };
-        macro_II: macro_II { label = "í/Í";  bindings = <&kp APOSTROPHE>, <&kp I>; };
-        macro_OO: macro_OO { label = "ó/Ó";  bindings = <&kp APOSTROPHE>, <&kp O>; };
-        macro_UU: macro_UU { label = "ú/Ú";  bindings = <&kp APOSTROPHE>, <&kp U>; };
+        // Vocales com á/é/í/ó/ú (dead-key US-Intl)
+        macro_a_acute: macro_a_acute { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <40>; tap-ms = <40>; bindings = <&kp APOSTROPHE>, <&kp A>; };
+        macro_e_acute: macro_e_acute { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <40>; tap-ms = <40>; bindings = <&kp APOSTROPHE>, <&kp E>; };
+        macro_i_acute: macro_i_acute { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <40>; tap-ms = <40>; bindings = <&kp APOSTROPHE>, <&kp I>; };
+        macro_o_acute: macro_o_acute { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <40>; tap-ms = <40>; bindings = <&kp APOSTROPHE>, <&kp O>; };
+        macro_u_acute: macro_u_acute { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <40>; tap-ms = <40>; bindings = <&kp APOSTROPHE>, <&kp U>; };
 
-        macro_Agrave: macro_Agrave { label = "à/À"; bindings = <&kp GRAVE>, <&kp A>; };
-        macro_Atilde: macro_Atilde { label = "ã/Ã"; bindings = <&kp TILDE>, <&kp A>; };
-        macro_Acirc : macro_Acirc  { label = "â/Â"; bindings = <&kp CARET>, <&kp A>; };
-        macro_Ecirc : macro_Ecirc  { label = "ê/Ê"; bindings = <&kp CARET>, <&kp E>; };
-        macro_Ocirc : macro_Ocirc  { label = "ô/Ô"; bindings = <&kp CARET>, <&kp O>; };
+        // à/ã/â/ê/ô (dead-key US-Intl)
+        macro_a_grave: macro_a_grave { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <40>; tap-ms = <40>; bindings = <&kp GRAVE>, <&kp A>; };
+        macro_a_tilde: macro_a_tilde { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <40>; tap-ms = <40>; bindings = <&kp TILDE>, <&kp A>; };
+        macro_a_circ:  macro_a_circ  { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <40>; tap-ms = <40>; bindings = <&kp CARET>, <&kp A>; };
+        macro_e_circ:  macro_e_circ  { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <40>; tap-ms = <40>; bindings = <&kp CARET>, <&kp E>; };
+        macro_o_circ:  macro_o_circ  { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <40>; tap-ms = <40>; bindings = <&kp CARET>, <&kp O>; };
+
+        // Cedilha (Windows): ç = Alt+0231 ; Ç = Alt+0199
+        macro_c_ced_win: macro_c_ced_win {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <40>; tap-ms = <40>;
+            bindings = <&macro_press &kp LALT>,
+                       <&macro_tap &kp KP_N0 &kp KP_N2 &kp KP_N3 &kp KP_N1>,
+                       <&macro_release &kp LALT>;
+        };
+        macro_C_ced_win: macro_C_ced_win {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <40>; tap-ms = <40>;
+            bindings = <&macro_press &kp LALT>,
+                       <&macro_tap &kp KP_N0 &kp KP_N1 &kp KP_N9 &kp KP_N9>,
+                       <&macro_release &kp LALT>;
+        };
     };
 };
-
-/* Aliases práticos (dependem do seu board/rgb driver) */
-&rgb_ug  { label = "RGB-"; };
-&rgb_ui  { label = "RGB+"; };
-&rgb_mod { label = "RGB Mode"; };
