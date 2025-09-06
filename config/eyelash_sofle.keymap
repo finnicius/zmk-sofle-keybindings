@@ -122,7 +122,7 @@
                 
                 /* Row 1 */
                 &trans      &kp PIPE         &kp BSLH          &kp MINUS        &kp STAR         &kp FSLH           
-                &mmv MOVE_DOWN   &kp LEFT_PAREN   &kp RIGHT_PAREN  &kp LEFT_BRACKET &kp RIGHT_BRACKET  &kp PLUS         &kp UNDERSCORE
+                &mmv MOVE_DOWN   &kp LPAR   &kp RPAR  &kp LBRC &kp RBRC  &kp PLUS         &kp UNDERSCORE
                 
                 /* Row 2 */
                 &trans      &trans           &trans            &trans           &trans           &trans             
@@ -154,7 +154,7 @@
                 
                 /* Row 2 */
                 &trans      &kp LCTRL         &kp LALT          &kp LGUI          &kp LSHFT         &trans             
-                &mmv MOVE_LEFT   &kp DEL          &kp BSPC         &kp CUT          &kp COPY         &kp PASTE        &kp UNDO
+                &mmv MOVE_LEFT   &kp DEL          &kp BSPC         &kp K_CUT          &kp K_COPY         &kp K_PASTE        &kp K_UNDO
                 
                 /* Row 3 */
                 &trans      &trans            &trans            &trans            &trans            &trans             
