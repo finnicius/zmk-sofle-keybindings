@@ -39,7 +39,6 @@
         /* Tap-dance: C -> c ; double-tap -> c cedilha ; triple-tap -> C cedilha (Alt codes no Windows) */
         c_ced: c_ced {
             compatible = "zmk,behavior-tap-dance";
-            label = "C_CED_TD";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp C>, <&macro_c_ced_win>, <&macro_C_ced_win>;
