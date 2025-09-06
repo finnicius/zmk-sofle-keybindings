@@ -64,7 +64,7 @@ layers:
   - layer2
   - {t: PG DN, h: PG UP}
   - {t: '$$mdi:backspace$$', type: backspace}
-  - {t: '0', h: '&macro_show_desktop PSCRN'}
+  - {t: '&macro_ctrl_prtscr', h: '&macro_show_desktop'}
   layer1:
   - {t: '`', s: '~'}
   - {t: '''', s: '"'}
