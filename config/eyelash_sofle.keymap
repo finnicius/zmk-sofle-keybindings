@@ -1,58 +1,43 @@
-#include <dt-bindings/zmk/backlight.h>
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 1200  // 600
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 25   // 10
+
+#include <input/processors.dtsi>
+#include <zephyr/dt-bindings/input/input-event-codes.h>
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/pointing.h>
+#include <dt-bindings/zmk/rgb.h>
+
+&mmv_input_listener { input-processors = <&zip_xy_scaler 2 1>; };
+
+&msc_input_listener { input-processors = <&zip_scroll_scaler 2 1>; };
+
+&msc {
+    acceleration-exponent = <1>;      // 0
+    time-to-max-speed-ms = <100>;     // 300
+    delay-ms = <0>;                   // 0
+};
+
+&mmv {
+    time-to-max-speed-ms = <500>;
+    acceleration-exponent = <1>;
+    trigger-period-ms = <16>;
+};
+
+&soft_off { hold-time-ms = <2000>; };
 
 / {
-    keymap {
-        compatible = "zmk,keymap";
-
-        // ========= LAYER 0: BASE =========
-        layer0 {
-            bindings = <
-&kp ESC &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &trans &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &kp BSLH
-&kp TAB &kp Q &kp W &kp E &kp R &kp T &trans &kp Y &kp U &kp I &kp O &kp P &kp LBKT
-&kp CAPS &kp A &kp S &kp D &kp F &kp G &trans &kp H &kp J &kp K &kp L &kp SEMI &kp APOS
-&kp LSHFT &kp Z &kp X &td c_ced &kp V &kp B &trans &kp N &kp M &kp COMMA &kp DOT &kp FSLH &kp RSHFT
-            &kp C_MUTE &kp LCTRL &kp LGUI &kp LALT &mo 1 &kp SPACE &trans &kp ENTER &mo 2 &sk LSHFT &kp BSPC &trans
-            >;
-        };
-
-        // ========= LAYER 1: SIMBOLOS + DIGITOS =========
-        layer_1 {
-            bindings = <
-&kp GRAVE &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &trans &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &kp EQUAL
-&trans &kp PIPE &kp BSLH &kp MINUS &kp STAR &kp FSLH &trans &kp LBKT &kp RBKT &kp LBRC &kp RBRC &kp PLUS &kp UNDER
-&trans &trans &trans &trans &trans &trans &trans &trans &trans &kp COLON &kp SEMI &kp QMARK &kp DQT
-&trans &trans &trans &trans &trans &trans &trans &trans &trans &kp LT &kp GT &kp FSLH &kp BSLH
-            &trans &trans &trans &trans &trans &trans &trans &mo 3 &trans &trans &trans
-            >;
-        };
-
-        // ========= LAYER 2: NAVEGACAO / EDICAO / BACKLIGHT + PRINT =========
-        layer_2 {
-            bindings = <
-&trans &trans &trans &trans &trans &trans &trans &trans &kp HOME &kp UP &kp END &kp PG_UP &kp PSCRN
-&trans &sk LCTRL &sk LALT &sk LGUI &sk LSHFT &trans &trans &trans &kp LEFT &kp DOWN &kp RIGHT &trans &kp PG_DN
-&trans &kp LCTRL &kp LALT &kp LGUI &kp LSHFT &trans &trans &kp DEL &kp BSPC &kp CUT &kp COPY &kp PASTE &kp UNDO
-&trans &trans &trans &trans &trans &trans &trans &bl BL_DEC &bl BL_INC &bl BL_TOG &trans &trans &trans
-            &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
-            >;
-        };
-
-        // ========= LAYER 3: ACENTOS (OPCIONAL) =========
-        layer_3 {
-            bindings = <
-&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
-&trans &kp ACUTE &kp GRAVE &kp TILDE &kp CARET &kp DQT &trans &macro_a_acute &macro_e_acute &macro_i_acute &macro_o_acute &macro_u_acute &trans
-&trans &macro_a_grave &macro_a_tilde &macro_a_circ &macro_e_circ &macro_o_circ &trans &trans &trans &trans &trans &trans &trans
-&trans &trans &trans &macro_c_ced_win &trans &trans &trans &trans &trans &trans &trans &trans &trans
-            &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
-            >;
-        };
+    scroll_encoder: scroll_encoder {
+        compatible = "zmk,behavior-sensor-rotate";
+        #sensor-binding-cells = <0>;
+        bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
+        tap-ms = <100>;
     };
 
-    // ========= BEHAVIORS =========
-
     behaviors {
-        // Tap-dance: C -> c ; double-tap -> c cedilha (Windows Alt code) ; triple-tap -> C cedilha (Windows Alt code)
+        /* Tap-dance: C -> c ; double-tap -> ç ; triple-tap -> Ç (Alt codes no Windows) */
         c_ced: c_ced {
             compatible = "zmk,behavior-tap-dance";
             label = "C_CED_TD";
@@ -63,36 +48,101 @@
     };
 
     macros {
-        // Vocales com a/e/i/o/u agudos (dead-key US-Intl)
+        /* Acentos com dead-keys do US-International (rápidos para PT-BR) */
         macro_a_acute: macro_a_acute { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <40>; tap-ms = <40>; bindings = <&kp APOSTROPHE>, <&kp A>; };
         macro_e_acute: macro_e_acute { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <40>; tap-ms = <40>; bindings = <&kp APOSTROPHE>, <&kp E>; };
         macro_i_acute: macro_i_acute { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <40>; tap-ms = <40>; bindings = <&kp APOSTROPHE>, <&kp I>; };
         macro_o_acute: macro_o_acute { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <40>; tap-ms = <40>; bindings = <&kp APOSTROPHE>, <&kp O>; };
         macro_u_acute: macro_u_acute { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <40>; tap-ms = <40>; bindings = <&kp APOSTROPHE>, <&kp U>; };
 
-        // a/a/o/e/o com acentos (dead-key US-Intl)
         macro_a_grave: macro_a_grave { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <40>; tap-ms = <40>; bindings = <&kp GRAVE>, <&kp A>; };
         macro_a_tilde: macro_a_tilde { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <40>; tap-ms = <40>; bindings = <&kp TILDE>, <&kp A>; };
         macro_a_circ:  macro_a_circ  { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <40>; tap-ms = <40>; bindings = <&kp CARET>, <&kp A>; };
         macro_e_circ:  macro_e_circ  { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <40>; tap-ms = <40>; bindings = <&kp CARET>, <&kp E>; };
         macro_o_circ:  macro_o_circ  { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <40>; tap-ms = <40>; bindings = <&kp CARET>, <&kp O>; };
 
-        // Cedilha (Windows): c cedilha = Alt+0231 ; C cedilha = Alt+0199
+        /* Cedilha (Windows) — Alt+0231 e Alt+0199 */
         macro_c_ced_win: macro_c_ced_win {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <40>; tap-ms = <40>;
+            compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <40>; tap-ms = <40>;
             bindings = <&macro_press &kp LALT>,
                        <&macro_tap &kp KP_N0 &kp KP_N2 &kp KP_N3 &kp KP_N1>,
                        <&macro_release &kp LALT>;
         };
         macro_C_ced_win: macro_C_ced_win {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <40>; tap-ms = <40>;
+            compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <40>; tap-ms = <40>;
             bindings = <&macro_press &kp LALT>,
                        <&macro_tap &kp KP_N0 &kp KP_N1 &kp KP_N9 &kp KP_N9>,
                        <&macro_release &kp LALT>;
+        };
+    };
+
+    combos {
+        compatible = "zmk,combos";
+        softoff {
+            bindings = <&soft_off>;
+            key-positions = <14 28 40>;
+        };
+    };
+
+    keymap {
+        compatible = "zmk,keymap";
+
+        /* ===================== LAYER 0 — BASE ===================== */
+        layer0 {
+            bindings = <
+&kp ESC     &kp N1     &kp N2        &kp N3        &kp N4  &kp N5       &kp UP_ARROW     &kp N6     &kp N7     &kp N8     &kp N9           &kp N0      &kp BACKSPACE
+&kp TAB     &kp Q      &kp W         &kp E         &kp R   &kp T        &kp DOWN_ARROW   &kp Y      &kp U      &kp I      &kp O            &kp P       &kp BSLH
+&kp CAPS    &kp A      &kp S         &kp D         &kp F   &kp G        &kp LEFT_ARROW   &kp H      &kp J      &kp K      &kp L            &kp SEMI    &kp APOS
+&kp LSHFT   &kp Z      &kp X         &c_ced        &kp V   &kp B        &kp RIGHT_ARROW  &kp N      &kp M      &kp COMMA  &kp DOT          &kp FSLH    &kp ENTER
+&kp C_MUTE  &kp LCTRL  &kp LEFT_GUI  &kp LEFT_ALT  &mo 1   &kp SPACE    &kp ENTER        &kp SPACE  &kp ENTER  &mo 2      &kp RIGHT_SHIFT  &kp DELETE
+            >;
+
+            /* Slider = volume */
+            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
+            display-name = "LAYER0";
+        };
+
+        /* ===================== LAYER 1 — SÍMBOLOS + DÍGITOS ===================== */
+        layer_1 {
+            bindings = <
+&kp GRAVE   &kp N1           &kp N2            &kp N3           &kp N4           &kp N5             &mmv MOVE_UP     &kp N6           &kp N7           &kp N8         &kp N9       &kp N0            &trans
+&trans      &kp PIPE         &kp BSLH          &kp MINUS        &kp STAR         &kp FSLH           &mmv MOVE_DOWN   &kp LEFT_PAREN   &kp RIGHT_PAREN  &kp LEFT_BRACKET &kp RIGHT_BRACKET &kp PLUS        &kp UNDER
+&trans      &trans           &trans            &trans           &trans           &trans             &mmv MOVE_LEFT   &kp LBRC         &kp RBRC         &kp COLON       &kp SEMI      &kp QMARK         &kp DQT
+&trans      &trans           &trans            &trans           &trans           &trans             &mmv MOVE_RIGHT  &kp LT           &kp GT           &kp FSLH        &kp BSLH      &trans            &trans
+&kp C_MUTE  &trans           &trans            &trans           &trans           &trans             &mkp LCLK        &trans           &trans           &trans          &trans        &trans
+            >;
+
+            display-name = "layer1";
+            /* Encoder = scroll */
+            sensor-bindings = <&scroll_encoder>;
+        };
+
+        /* ===================== LAYER 2 — NAVEGAÇÃO/EDIÇÃO + BACKLIGHT + PRINT ===================== */
+        layer_2 {
+            bindings = <
+&kp GRAVE   &trans            &trans            &trans            &trans            &trans              &mmv MOVE_UP     &kp HOME   &kp UP     &kp END    &kp PG_UP   &kp PSCRN      &trans
+&trans      &sk LCTRL         &sk LALT          &sk LGUI          &sk LSHFT         &trans              &mmv MOVE_DOWN   &kp LEFT   &kp DOWN   &kp RIGHT  &trans      &kp PG_DN      &trans
+&trans      &kp LCTRL         &kp LALT          &kp LGUI          &kp LSHFT         &trans              &mmv MOVE_LEFT   &kp DEL    &kp BSPC   &kp CUT    &kp COPY    &kp PASTE      &kp UNDO
+&trans      &trans            &trans            &trans            &trans            &trans              &mmv MOVE_RIGHT  &bl BL_DEC &bl BL_INC &bl BL_TOG &trans      &trans         &trans
+&trans      &trans            &trans            &trans            &trans            &trans              &mkp LCLK        &trans     &trans     &trans     &trans      &trans
+            >;
+
+            display-name = "layer2";
+            /* Encoder = scroll */
+            sensor-bindings = <&scroll_encoder>;
+        };
+
+        /* ===================== LAYER 3 — ACENTOS (opcional) ===================== */
+        layer_3 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp ACUTE &kp GRAVE &kp TILDE &kp CARET &kp DQT   &trans  &macro_a_acute &macro_e_acute &macro_i_acute &macro_o_acute &macro_u_acute &trans
+&trans  &macro_a_grave &macro_a_tilde &macro_a_circ &macro_e_circ &macro_o_circ  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &c_ced  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+
+            display-name = "layer3";
         };
     };
 };
