@@ -37,7 +37,7 @@
     };
 
     behaviors {
-        /* Tap-dance: C -> c ; double-tap -> ç ; triple-tap -> Ç (Alt codes no Windows) */
+        /* Tap-dance: C -> c ; double-tap -> c cedilha ; triple-tap -> C cedilha (Alt codes no Windows) */
         c_ced: c_ced {
             compatible = "zmk,behavior-tap-dance";
             label = "C_CED_TD";
@@ -48,7 +48,7 @@
     };
 
     macros {
-        /* Acentos com dead-keys do US-International (rápidos para PT-BR) */
+        /* Acentos com dead-keys do US-International (rapidos para PT-BR) */
         macro_a_acute: macro_a_acute { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <40>; tap-ms = <40>; bindings = <&kp APOSTROPHE>, <&kp A>; };
         macro_e_acute: macro_e_acute { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <40>; tap-ms = <40>; bindings = <&kp APOSTROPHE>, <&kp E>; };
         macro_i_acute: macro_i_acute { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <40>; tap-ms = <40>; bindings = <&kp APOSTROPHE>, <&kp I>; };
@@ -102,7 +102,7 @@
             display-name = "LAYER0";
         };
 
-        /* ===================== LAYER 1 — SÍMBOLOS + DÍGITOS ===================== */
+        /* ===================== LAYER 1 — SIMBOLOS + DIGITOS ===================== */
         layer_1 {
             bindings = <
 &kp GRAVE   &kp N1           &kp N2            &kp N3           &kp N4           &kp N5             &mmv MOVE_UP     &kp N6           &kp N7           &kp N8         &kp N9       &kp N0            &trans
@@ -117,7 +117,7 @@
             sensor-bindings = <&scroll_encoder>;
         };
 
-        /* ===================== LAYER 2 — NAVEGAÇÃO/EDIÇÃO + BACKLIGHT + PRINT ===================== */
+        /* ===================== LAYER 2 — NAVEGACAO/EDICAO + BACKLIGHT + PRINT ===================== */
         layer_2 {
             bindings = <
 &kp GRAVE   &trans            &trans            &trans            &trans            &trans              &mmv MOVE_UP     &kp HOME   &kp UP     &kp END    &kp PG_UP   &kp PSCRN      &trans
