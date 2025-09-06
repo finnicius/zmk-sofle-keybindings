@@ -7,44 +7,44 @@
         // ========= LAYER 0: BASE =========
         layer0 {
             bindings = <
-&kp ESC &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &kp BSLH
-&kp TAB &kp Q &kp W &kp E &kp R &kp T &kp Y &kp U &kp I &kp O &kp P &kp LBKT
-&kp CAPS &kp A &kp S &kp D &kp F &kp G &kp H &kp J &kp K &kp L &kp SEMI &kp APOS
-&kp LSHFT &kp Z &kp X &td c_ced &kp V &kp B &kp N &kp M &kp COMMA &kp DOT &kp FSLH &kp RSHFT
-            &kp C_MUTE &kp LCTRL &kp LGUI &kp LALT &mo 1 &kp SPACE &kp ENTER &mo 2 &sk LSHFT &kp BSPC
+&kp ESC &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &trans &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &kp BSLH
+&kp TAB &kp Q &kp W &kp E &kp R &kp T &trans &kp Y &kp U &kp I &kp O &kp P &kp LBKT
+&kp CAPS &kp A &kp S &kp D &kp F &kp G &trans &kp H &kp J &kp K &kp L &kp SEMI &kp APOS
+&kp LSHFT &kp Z &kp X &td c_ced &kp V &kp B &trans &kp N &kp M &kp COMMA &kp DOT &kp FSLH &kp RSHFT
+            &kp C_MUTE &kp LCTRL &kp LGUI &kp LALT &mo 1 &kp SPACE &trans &kp ENTER &mo 2 &sk LSHFT &kp BSPC &trans
             >;
         };
 
         // ========= LAYER 1: SIMBOLOS + DIGITOS =========
         layer_1 {
             bindings = <
-&kp GRAVE &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &kp EQUAL
-&trans &kp PIPE &kp BSLH &kp MINUS &kp STAR &kp FSLH &kp LBKT &kp RBKT &kp LBRC &kp RBRC &kp PLUS &kp UNDER
-&trans &trans &trans &trans &trans &trans &trans &trans &kp COLON &kp SEMI &kp QMARK &kp DQT
-&trans &trans &trans &trans &trans &trans &trans &trans &kp LT &kp GT &kp FSLH &kp BSLH
-            &trans &trans &trans &trans &trans &trans &trans &mo 3 &trans &trans
+&kp GRAVE &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &trans &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &kp EQUAL
+&trans &kp PIPE &kp BSLH &kp MINUS &kp STAR &kp FSLH &trans &kp LBKT &kp RBKT &kp LBRC &kp RBRC &kp PLUS &kp UNDER
+&trans &trans &trans &trans &trans &trans &trans &trans &trans &kp COLON &kp SEMI &kp QMARK &kp DQT
+&trans &trans &trans &trans &trans &trans &trans &trans &trans &kp LT &kp GT &kp FSLH &kp BSLH
+            &trans &trans &trans &trans &trans &trans &trans &mo 3 &trans &trans &trans
             >;
         };
 
         // ========= LAYER 2: NAVEGACAO / EDICAO / BACKLIGHT + PRINT =========
         layer_2 {
             bindings = <
-&trans &trans &trans &trans &trans &trans &trans &kp HOME &kp UP &kp END &kp PG_UP &kp PSCRN
-&trans &sk LCTRL &sk LALT &sk LGUI &sk LSHFT &trans &trans &kp LEFT &kp DOWN &kp RIGHT &trans &kp PG_DN
-&trans &kp LCTRL &kp LALT &kp LGUI &kp LSHFT &trans &kp DEL &kp BSPC &kp CUT &kp COPY &kp PASTE &kp UNDO
-&trans &trans &trans &trans &trans &trans &bl BL_DEC &bl BL_INC &bl BL_TOG &trans &trans &trans
-            &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
+&trans &trans &trans &trans &trans &trans &trans &trans &kp HOME &kp UP &kp END &kp PG_UP &kp PSCRN
+&trans &sk LCTRL &sk LALT &sk LGUI &sk LSHFT &trans &trans &trans &kp LEFT &kp DOWN &kp RIGHT &trans &kp PG_DN
+&trans &kp LCTRL &kp LALT &kp LGUI &kp LSHFT &trans &trans &kp DEL &kp BSPC &kp CUT &kp COPY &kp PASTE &kp UNDO
+&trans &trans &trans &trans &trans &trans &trans &bl BL_DEC &bl BL_INC &bl BL_TOG &trans &trans &trans
+            &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
             >;
         };
 
         // ========= LAYER 3: ACENTOS (OPCIONAL) =========
         layer_3 {
             bindings = <
-&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
-&trans &kp ACUTE &kp GRAVE &kp TILDE &kp CARET &kp DQT &macro_a_acute &macro_e_acute &macro_i_acute &macro_o_acute &macro_u_acute &trans
-&trans &macro_a_grave &macro_a_tilde &macro_a_circ &macro_e_circ &macro_o_circ &trans &trans &trans &trans &trans &trans
-&trans &trans &trans &macro_c_ced_win &trans &trans &trans &trans &trans &trans &trans &trans
-            &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
+&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
+&trans &kp ACUTE &kp GRAVE &kp TILDE &kp CARET &kp DQT &trans &macro_a_acute &macro_e_acute &macro_i_acute &macro_o_acute &macro_u_acute &trans
+&trans &macro_a_grave &macro_a_tilde &macro_a_circ &macro_e_circ &macro_o_circ &trans &trans &trans &trans &trans &trans &trans
+&trans &trans &trans &macro_c_ced_win &trans &trans &trans &trans &trans &trans &trans &trans &trans
+            &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
             >;
         };
     };
