@@ -1,22 +1,180 @@
-# Sofle
+# Sofle - Teclado Mecânico para Português Brasileiro
 
-- [Chinese](README.md)
+- [Português](README.md)
 - [English](README_EN.md)
 
-## Prerequisites
+## Visão Geral
 
-Before building the firmware, ensure you have the following installed:
+Este é um firmware personalizado para o teclado Sofle, otimizado especificamente para **digitação em português brasileiro**. O layout foi projetado para permitir digitação completa em PT-BR com acesso fácil a acentos, cedilhas e caracteres especiais.
 
+## Características Principais
+
+### ✨ Digitação Completa em PT-BR
+- **Layer 0**: Layout QWERTY padrão com cedilha (Ç) integrada
+- **Layer 3**: Acentos completos (á, é, í, ó, ú, à, ã, â, ê, ô)
+- **Tap-dance**: C/ç/Ç com um único botão
+- **Macros**: Acentos automáticos para digitação rápida
+
+### 🎯 Layout Otimizado
+- **Navegação**: Setas direcionais no centro do teclado
+- **Mídia**: Controles de volume no slider
+- **Mouse**: Emulação de mouse integrada
+- **Backlight**: Controle de brilho da iluminação
+
+## Estrutura das Camadas
+
+### Layer 0 - Base (Digitação Principal)
+**Layout QWERTY com modificações para PT-BR:**
+
+```
+ESC  1  2  3  4  5    ↑    6  7  8  9  0  BACKSPACE
+TAB  Q  W  É  R  T    ↓    Y  Ú  Í  Ó  P  \
+CAPS Á  S  D  F  G    ←    H  J  K  L  ;  '
+SHIFT Z  X  Ç  V  B    →    N  M  ,  .  /  ENTER
+MUTE CTRL GUI ALT L1  SPACE ENTER SPACE L2 SHIFT DEL
+```
+
+**Características especiais:**
+- **Acentos completos**: Vogais com tap-dance múltiplo:
+  - **A**: 1 toque=A, 2 toques=á, 3 toques=à, 4 toques=ã
+  - **E**: 1 toque=E, 2 toques=é, 3 toques=ê
+  - **I**: 1 toque=I, 2 toques=í
+  - **O**: 1 toque=O, 2 toques=ó, 3 toques=ô
+  - **U**: 1 toque=U, 2 toques=ú
+- **Cedilha integrada**: Tecla C com tap-dance (C/ç/Ç)
+- **Setas no centro**: Navegação sem sair da posição de digitação
+- **Controles de mídia**: Mute no canto inferior esquerdo
+- **Volume**: Controle via slider (encoder)
+
+### Layer 1 - Símbolos e Números
+**Acesso rápido a símbolos e emulação de mouse:**
+
+```
+`  1  2  3  4  5    ↑    6  7  8  9  0  trans
+    |  \  -  *  /    ↓    (  )  [  ]  +  _
+    trans trans trans trans trans  ←    {  }  :  ;  ?  "
+    trans trans trans trans trans  →    <  >  /  \  trans trans
+MUTE trans trans trans trans trans  LCLK trans trans trans trans trans
+```
+
+**Funcionalidades:**
+- **Símbolos**: Parênteses, colchetes, chaves, operadores
+- **Mouse**: Movimento e clique esquerdo
+- **Scroll**: Encoder para rolagem
+
+### Layer 2 - Navegação e Edição
+**Ferramentas de produtividade:**
+
+```
+`  trans trans trans trans trans    ↑    HOME UP END PG_UP PSCRN trans
+   STICKY_CTRL STICKY_ALT STICKY_GUI STICKY_SHIFT trans  ↓    LEFT DOWN RIGHT trans PG_DN trans
+   CTRL ALT GUI SHIFT trans        ←    DEL BSPC CUT COPY PASTE UNDO
+   trans trans trans trans trans    →    BL_DEC BL_INC BL_TOG trans trans trans
+   trans trans trans trans trans    LCLK trans trans trans trans trans
+```
+
+**Funcionalidades:**
+- **Navegação**: Home, End, Page Up/Down, Print Screen
+- **Edição**: Cut, Copy, Paste, Undo
+- **Sticky Keys**: Modificadores que ficam ativos
+- **Backlight**: Controle de brilho
+- **Mouse**: Movimento e clique
+
+### Layer 3 - Acentos PT-BR
+**Acentos completos para português brasileiro:**
+
+```
+trans trans trans trans trans trans    trans trans trans trans trans trans trans
+     '     `     ~     ^     "         á     é     í     ó     ú    trans
+     à     ã     â     ê     ô         trans trans trans trans trans trans trans
+     trans trans  Ç   trans trans      trans trans trans trans trans trans trans
+     trans trans trans trans trans      trans trans trans trans trans
+```
+
+**Acentos disponíveis:**
+- **Agudos**: á, é, í, ó, ú
+- **Graves**: à
+- **Tils**: ã
+- **Circunflexos**: â, ê, ô
+- **Cedilha**: Ç (tap-dance: C/ç/Ç)
+
+## Comportamentos Especiais
+
+### Tap-Dance Completo para Acentos
+As vogais no Layer 0 possuem comportamentos especiais:
+
+**Cedilha:**
+- **1 toque**: C
+- **2 toques**: ç (cedilha minúscula)
+- **3 toques**: Ç (cedilha maiúscula)
+
+**Vogais com acentos completos:**
+- **A**: 1 toque=A, 2 toques=á, 3 toques=à, 4 toques=ã
+- **E**: 1 toque=E, 2 toques=é, 3 toques=ê
+- **I**: 1 toque=I, 2 toques=í
+- **O**: 1 toque=O, 2 toques=ó, 3 toques=ô
+- **U**: 1 toque=U, 2 toques=ú
+
+### Macros de Acentos
+Cada acento é uma macro que combina dead-key + letra:
+- **Acentos agudos**: ' + letra (á, é, í, ó, ú)
+- **Acentos graves**: ` + letra (à)
+- **Tils**: ~ + letra (ã)
+- **Circunflexos**: ^ + letra (â, ê, ô)
+
+### Combo de Soft Off
+**Q + S + Z** (segurados por 2 segundos):
+- Coloca o teclado em modo de sono profundo
+- Útil para transporte
+- Acordar: pressionar botão reset
+
+## Configuração e Uso
+
+### Acesso às Camadas
+- **Layer 1**: Segurar tecla inferior esquerda (L1)
+- **Layer 2**: Segurar tecla inferior direita (L2)
+- **Layer 3**: L1 + L2 (momentaneamente)
+
+### Controles de Mídia
+- **Mute**: Tecla inferior esquerda (Layer 0)
+- **Volume**: Slider (encoder) no lado direito
+- **Scroll**: Encoder no Layer 1 e 2
+
+### Mouse
+- **Movimento**: Setas no Layer 1 e 2
+- **Clique**: Tecla central inferior
+- **Scroll**: Encoder
+
+## Vantagens para PT-BR
+
+### ✅ Digitação Eficiente
+- **Cedilha integrada**: Sem necessidade de combinações complexas
+- **Acentos rápidos**: Layer dedicado com macros otimizadas
+- **Layout familiar**: QWERTY com melhorias
+
+### ✅ Produtividade
+- **Navegação central**: Setas sem mover as mãos
+- **Sticky keys**: Modificadores que ficam ativos
+- **Mouse integrado**: Sem necessidade de mouse externo
+
+### ✅ Ergonomia
+- **Teclado dividido**: Reduz tensão nos ombros
+- **Thumb clusters**: Acesso fácil com os polegares
+- **Camadas lógicas**: Organização intuitiva
+
+## Instalação
+
+### Pré-requisitos
 - **Python 3.8+**
 - **Git**
-- **West** (Zephyr's meta-tool)
-- **CMake** (3.20.0 or later)
+- **West** (meta-ferramenta do Zephyr)
+- **CMake** (3.20.0 ou superior)
 - **Ninja**
-- **DTL (Device Tree Compiler)**
+- **DTC** (Device Tree Compiler)
 
-### Installing Dependencies
+### Instalação das Dependências
 
-#### Windows (using Chocolatey)
+#### Windows (usando Chocolatey)
 ```bash
 choco install python git cmake ninja dtc
 pip install west
@@ -35,219 +193,198 @@ brew install python git cmake ninja dtc
 pip3 install west
 ```
 
-## Setup Instructions
+### Configuração do Workspace
 
-1. **Clone the repository:**
+1. **Clone o repositório:**
    ```bash
    git clone https://github.com/finnicius/zmk-sofle-keybindings
    cd zmk-sofle-keybindings
    ```
 
-2. **Initialize West workspace:**
+2. **Inicialize o workspace West:**
    ```bash
    west init -l config
    west update
    ```
 
-3. **Install Zephyr dependencies:**
+3. **Instale dependências do Zephyr:**
    ```bash
    pip install -r zephyr/scripts/requirements.txt
    ```
 
-## Keymap Configuration
+## Compilação do Firmware
 
-The keyboard layout is defined in `config/eyelash_sofle.keymap`. Here are the available layers:
+### Opção 1: GitHub Actions (Recomendado)
 
-### Layer 0 (Default)
-- Standard QWERTY layout with some customizations
-- Media controls on bottom row
-- RGB controls and mouse controls on Layer 1
-
-### Layer 1 (Navigation/Media)
-- F1-F12 keys
-- Arrow keys
-- Mouse controls (left click, right click, scroll)
-- RGB controls
-
-### Layer 2 (Settings/Bootloader)
-- Bluetooth device selection
-- System reset and bootloader access
-- Soft off function
-
-### Layer 3 (Empty - Available for customization)
-
-### Customizing Keymap
-
-1. **Edit the keymap file:**
-   - Open `config/eyelash_sofle.keymap`
-   - Each layer is defined as a `bindings` array
-   - Keys are mapped in a specific order (left to right, top to bottom)
-
-2. **Understanding ZMK Key Codes:**
-   - **Standard keys:** Use `&kp KEY_NAME` (e.g., `&kp A`, `&kp ENTER`)
-   - **Modifiers:** `&kp LCTRL`, `&kp LALT`, `&kp LSHFT`, `&kp LGUI`
-   - **Layer switching:** `&mo LAYER_NUMBER` (momentary), `&to LAYER_NUMBER` (toggle)
-   - **Special functions:** `&bt BT_SEL 0` (Bluetooth device), `&sys_reset` (reset)
-   - **Mouse:** `&mkp LCLK` (left click), `&mmv MOVE_UP` (mouse movement)
-
-3. **ZMK Documentation Resources:**
-   - [ZMK Keymap Documentation](https://zmk.dev/docs/keymaps)
-   - [ZMK Key Codes Reference](https://zmk.dev/docs/keymaps/keycodes)
-   - [ZMK Behaviors](https://zmk.dev/docs/behaviors)
-   - [Complete Key Code List](https://zmk.dev/docs/keymaps/list-of-keycodes)
-
-4. **Keymap Structure:**
-   - **Layer 0:** Main typing layer (QWERTY)
-   - **Layer 1:** Navigation/Media layer (F1-F12, arrows, mouse)
-   - **Layer 2:** Settings/Bootloader layer (Bluetooth, reset)
-   - **Layer 3:** Empty layer for custom functions
-
-5. **Save and test:**
-   - Save the file
-   - Commit and push to trigger GitHub Actions
-   - Download the generated firmware files
-
-### Keymap Visualization
-
-To generate a visual representation of your keymap:
-
-1. Push your changes to GitHub
-2. The GitHub Action will automatically generate an SVG in `keymap-drawer/eyelash_sofle.svg`
-
-## Building the Firmware
-
-### Option 1: Using GitHub Actions (Recommended)
-
-1. **Commit and push your changes:**
+1. **Faça commit e push das mudanças:**
    ```bash
    git add config/eyelash_sofle.keymap
-   git commit -m "feat: update keymap configuration"
+   git commit -m "feat: atualizar configuração do keymap"
    git push origin main
    ```
 
-2. **Monitor the build process:**
-   - Go to the **Actions** tab in your GitHub repository
-   - Click on the latest "Build ZMK firmware" workflow run
-   - Wait for all jobs to complete (usually 5-15 minutes)
+2. **Monitore o processo de build:**
+   - Vá para a aba **Actions** no seu repositório GitHub
+   - Clique na execução mais recente do workflow "Build ZMK firmware"
+   - Aguarde todos os jobs completarem (5-15 minutos)
 
-3. **Download the firmware:**
-   - In the workflow run page, scroll down to "Artifacts"
-   - Download the firmware files (`.uf2` files for both left and right sides)
-   - The artifacts will be named according to your `build.yaml` configuration
+3. **Baixe o firmware:**
+   - Na página do workflow, role até "Artifacts"
+   - Baixe os arquivos de firmware (`.uf2` para ambos os lados)
+   - Os artefatos serão nomeados conforme sua configuração `build.yaml`
 
-### Option 2: Local Build
+### Opção 2: Build Local
 
-1. **Set up Zephyr environment:**
+1. **Configure o ambiente Zephyr:**
    ```bash
-   # On Windows
+   # No Windows
    west zephyr-export
 
-   # On Linux/macOS
+   # No Linux/macOS
    source zephyr/zephyr-env.sh
    ```
 
-2. **Build the firmware:**
+2. **Compile o firmware:**
    ```bash
-   # Build right side
+   # Lado direito
    west build -b eyelash_sofle_right -- -DSHIELD=nice_view
 
-   # Build left side with ZMK Studio support
+   # Lado esquerdo com suporte ZMK Studio
    west build -b eyelash_sofle_left -- -DSHIELD=nice_view -DCONFIG_ZMK_STUDIO=y
 
-   # Build left side for settings reset
+   # Lado esquerdo para reset de configurações
    west build -b eyelash_sofle_left -- -DSHIELD=settings_reset
    ```
 
-3. **Find the firmware files:**
-   - Firmware files will be in `build/zephyr/zmk.uf2`
+3. **Localize os arquivos:**
+   - Os arquivos estarão em `build/zephyr/zmk.uf2`
 
-## Flashing the Firmware
+## Flashing do Firmware
 
-### Using UF2 Bootloader
+### Usando UF2 Bootloader
 
-1. **Enter bootloader mode:**
-   - Press the reset button twice quickly, or
-   - Use the bootloader key combination (Layer 2 + BT key)
+1. **Entre no modo bootloader:**
+   - Pressione o botão reset duas vezes rapidamente, ou
+   - Use a combinação de teclas (Layer 2 + tecla BT)
 
-2. **Flash the firmware:**
-   - Copy the `.uf2` file to the USB drive that appears
-   - The keyboard will automatically restart with new firmware
+2. **Flash o firmware:**
+   - Copie o arquivo `.uf2` para o drive USB que aparece
+   - O teclado reiniciará automaticamente com o novo firmware
 
-### Using ZMK Studio (for left side only)
+### Usando ZMK Studio (apenas lado esquerdo)
 
-1. **Install ZMK Studio:**
-   - Download from https://zmk.studio
-   - Connect your keyboard
+1. **Instale o ZMK Studio:**
+   - Baixe de https://zmk.studio
+   - Conecte seu teclado
 
-2. **Update firmware:**
-   - Select your device in ZMK Studio
-   - Upload the firmware file
+2. **Atualize o firmware:**
+   - Selecione seu dispositivo no ZMK Studio
+   - Faça upload do arquivo de firmware
 
-## Troubleshooting
+## Personalização
 
-### Common Issues
+### Editando o Keymap
 
-**West update fails:**
+1. **Edite o arquivo:**
+   - Abra `config/eyelash_sofle.keymap`
+   - Cada camada é definida como um array `bindings`
+   - As teclas são mapeadas em ordem específica (esquerda para direita, cima para baixo)
+
+2. **Entendendo os códigos ZMK:**
+   - **Teclas padrão:** Use `&kp NOME_DA_TECLA` (ex: `&kp A`, `&kp ENTER`)
+   - **Modificadores:** `&kp LCTRL`, `&kp LALT`, `&kp LSHFT`, `&kp LGUI`
+   - **Mudança de camada:** `&mo NUMERO_DA_CAMADA` (momentâneo), `&to NUMERO_DA_CAMADA` (toggle)
+   - **Funções especiais:** `&bt BT_SEL 0` (dispositivo Bluetooth), `&sys_reset` (reset)
+   - **Mouse:** `&mkp LCLK` (clique esquerdo), `&mmv MOVE_UP` (movimento do mouse)
+
+3. **Recursos de documentação ZMK:**
+   - [Documentação de Keymaps ZMK](https://zmk.dev/docs/keymaps)
+   - [Referência de Códigos de Tecla ZMK](https://zmk.dev/docs/keymaps/keycodes)
+   - [Comportamentos ZMK](https://zmk.dev/docs/behaviors)
+   - [Lista Completa de Códigos de Tecla](https://zmk.dev/docs/keymaps/list-of-keycodes)
+
+4. **Estrutura das camadas:**
+   - **Layer 0:** Camada principal de digitação (QWERTY)
+   - **Layer 1:** Camada de símbolos/mouse (F1-F12, setas, mouse)
+   - **Layer 2:** Camada de navegação/edição (Bluetooth, reset)
+   - **Layer 3:** Camada de acentos (vazia para personalização)
+
+5. **Salve e teste:**
+   - Salve o arquivo
+   - Faça commit e push para acionar GitHub Actions
+   - Baixe os arquivos de firmware gerados
+
+### Visualização do Keymap
+
+Para gerar uma representação visual do seu keymap:
+
+1. Faça push das mudanças para o GitHub
+2. A GitHub Action gerará automaticamente um SVG em `keymap-drawer/eyelash_sofle.svg`
+
+## Solução de Problemas
+
+### Problemas Comuns
+
+**West update falha:**
 ```bash
-# Clear west cache and retry
+# Limpe o cache do west e tente novamente
 west update --narrow
 ```
 
-**Build fails with missing dependencies:**
+**Build falha com dependências ausentes:**
 ```bash
-# Reinstall requirements
+# Reinstale os requisitos
 pip install -r zephyr/scripts/requirements.txt
 ```
 
-**Keyboard not recognized:**
-- Try a different USB cable
-- Try a different USB port
-- Check if the keyboard is in bootloader mode
+**Teclado não reconhecido:**
+- Tente um cabo USB diferente
+- Tente uma porta USB diferente
+- Verifique se o teclado está no modo bootloader
 
-**ZMK Studio connection issues:**
-- Ensure you're using the left side firmware with Studio support
-- Check USB connection
-- Try refreshing the Studio interface
+**Problemas de conexão ZMK Studio:**
+- Certifique-se de usar o firmware do lado esquerdo com suporte Studio
+- Verifique a conexão USB
+- Tente atualizar a interface do Studio
 
-### Keymap Editing Troubleshooting
+### Solução de Problemas de Edição de Keymap
 
-**Common Keymap Issues:**
-- **Build fails with syntax error:** Check for missing semicolons or incorrect key code format
-- **Key not working:** Verify the key code exists in ZMK documentation
-- **Layer not switching:** Ensure layer numbers match (0, 1, 2, 3) and use correct behavior (`&mo` vs `&to`)
-- **Mouse not working:** Check that mouse behaviors are properly configured in the keymap
+**Problemas comuns de keymap:**
+- **Build falha com erro de sintaxe:** Verifique ponto e vírgula ausentes ou formato incorreto de código de tecla
+- **Tecla não funciona:** Verifique se o código de tecla existe na documentação ZMK
+- **Camada não muda:** Certifique-se de que os números das camadas coincidem (0, 1, 2, 3) e use o comportamento correto (`&mo` vs `&to`)
+- **Mouse não funciona:** Verifique se os comportamentos de mouse estão configurados corretamente no keymap
 
-**Testing Your Changes:**
-- Always test keymap changes on one side first before flashing both
-- Use the left side with ZMK Studio support for easier testing
-- Keep backups of working keymap configurations
+**Testando suas mudanças:**
+- Sempre teste mudanças de keymap em um lado primeiro antes de fazer flash em ambos
+- Use o lado esquerdo com suporte ZMK Studio para testes mais fáceis
+- Mantenha backups de configurações de keymap funcionais
 
-### Getting Help
+### Obtendo Ajuda
 
-- **ZMK Documentation:** [zmk.dev/docs](https://zmk.dev/docs)
-- **ZMK Discord Community:** [discord.zmk.dev](https://zmk.dev/community/discord)
-- **Keymap Examples:** [zmk.dev/docs/keymaps/examples](https://zmk.dev/docs/keymaps/examples)
-- **Contact:** [380465425@qq.com](mailto:380465425@qq.com)
+- **Documentação ZMK:** [zmk.dev/docs](https://zmk.dev/docs)
+- **Comunidade Discord ZMK:** [discord.zmk.dev](https://zmk.dev/community/discord)
+- **Exemplos de Keymap:** [zmk.dev/docs/keymaps/examples](https://zmk.dev/docs/keymaps/examples)
+- **Contato:** [380465425@qq.com](mailto:380465425@qq.com)
 
-## Update List
+## Histórico de Atualizações
 
-- 2024/12/21
-  1. Added support for zmk-studio (just refresh the left hand to use).
-- 2024/10/24
-  1. Modified power supply mode to reduce power consumption.
-  2. Fixed the automatic shut-off feature for RGB power supply.
-- 2025/8/22
-  1. update the soft off.When you press the keys Q, S and Z simultaneously and hold them for 2 seconds, the keyboard will enter a deep sleep state and cannot be awakened by pressing the keys. This function can be used when carrying it outside. The activation method is to press the reset switch once.
-  2. This month, I also updated the ultra-thin versions of the corne and sofle cases. The frame and base plate have been thickened, and the opening of the reset switch has been adjusted, so that the reset switch can be easily pressed. At present, we are still conceptualizing how to design the shell with an inclined bracket.If you have carefully examined a PCB, you will notice that there are reserved interfaces for expansion IO. I wonder if anyone has been able to utilize them,I will try it！
-  3. The GIF animations on the right-hand keyboard screen have been removed, which will significantly reduce the power consumption of the right-hand keyboard.
+- **2024/12/21**
+  1. Adicionado suporte para zmk-studio (apenas atualize o lado esquerdo para usar).
+- **2024/10/24**
+  1. Modificado modo de alimentação para reduzir consumo de energia.
+  2. Corrigida funcionalidade de desligamento automático para alimentação RGB.
+- **2025/8/22**
+  1. Atualizado o soft off. Quando você pressiona as teclas Q, S e Z simultaneamente e as segura por 2 segundos, o teclado entra em estado de sono profundo e não pode ser acordado pressionando teclas. Esta função pode ser usada ao transportá-lo. O método de ativação é pressionar o botão reset uma vez.
+  2. Este mês, também atualizei as versões ultra-finas dos cases corne e sofle. A moldura e a placa base foram espessadas, e a abertura do botão reset foi ajustada, para que o botão reset possa ser pressionado facilmente. Atualmente, ainda estamos conceituando como projetar a carcaça com um suporte inclinado. Se você examinar cuidadosamente uma PCB, notará que há interfaces reservadas para expansão IO. Eu me pergunto se alguém conseguiu utilizá-las, vou tentar!
+  3. As animações GIF na tela do teclado do lado direito foram removidas, o que reduzirá significativamente o consumo de energia do teclado do lado direito.
 
-> If your  sofle was updated before 2025/8/22, please update to the latest firmware.
->
+> Se seu sofle foi atualizado antes de 2025/8/22, atualize para o firmware mais recente.
 
-## Contact Me
+## Contato
 
-For 3D printed model files or any issues and malfunctions with the keyboard, please contact [380465425@qq.com](mailto:380465425@qq.com)
+Para arquivos de modelo 3D impresso ou quaisquer problemas e mau funcionamento com o teclado, entre em contato [380465425@qq.com](mailto:380465425@qq.com)
 
-## Sofle Keymap
+## Layout do Sofle
 
 ![Sofle键位图](keymap-drawer/eyelash_sofle.svg)

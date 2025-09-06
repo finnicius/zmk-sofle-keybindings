@@ -45,6 +45,47 @@
             tapping-term-ms = <200>;
             bindings = <&kp C>, <&macro_c_cedilha_min>, <&macro_c_cedilha_mai>;
         };
+        
+        /* Tap-dance completo para vogais - Layer 0 */
+        a_complete: a_complete {
+            compatible = "zmk,behavior-tap-dance";
+            label = "A_COMPLETE";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp A>, <&macro_a_acute>, <&macro_a_grave>, <&macro_a_tilde>;
+        };
+        
+        e_complete: e_complete {
+            compatible = "zmk,behavior-tap-dance";
+            label = "E_COMPLETE";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp E>, <&macro_e_acute>, <&macro_e_circ>;
+        };
+        
+        i_complete: i_complete {
+            compatible = "zmk,behavior-tap-dance";
+            label = "I_COMPLETE";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp I>, <&macro_i_acute>;
+        };
+        
+        o_complete: o_complete {
+            compatible = "zmk,behavior-tap-dance";
+            label = "O_COMPLETE";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp O>, <&macro_o_acute>, <&macro_o_circ>;
+        };
+        
+        u_complete: u_complete {
+            compatible = "zmk,behavior-tap-dance";
+            label = "U_COMPLETE";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp U>, <&macro_u_acute>;
+        };
     };
 
     macros {
@@ -94,11 +135,11 @@
                 &kp UP_ARROW     &kp N6     &kp N7     &kp N8     &kp N9           &kp N0      &kp BACKSPACE
                 
                 /* Row 1 */
-                &kp TAB     &kp Q      &kp W         &kp E         &kp R   &kp T        
-                &kp DOWN_ARROW   &kp Y      &kp U      &kp I      &kp O            &kp P       &kp BSLH
+                &kp TAB     &kp Q      &kp W         &e_complete    &kp R   &kp T        
+                &kp DOWN_ARROW   &kp Y      &u_complete &i_complete &o_complete      &kp P       &kp BSLH
                 
                 /* Row 2 */
-                &kp CAPS    &kp A      &kp S         &kp D         &kp F   &kp G        
+                &kp CAPS    &a_complete &kp S         &kp D         &kp F   &kp G        
                 &kp LEFT_ARROW   &kp H      &kp J      &kp K      &kp L            &kp SEMI    &kp APOS
                 
                 /* Row 3 */
@@ -114,28 +155,28 @@
             display-name = "LAYER0";
         };
 
-        /* ===================== LAYER 1 — SIMBOLOS + DIGITOS ===================== */
+        /* ===================== LAYER 1 — SIMBOLOS + NUMPAD ===================== */
         layer_1 {
             bindings = <
-                /* Row 0 */
-                &kp GRAVE   &kp N1           &kp N2            &kp N3           &kp N4           &kp N5             
-                &mmv MOVE_UP     &kp N6           &kp N7           &kp N8           &kp N9           &kp N0           &trans
+                /* Row 0 - Símbolos | Numpad */
+                &kp GRAVE   &kp APOSTROPHE  &kp TILDE        &kp CARET        &kp DQT           &kp PIPE             
+                &mmv MOVE_UP     &kp KP_N7           &kp KP_N8           &kp KP_N9           &kp KP_DIVIDE        &kp KP_MULTIPLY    &trans
                 
-                /* Row 1 */
-                &trans      &kp PIPE         &kp BSLH          &kp MINUS        &kp STAR         &kp FSLH           
-                &mmv MOVE_DOWN   &kp LPAR   &kp RPAR  &kp LBRC &kp RBRC  &kp PLUS         &kp UNDERSCORE
+                /* Row 1 - Símbolos | Numpad */
+                &trans      &kp LPAR        &kp RPAR         &kp LBRC         &kp RBRC          &kp BSLH           
+                &mmv MOVE_DOWN   &kp KP_N4           &kp KP_N5           &kp KP_N6           &kp KP_PLUS         &kp KP_MINUS       &trans
                 
-                /* Row 2 */
-                &trans      &trans           &trans            &trans           &trans           &trans             
-                &mmv MOVE_LEFT   &kp LBRC         &kp RBRC         &kp COLON        &kp SEMI         &kp QMARK        &kp DQT
+                /* Row 2 - Símbolos | Numpad */
+                &trans      &kp LT          &kp GT           &kp COLON        &kp SEMI         &kp QMARK             
+                &mmv MOVE_LEFT   &kp KP_N1           &kp KP_N2           &kp KP_N3           &kp KP_ENTER        &kp KP_EQUAL       &trans
                 
-                /* Row 3 */
-                &trans      &trans           &trans            &trans           &trans           &trans             
-                &mmv MOVE_RIGHT  &kp LT           &kp GT           &kp FSLH         &kp BSLH         &trans           &trans
+                /* Row 3 - Símbolos | Numpad */
+                &trans      &kp MINUS       &kp STAR         &kp PLUS         &kp UNDERSCORE   &kp FSLH             
+                &mmv MOVE_RIGHT  &kp KP_N0           &kp KP_DOT          &kp KP_ENTER       &trans              &trans              &trans
                 
-                /* Row 4 */
-                &kp C_MUTE  &trans           &trans            &trans           &trans           &trans             
-                &mkp LCLK        &trans           &trans           &trans           &trans           &trans
+                /* Row 4 - Mouse | Numpad */
+                &kp C_MUTE  &trans          &trans           &trans           &trans           &trans             
+                &mkp LCLK        &trans              &trans              &trans              &trans              &trans
             >;
             display-name = "layer1";
             /* Encoder = scroll */
