@@ -28,10 +28,10 @@ Este é um firmware personalizado para o teclado Sofle, otimizado especificament
 
 ```
 ESC  1  2  3  4  5    ↑    6  7  8  9  0  BACKSPACE
-TAB  Q  W  É  R  T    ↓    Y  Ú  Í  Ó  P  \
-CAPS Á  S  D  F  G    ←    H  J  K  L  ;  '
-SHIFT Z  X  Ç  V  B    →    N  M  ,  .  /  ENTER
-MUTE CTRL GUI ALT L1  SPACE ENTER SPACE L2 SHIFT DEL
+TAB  Q  W  É  R  T    ↓    Y  Ú  Í  Ó  P  DEL
+SHIFT Á  S  D  F  G    ←    H  J  K  L  ;  '
+CTRL Z  X  Ç  V  B    →    N  M  ,  .  /  ENTER
+MUTE GUI ALT MENU L1  SPACE/ESC SPACE ENTER L2 PG_UP/DN BACKSPACE
 ```
 
 **Características especiais:**
@@ -42,9 +42,13 @@ MUTE CTRL GUI ALT L1  SPACE ENTER SPACE L2 SHIFT DEL
   - **O**: 1 toque=O, 2 toques=ó, 3 toques=ô
   - **U**: 1 toque=U, 2 toques=ú
 - **Cedilha integrada**: Tecla C com tap-dance (C/ç/Ç)
+- **Shift inteligente**: Tap-dance para Shift (tap=Shift, double-tap=Caps Lock)
+- **Space/Escape**: Hold-tap para Space (tap=Space, hold=Escape)
+- **Page Up/Down**: Hold-tap para navegação (tap=Page Up, hold=Page Down)
 - **Setas no centro**: Navegação sem sair da posição de digitação
 - **Controles de mídia**: Mute no canto inferior esquerdo
 - **Volume**: Controle via slider (encoder)
+- **Ergonomia otimizada**: Space e Enter lado a lado no polegar direito
 
 ### Layer 1 - Símbolos e Números
 **Acesso rápido a símbolos e emulação de mouse:**
@@ -159,7 +163,10 @@ Cada acento é uma macro que combina dead-key + letra:
 
 ### ✅ Ergonomia
 - **Teclado dividido**: Reduz tensão nos ombros
-- **Thumb clusters**: Acesso fácil com os polegares
+- **Thumb clusters otimizados**: Space e Enter lado a lado no polegar direito
+- **Escape acessível**: Hold no Space esquerdo (sem esticar mindinho)
+- **Page Up/Down no polegar**: Navegação sem mover as mãos
+- **Backspace no polegar**: Edição confortável
 - **Camadas lógicas**: Organização intuitiva
 
 ## Instalação

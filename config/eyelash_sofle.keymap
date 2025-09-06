@@ -86,6 +86,37 @@
             tapping-term-ms = <200>;
             bindings = <&kp U>, <&macro_u_acute>;
         };
+        
+        /* Tap-dance para Shift com toggle de Caps Lock */
+        shift_caps: shift_caps {
+            compatible = "zmk,behavior-tap-dance";
+            label = "SHIFT_CAPS";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp LSHFT>, <&kp CAPS>;
+        };
+        
+        /* Hold-tap para Space/Escape */
+        space_escape: space_escape {
+            compatible = "zmk,behavior-hold-tap";
+            label = "SPACE_ESCAPE";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
+            flavor = "tap-preferred";
+            bindings = <&kp ESC>, <&kp SPACE>;
+        };
+        
+        /* Hold-tap para Page Up/Page Down */
+        page_up_down: page_up_down {
+            compatible = "zmk,behavior-hold-tap";
+            label = "PAGE_UP_DOWN";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
+            flavor = "tap-preferred";
+            bindings = <&kp PG_DN>, <&kp PG_UP>;
+        };
     };
 
     macros {
@@ -136,19 +167,19 @@
                 
                 /* Row 1 */
                 &kp TAB     &kp Q      &kp W         &e_complete    &kp R   &kp T        
-                &kp DOWN_ARROW   &kp Y      &u_complete &i_complete &o_complete      &kp P       &kp BSLH
+                &kp DOWN_ARROW   &kp Y      &u_complete &i_complete &o_complete      &kp P       &kp DEL
                 
                 /* Row 2 */
-                &kp CAPS    &a_complete &kp S         &kp D         &kp F   &kp G        
+                &shift_caps &a_complete &kp S         &kp D         &kp F   &kp G        
                 &kp LEFT_ARROW   &kp H      &kp J      &kp K      &kp L            &kp SEMI    &kp APOS
                 
                 /* Row 3 */
-                &kp LSHFT   &kp Z      &kp X         &c_ced        &kp V   &kp B        
-                &kp RIGHT_ARROW  &kp N      &kp M      &kp COMMA  &kp DOT          &kp FSLH    &kp ENTER
+                &kp LCTRL   &kp Z      &kp X         &c_ced        &kp V   &kp B        
+                &kp RIGHT_ARROW  &kp N      &kp M      &kp COMMA  &kp DOT          &kp FSLH    &kp RIGHT_CTRL
                 
                 /* Row 4 */
-                &kp C_MUTE  &kp LCTRL  &kp LEFT_GUI  &kp LEFT_ALT  &mo 1   &kp SPACE    
-                &kp ENTER        &kp SPACE  &kp ENTER  &mo 2      &kp RIGHT_SHIFT  &kp DELETE
+                &kp C_MUTE  &kp LGUI   &kp LEFT_ALT  &kp MENU      &mo 1   &space_escape    
+                &kp SPACE        &kp ENTER  &mo 2      &page_up_down &kp BACKSPACE
             >;
             /* Slider = volume */
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
