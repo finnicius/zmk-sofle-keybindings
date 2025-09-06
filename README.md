@@ -30,8 +30,8 @@ Este é um firmware personalizado para o teclado Sofle, otimizado especificament
 ESC  1  2  3  4  5    ↑    6  7  8  9  0  BACKSPACE
 TAB  Q  W  É  R  T    ↓    Y  Ú  Í  Ó  P  DEL
 SHIFT Á  S  D  F  G    ←    H  J  K  L  ;  '
-CTRL Z  X  Ç  V  B    →    N  M  ,  .  /  ENTER
-MUTE GUI ALT MENU L1  SPACE/ESC SPACE ENTER L2 PG_UP/DN BACKSPACE
+CTRL Z  X  Ç  V  B    →    N  M  ,  .  /  RCTRL
+MUTE GUI ALT APP L1   SPACE/ESC SPACE ENTER L2 PG_UP/DN BACKSPACE
 ```
 
 **Características especiais:**
@@ -371,6 +371,10 @@ Quando estiver no modo bootloader:
    - [Referência de Códigos de Tecla ZMK](https://zmk.dev/docs/keymaps/keycodes)
    - [Comportamentos ZMK](https://zmk.dev/docs/behaviors)
    - [Lista Completa de Códigos de Tecla](https://zmk.dev/docs/keymaps/list-of-keycodes)
+   - [Modificadores ZMK](https://zmk.dev/docs/keymaps/modifiers)
+   - [Tap-Dance ZMK](https://zmk.dev/docs/behaviors/tap-dance)
+   - [Hold-Tap ZMK](https://zmk.dev/docs/behaviors/hold-tap)
+   - [Macros ZMK](https://zmk.dev/docs/behaviors/macros)
 
 4. **Estrutura das camadas:**
    - **Layer 0:** Camada principal de digitação (QWERTY)
