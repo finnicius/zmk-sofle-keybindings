@@ -43,7 +43,7 @@
             label = "C_CED_TD";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp C>, <&macro_c_ced_win>, <&macro_C_ced_win>;
+            bindings = <&kp C>, <&macro_c_cedilha_min>, <&macro_c_cedilha_mai>;
         };
     };
 
@@ -60,14 +60,14 @@
         macro_e_circ:  macro_e_circ  { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <40>; tap-ms = <40>; bindings = <&kp CARET>, <&kp E>; };
         macro_o_circ:  macro_o_circ  { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <40>; tap-ms = <40>; bindings = <&kp CARET>, <&kp O>; };
         /* Cedilha (Windows) — Alt+0231 e Alt+0199 */
-        macro_c_ced_win: macro_c_ced_win {
+        macro_c_cedilha_min: macro_c_cedilha_min {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>; wait-ms = <40>; tap-ms = <40>;
             bindings = <&macro_press &kp LALT>,
                        <&macro_tap &kp KP_N0 &kp KP_N2 &kp KP_N3 &kp KP_N1>,
                        <&macro_release &kp LALT>;
         };
-        macro_C_ced_win: macro_C_ced_win {
+        macro_c_cedilha_mai: macro_c_cedilha_mai {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>; wait-ms = <40>; tap-ms = <40>;
             bindings = <&macro_press &kp LALT>,
