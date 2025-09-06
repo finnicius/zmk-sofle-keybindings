@@ -178,11 +178,11 @@
                 &trans           &trans           &trans           &trans           &trans           &trans           &trans
                 
                 /* Row 1 */
-                &trans      &kp ACUTE        &kp GRAVE        &kp TILDE        &kp CARET        &kp DQT            
-                &trans           &macro_a_acute   &macro_e_acute   &macro_i_acute   &macro_o_acute   &macro_u_acute   &trans
+                &trans      &kp APOSTROPHE        &kp GRAVE        &kp TILDE        &kp CARET        &kp DQT            
+                &trans           &kp A           &kp E           &kp I           &kp O           &kp U           &trans
                 
                 /* Row 2 */
-                &trans      &macro_a_grave   &macro_a_tilde   &macro_a_circ    &macro_e_circ    &macro_o_circ      
+                &trans      &kp A   &kp A   &kp A    &kp E    &kp O      
                 &trans           &trans           &trans           &trans           &trans           &trans           &trans
                 
                 /* Row 3 */
