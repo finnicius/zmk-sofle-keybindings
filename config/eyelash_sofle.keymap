@@ -124,7 +124,7 @@
             tapping-term-ms = <200>;
             quick-tap-ms = <200>;
             flavor = "tap-preferred";
-            bindings = <&kp>, <&kp>;
+            bindings = <&macro_show_desktop>, <&kp>;
         };
     };
 
@@ -197,7 +197,7 @@
                 
                 /* Row 4 */
                 &kp C_MUTE  &kp LGUI   &kp LALT      &kp TAB       &mo 1   &space_escape SPACE ESC
-                &kp SPACE   &kp ENTER  &mo 2          &page_up_down PG_UP PG_DN    &kp BSPC      &prtscr_desktop PSCRN macro_show_desktop
+                &kp SPACE   &kp ENTER  &mo 2          &page_up_down PG_UP PG_DN    &kp BSPC      &prtscr_desktop PSCRN 0
             >;
             /* Slider = volume */
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
