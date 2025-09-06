@@ -27,7 +27,7 @@ layers:
   - '&o_complete'
   - P
   - $$mdi:backspace-reverse-outline$$
-  - '&shift_caps'
+  - {t: '$$mdi:apple-keyboard-caps$$', h: '$$mdi:apple-keyboard-shift$$'}
   - '&a_complete'
   - S
   - D
@@ -58,13 +58,13 @@ layers:
   - $$mdi:apple-keyboard-option$$
   - $$mdi:keyboard-tab$$
   - layer1
-  - '&space_escape'
+  - {t: '$$mdi:keyboard-esc$$', h: '$$mdi:keyboard-space$$'}
   - $$mdi:keyboard-space$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - layer2
-  - '&page_up_down'
+  - {t: PG DN, h: PG UP}
   - {t: '$$mdi:backspace$$', type: backspace}
-  - '&prtscr_desktop'
+  - {t: '&macro show_desktop', h: '$$mdi:printer-outline$$'}
   layer1:
   - {t: '`', s: '~'}
   - {t: '''', s: '"'}
