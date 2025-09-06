@@ -64,7 +64,7 @@ layers:
   - layer2
   - {t: PG DN, h: PG UP}
   - {t: '$$mdi:backspace$$', type: backspace}
-  - {t: '&macro show_desktop', h: '$$mdi:printer-outline$$'}
+  - {t: '&macro macro_show_desktop', h: '$$mdi:printer-outline$$'}
   layer1:
   - {t: '`', s: '~'}
   - {t: '''', s: '"'}
