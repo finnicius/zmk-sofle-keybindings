@@ -117,14 +117,14 @@
             bindings = <&kp>, <&kp>;
         };
         
-        /* Hold-tap para Print Screen + Mostrar Desktop */
+        /* Hold-tap para CTRL+Print Screen + Mostrar Desktop */
         prtscr_desktop: prtscr_desktop {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             quick-tap-ms = <200>;
             flavor = "tap-preferred";
-            bindings = <&macro_show_desktop>, <&kp>;
+            bindings = <&macro_show_desktop>, <&macro_ctrl_prtscr>;
         };
     };
 
@@ -164,6 +164,15 @@
                        <&macro_tap &kp D>,
                        <&macro_release &kp LGUI>;
         };
+        
+        /* Macro para CTRL+Print Screen */
+        macro_ctrl_prtscr: macro_ctrl_prtscr {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>; wait-ms = <40>; tap-ms = <40>;
+            bindings = <&macro_press &kp LCTRL>,
+                       <&macro_tap &kp PSCRN>,
+                       <&macro_release &kp LCTRL>;
+        };
     };
 
     combos {
@@ -197,7 +206,7 @@
                 
                 /* Row 4 */
                 &kp C_MUTE  &kp LGUI   &kp LALT      &kp TAB       &mo 1   &space_escape SPACE ESC
-                &kp SPACE   &kp ENTER  &mo 2          &page_up_down PG_UP PG_DN    &kp BSPC      &prtscr_desktop PSCRN 0
+                &kp SPACE   &kp ENTER  &mo 2          &page_up_down PG_UP PG_DN    &kp BSPC      &prtscr_desktop 0 0
             >;
             /* Slider = volume */
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
