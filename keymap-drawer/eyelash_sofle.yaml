@@ -17,18 +17,18 @@ layers:
   - $$mdi:keyboard-tab$$
   - Q
   - W
-  - E
+  - '&e_complete'
   - R
   - T
   - $$mdi:arrow-down-bold$$
   - Y
-  - U
-  - I
-  - O
+  - '&u_complete'
+  - '&i_complete'
+  - '&o_complete'
   - P
   - {t: \, s: '|'}
   - $$mdi:apple-keyboard-caps$$
-  - A
+  - '&a_complete'
   - S
   - D
   - F
@@ -67,55 +67,55 @@ layers:
   - $$mdi:backspace-reverse-outline$$
   layer1:
   - {t: '`', s: '~'}
-  - {t: '1', s: '!'}
-  - {t: '2', s: '@'}
-  - {t: '3', s: '#'}
-  - {t: '4', s: $}
-  - {t: '5', s: '%'}
-  - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
-  - {t: '6', s: ^}
-  - {t: '7', s: '&'}
-  - {t: '8', s: '*'}
-  - {t: '9', s: (}
-  - {t: '0', s: )}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '''', s: '"'}
+  - '~'
+  - ^
+  - '"'
   - '|'
-  - {t: \, s: '|'}
-  - {t: '-', s: _}
-  - '*'
-  - {t: /, s: '?'}
-  - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
+  - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
+  - KP 7
+  - KP 8
+  - KP 9
+  - KP DIVIDE
+  - KP MULTIPLY
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - (
   - )
   - '{'
   - '}'
-  - +
-  - _
+  - {t: \, s: '|'}
+  - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
+  - KP 4
+  - KP 5
+  - KP 6
+  - KP PLUS
+  - KP MINUS
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
-  - '{'
-  - '}'
+  - <
+  - '>'
   - ':'
   - {t: ;, s: ':'}
   - '?'
-  - '"'
+  - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
+  - KP 1
+  - KP 2
+  - KP 3
+  - KP ENTER
+  - KP EQUAL
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
-  - <
-  - '>'
+  - {t: '-', s: _}
+  - '*'
+  - +
+  - _
   - {t: /, s: '?'}
-  - {t: \, s: '|'}
+  - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
+  - KP 0
+  - KP DOT
+  - KP ENTER
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:volume-off$$
