@@ -62,9 +62,9 @@ layers:
   - $$mdi:keyboard-space$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - layer2
-  - {t: PG DN, h: PG UP}
+  - PG UP
   - {t: '$$mdi:backspace$$', type: backspace}
-  - {t: '&macro macro_show_desktop', h: '$$mdi:printer-outline$$'}
+  - $$mdi:printer-outline$$
   layer1:
   - {t: '`', s: '~'}
   - {t: '''', s: '"'}
