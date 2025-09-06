@@ -105,8 +105,8 @@
         /* ===================== LAYER 1 — SIMBOLOS + DIGITOS ===================== */
         layer_1 {
             bindings = <
-&kp GRAVE   &kp N1           &kp N2            &kp N3           &kp N4           &kp N5             &mmv MOVE_UP     &kp N6           &kp N7           &kp N8         &kp N9       &kp N0            &trans
-&trans      &kp PIPE         &kp BSLH          &kp MINUS        &kp STAR         &kp FSLH           &mmv MOVE_DOWN   &kp LEFT_PAREN   &kp RIGHT_PAREN  &kp LEFT_BRACKET &kp RIGHT_BRACKET &kp PLUS        &kp UNDER
+&kp GRAVE &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &mmv MOVE_UP &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &trans
+&trans &kp PIPE &kp BSLH &kp MINUS &kp STAR &kp FSLH &mmv MOVE_DOWN &kp LEFT_PAREN &kp RIGHT_PAREN &kp LEFT_BRACKET &kp RIGHT_BRACKET &kp PLUS &kp UNDER
 &trans      &trans           &trans            &trans           &trans           &trans             &mmv MOVE_LEFT   &kp LBRC         &kp RBRC         &kp COLON       &kp SEMI      &kp QMARK         &kp DQT
 &trans      &trans           &trans            &trans           &trans           &trans             &mmv MOVE_RIGHT  &kp LT           &kp GT           &kp FSLH        &kp BSLH      &trans            &trans
 &kp C_MUTE  &trans           &trans            &trans           &trans           &trans             &mkp LCLK        &trans           &trans           &trans          &trans        &trans
