@@ -215,8 +215,8 @@
                 &kp RIGHT_ARROW  &kp N      &kp M      &kp COMMA  &kp DOT          &kp FSLH    &kp RCTRL
                 
                 /* Row 4 */
-                &kp C_MUTE  &kp LGUI   &kp LALT      &kp TAB       &mo 1   &space_escape SPACE ESC
-                &kp SPACE   &kp ENTER  &mo 2          &page_up_down PG_UP PG_DN    &kp BSPC      &prtscr_desktop 0 0
+                &kp C_MUTE  &kp LGUI   &kp LALT      &kp TAB       &mo 1   &space_escape ESC SPACE
+                &kp SPACE   &kp ENTER  &mo 2          &kp BSPC      &prtscr_desktop 0 0
             >;
             /* Slider = volume */
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
