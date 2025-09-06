@@ -87,46 +87,44 @@
             bindings = <&kp U>, <&macro_u_acute>;
         };
         
-        /* Tap-dance para Shift com toggle de Caps Lock */
+        /* Hold-tap para Shift com toggle de Caps Lock */
         shift_caps: shift_caps {
-            compatible = "zmk,behavior-tap-dance";
-            label = "SHIFT_CAPS";
-            #binding-cells = <0>;
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
             tapping-term-ms = <200>;
-            bindings = <&kp LSHFT>, <&kp CAPS>;
+            quick-tap-ms = <200>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kt>;
         };
         
         /* Hold-tap para Space/Escape */
         space_escape: space_escape {
             compatible = "zmk,behavior-hold-tap";
-            label = "SPACE_ESCAPE";
-            #binding-cells = <0>;
+            #binding-cells = <2>;
             tapping-term-ms = <200>;
             quick-tap-ms = <200>;
             flavor = "tap-preferred";
-            bindings = <&kp SPACE>, <&kp ESC>;
+            bindings = <&kp>, <&kp>;
         };
         
         /* Hold-tap para Page Up/Page Down */
         page_up_down: page_up_down {
             compatible = "zmk,behavior-hold-tap";
-            label = "PAGE_UP_DOWN";
-            #binding-cells = <0>;
+            #binding-cells = <2>;
             tapping-term-ms = <200>;
             quick-tap-ms = <200>;
             flavor = "tap-preferred";
-            bindings = <&kp PG_UP>, <&kp PG_DN>;
+            bindings = <&kp>, <&kp>;
         };
         
         /* Hold-tap para Print Screen + Mostrar Desktop */
         prtscr_desktop: prtscr_desktop {
             compatible = "zmk,behavior-hold-tap";
-            label = "PRTSCR_DESKTOP";
-            #binding-cells = <0>;
+            #binding-cells = <2>;
             tapping-term-ms = <200>;
             quick-tap-ms = <200>;
             flavor = "tap-preferred";
-            bindings = <&kp PSCRN>, <&macro_show_desktop>;
+            bindings = <&kp>, <&macro>;
         };
     };
 
@@ -190,7 +188,7 @@
                 &kp DOWN_ARROW   &kp Y      &u_complete &i_complete &o_complete      &kp P       &kp DEL
                 
                 /* Row 2 */
-                &shift_caps &a_complete &kp S         &kp D         &kp F   &kp G        
+                &shift_caps LSHFT CAPS &a_complete &kp S         &kp D         &kp F   &kp G        
                 &kp LEFT_ARROW   &kp H      &kp J      &kp K      &kp L            &kp SEMI    &kp APOS
                 
                 /* Row 3 */
@@ -198,8 +196,8 @@
                 &kp RIGHT_ARROW  &kp N      &kp M      &kp COMMA  &kp DOT          &kp FSLH    &kp RCTRL
                 
                 /* Row 4 */
-                &kp C_MUTE  &kp LGUI   &kp LALT      &kp TAB       &mo 1   &space_escape
-                &kp SPACE   &kp ENTER  &mo 2          &page_up_down &kp BSPC      &prtscr_desktop
+                &kp C_MUTE  &kp LGUI   &kp LALT      &kp TAB       &mo 1   &space_escape SPACE ESC
+                &kp SPACE   &kp ENTER  &mo 2          &page_up_down PG_UP PG_DN    &kp BSPC      &prtscr_desktop PSCRN show_desktop
             >;
             /* Slider = volume */
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
