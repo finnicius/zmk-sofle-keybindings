@@ -263,13 +263,75 @@ pip3 install west
 
 ### Usando UF2 Bootloader
 
-1. **Entre no modo bootloader:**
-   - Pressione o botão reset duas vezes rapidamente, ou
-   - Use a combinação de teclas (Layer 2 + tecla BT)
+O UF2 (USB Flashing Format) é o método mais confiável para fazer flash do firmware em ambos os lados do teclado.
 
-2. **Flash o firmware:**
-   - Copie o arquivo `.uf2` para o drive USB que aparece
-   - O teclado reiniciará automaticamente com o novo firmware
+#### **Passo 1: Entrar no Modo Bootloader**
+
+**Método 1 - Botão Reset (Recomendado):**
+1. **Desconecte** o teclado do USB
+2. **Segure** o botão reset (geralmente na parte inferior)
+3. **Conecte** o USB mantendo o botão pressionado
+4. **Solte** o botão reset
+5. **Aguarde** 2-3 segundos
+
+**Método 2 - Duplo Reset:**
+1. **Pressione** o botão reset duas vezes rapidamente
+2. **Aguarde** o LED piscar (se houver)
+
+**Método 3 - Combinação de Teclas:**
+1. **Acesse** o Layer 2 (segure a tecla L2)
+2. **Pressione** a tecla BT (Bluetooth)
+3. **Aguarde** o LED piscar
+
+#### **Passo 2: Verificar o Modo Bootloader**
+
+Quando estiver no modo bootloader:
+- **Windows**: Aparecerá um novo drive USB (ex: "SOFLEBOOT")
+- **Linux/macOS**: Aparecerá um drive montado (ex: "/media/SOFLEBOOT")
+- **LED**: Pode piscar de forma diferente (se houver LED)
+
+#### **Passo 3: Fazer Flash do Firmware**
+
+1. **Localize** o arquivo `.uf2` correto:
+   - **Lado esquerdo**: `eyelash_sofle_left-nice_view-zmk.uf2`
+   - **Lado direito**: `eyelash_sofle_right-nice_view-zmk.uf2`
+
+2. **Copie** o arquivo `.uf2` para o drive USB que apareceu
+   - **Windows**: Arraste e solte ou Ctrl+C/Ctrl+V
+   - **Linux/macOS**: `cp arquivo.uf2 /caminho/do/drive/`
+
+3. **Aguarde** a cópia completar (alguns segundos)
+
+4. **O teclado reiniciará automaticamente** com o novo firmware
+
+#### **Passo 4: Verificar se Funcionou**
+
+- **LED**: Deve parar de piscar e voltar ao normal
+- **Drive USB**: Deve desaparecer
+- **Teclado**: Deve funcionar normalmente
+
+#### **Troubleshooting**
+
+**Problema: Drive não aparece**
+- Tente o método 1 (botão reset + conectar USB)
+- Verifique se o cabo USB está funcionando
+- Tente uma porta USB diferente
+
+**Problema: Arquivo não copia**
+- Verifique se o arquivo `.uf2` não está corrompido
+- Tente renomear o arquivo para algo mais simples
+- Verifique se há espaço suficiente no drive
+
+**Problema: Teclado não reinicia**
+- Aguarde mais tempo (até 30 segundos)
+- Desconecte e reconecte o USB
+- Tente entrar no modo bootloader novamente
+
+#### **Vantagens do UF2:**
+- ✅ **Funciona em ambos os lados**
+- ✅ **Não precisa de software especial**
+- ✅ **Mais confiável** que outros métodos
+- ✅ **Funciona em qualquer sistema operacional**
 
 ### Usando ZMK Studio (apenas lado esquerdo)
 
