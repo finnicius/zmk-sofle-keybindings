@@ -203,15 +203,15 @@
                 &kp UP_ARROW     &kp N6     &kp N7     &kp N8     &kp N9           &kp N0      &kp BACKSPACE
                 
                 /* Row 1 */
-                &kp TAB     &kp Q      &kp W         &e_complete    &kp R   &kp T        
-                &kp DOWN_ARROW   &kp Y      &u_complete &i_complete &o_complete      &kp P       &kp DEL
+                &kp TAB     &kp Q      &kp W         &kp E          &kp R   &kp T        
+                &kp DOWN_ARROW   &kp Y      &kp U      &kp I      &kp O          &kp P       &kp DEL
                 
                 /* Row 2 */
-                &shift_caps LSHFT CAPS &a_complete &kp S         &kp D         &kp F   &kp G        
+                &shift_caps LSHFT CAPS &kp A         &kp S         &kp D         &kp F   &kp G        
                 &kp LEFT_ARROW   &kp H      &kp J      &kp K      &kp L            &kp SEMI    &kp APOS
                 
                 /* Row 3 */
-                &kp LCTRL   &kp Z      &kp X         &c_ced        &kp V   &kp B        
+                &kp LCTRL   &kp Z      &kp X         &kp C         &kp V   &kp B        
                 &kp RIGHT_ARROW  &kp N      &kp M      &kp COMMA  &kp DOT          &kp FSLH    &kp RCTRL
                 
                 /* Row 4 */
