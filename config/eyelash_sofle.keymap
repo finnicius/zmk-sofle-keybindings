@@ -88,11 +88,11 @@
         /* ===================== LAYER 0 — BASE ===================== */
         layer0 {
             bindings = <
-&kp ESC &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &kp UP_ARROW &kp BACKSPACE
-&kp TAB &kp Q &kp W &kp E &kp R &kp T &kp Y &kp U &kp I &kp O &kp P &kp DOWN_ARROW &kp BSLH
-&kp CAPS &kp A &kp S &kp D &kp F &kp G &kp H &kp J &kp K &kp L &kp LEFT_ARROW &kp SEMI &kp APOS
-&kp LSHFT &kp Z &kp X &c_ced &kp V &kp B &kp N &kp M &kp COMMA &kp DOT &kp RIGHT_ARROW &kp FSLH &kp ENTER
-&kp C_MUTE &kp LCTRL &kp LEFT_GUI &kp LEFT_ALT &mo 1 &kp SPACE &kp ENTER &kp SPACE &kp ENTER &mo 2 &kp RIGHT_SHIFT &kp DELETE
+&kp ESC     &kp N1     &kp N2        &kp N3        &kp N4  &kp N5       &kp UP_ARROW     &kp N6     &kp N7     &kp N8     &kp N9           &kp N0      &kp BACKSPACE
+&kp TAB     &kp Q      &kp W         &kp E         &kp R   &kp T        &kp DOWN_ARROW   &kp Y      &kp U      &kp I      &kp O            &kp P       &kp BSLH
+&kp CAPS    &kp A      &kp S         &kp D         &kp F   &kp G        &kp LEFT_ARROW   &kp H      &kp J      &kp K      &kp L            &kp SEMI    &kp APOS
+&kp LSHFT   &kp Z      &kp X         &c_ced        &kp V   &kp B        &kp RIGHT_ARROW  &kp N      &kp M      &kp COMMA  &kp DOT          &kp FSLH    &kp ENTER
+&kp C_MUTE  &kp LCTRL  &kp LEFT_GUI  &kp LEFT_ALT  &mo 1   &kp SPACE    &kp ENTER        &kp SPACE  &kp ENTER  &mo 2      &kp RIGHT_SHIFT  &kp DELETE
             >;
             /* Slider = volume */
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
@@ -102,11 +102,11 @@
         /* ===================== LAYER 1 — SIMBOLOS + DIGITOS ===================== */
         layer_1 {
             bindings = <
-&kp GRAVE &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &mmv MOVE_UP &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &trans
-&trans &kp PIPE &kp BSLH &kp MINUS &kp STAR &kp FSLH &mmv MOVE_DOWN &kp LEFT_PAREN &kp RIGHT_PAREN &kp LEFT_BRACKET &kp RIGHT_BRACKET &kp PLUS &kp UNDER
-&trans &trans &trans &trans &trans &trans &mmv MOVE_LEFT &kp LBRC &kp RBRC &kp COLON &kp SEMI &kp QMARK &kp DQT
-&trans &trans &trans &trans &trans &trans &mmv MOVE_RIGHT &kp LT &kp GT &kp FSLH &kp BSLH &trans &trans
-&kp C_MUTE &trans &trans &trans &trans &trans &mkp LCLK &trans &trans &trans &trans &trans
+&kp GRAVE   &kp N1           &kp N2            &kp N3           &kp N4           &kp N5             &mmv MOVE_UP     &kp N6           &kp N7           &kp N8           &kp N9           &kp N0           &trans
+&trans      &kp PIPE         &kp BSLH          &kp MINUS        &kp STAR         &kp FSLH           &mmv MOVE_DOWN   &kp LEFT_PAREN   &kp RIGHT_PAREN  &kp LEFT_BRACKET &kp RIGHT_BRACKET  &kp PLUS         &kp UNDERSCORE
+&trans      &trans           &trans            &trans           &trans           &trans             &mmv MOVE_LEFT   &kp LBRC         &kp RBRC         &kp COLON        &kp SEMI         &kp QMARK        &kp DQT
+&trans      &trans           &trans            &trans           &trans           &trans             &mmv MOVE_RIGHT  &kp LT           &kp GT           &kp FSLH         &kp BSLH         &trans           &trans
+&kp C_MUTE  &trans           &trans            &trans           &trans           &trans             &mkp LCLK        &trans           &trans           &trans           &trans           &trans
             >;
             display-name = "layer1";
             /* Encoder = scroll */
@@ -116,11 +116,11 @@
         /* ===================== LAYER 2 — NAVEGACAO/EDICAO + BACKLIGHT + PRINT ===================== */
         layer_2 {
             bindings = <
-&kp GRAVE &trans &trans &trans &trans &trans &mmv MOVE_UP &kp HOME &kp UP &kp END &kp PG_UP &kp PSCRN &trans
-&trans &sk LCTRL &sk LALT &sk LGUI &sk LSHFT &trans &mmv MOVE_DOWN &kp LEFT &kp DOWN &kp RIGHT &trans &kp PG_DN &trans
-&trans &kp LCTRL &kp LALT &kp LGUI &kp LSHFT &trans &mmv MOVE_LEFT &kp DEL &kp BSPC &kp CUT &kp COPY &kp PASTE &kp UNDO
-&trans &trans &trans &trans &trans &trans &mmv MOVE_RIGHT &bl BL_DEC &bl BL_INC &bl BL_TOG &trans &trans &trans
-&trans &trans &trans &trans &trans &trans &mkp LCLK &trans &trans &trans &trans &trans
+&kp GRAVE   &trans            &trans            &trans            &trans            &trans             &mmv MOVE_UP     &kp HOME         &kp UP           &kp END          &kp PG_UP        &kp PSCRN        &trans
+&trans      &sk LCTRL         &sk LALT          &sk LGUI          &sk LSHFT         &trans             &mmv MOVE_DOWN   &kp LEFT         &kp DOWN         &kp RIGHT        &trans           &kp PG_DN        &trans
+&trans      &kp LCTRL         &kp LALT          &kp LGUI          &kp LSHFT         &trans             &mmv MOVE_LEFT   &kp DEL          &kp BSPC         &kp CUT          &kp COPY         &kp PASTE        &kp UNDO
+&trans      &trans            &trans            &trans            &trans            &trans             &mmv MOVE_RIGHT  &bl BL_DEC       &bl BL_INC       &bl BL_TOG       &trans           &trans           &trans
+&trans      &trans            &trans            &trans            &trans            &trans             &mkp LCLK        &trans           &trans           &trans           &trans           &trans
             >;
             display-name = "layer2";
             /* Encoder = scroll */
@@ -130,11 +130,11 @@
         /* ===================== LAYER 3 — ACENTOS (opcional) ===================== */
         layer_3 {
             bindings = <
-&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
-&trans &kp ACUTE &kp GRAVE &kp TILDE &kp CARET &kp DQT &trans &macro_a_acute &macro_e_acute &macro_i_acute &macro_o_acute &macro_u_acute &trans
-&trans &macro_a_grave &macro_a_tilde &macro_a_circ &macro_e_circ &macro_o_circ &trans &trans &trans &trans &trans &trans &trans
-&trans &trans &trans &c_ced &trans &trans &trans &trans &trans &trans &trans &trans &trans
-&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
+&trans      &trans           &trans           &trans           &trans           &trans             &trans           &trans           &trans           &trans           &trans           &trans           &trans
+&trans      &kp ACUTE        &kp GRAVE        &kp TILDE        &kp CARET        &kp DQT            &trans           &macro_a_acute   &macro_e_acute   &macro_i_acute   &macro_o_acute   &macro_u_acute   &trans
+&trans      &macro_a_grave   &macro_a_tilde   &macro_a_circ    &macro_e_circ    &macro_o_circ      &trans           &trans           &trans           &trans           &trans           &trans           &trans
+&trans      &trans           &trans           &c_ced           &trans           &trans             &trans           &trans           &trans           &trans           &trans           &trans           &trans
+&trans      &trans           &trans           &trans           &trans           &trans             &trans           &trans           &trans           &trans           &trans           &trans
             >;
             display-name = "layer3";
         };
