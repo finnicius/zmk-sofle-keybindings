@@ -56,7 +56,7 @@ layers:
   - $$mdi:volume-off$$
   - LGUI
   - $$mdi:apple-keyboard-option$$
-  - APP
+  - $$mdi:keyboard-tab$$
   - layer1
   - '&space_escape'
   - $$mdi:keyboard-space$$
@@ -64,7 +64,7 @@ layers:
   - layer2
   - '&page_up_down'
   - {t: '$$mdi:backspace$$', type: backspace}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - '&prtscr_desktop'
   layer1:
   - {t: '`', s: '~'}
   - {t: '''', s: '"'}
