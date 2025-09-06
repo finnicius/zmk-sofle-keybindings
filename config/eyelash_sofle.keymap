@@ -104,7 +104,7 @@
             tapping-term-ms = <200>;
             quick-tap-ms = <200>;
             flavor = "tap-preferred";
-            bindings = <&kp ESC>, <&kp SPACE>;
+            bindings = <&kp SPACE>, <&kp ESC>;
         };
         
         /* Hold-tap para Page Up/Page Down */
@@ -115,7 +115,7 @@
             tapping-term-ms = <200>;
             quick-tap-ms = <200>;
             flavor = "tap-preferred";
-            bindings = <&kp PG_DN>, <&kp PG_UP>;
+            bindings = <&kp PG_UP>, <&kp PG_DN>;
         };
         
         /* Hold-tap para Print Screen + Mostrar Desktop */
@@ -126,7 +126,7 @@
             tapping-term-ms = <200>;
             quick-tap-ms = <200>;
             flavor = "tap-preferred";
-            bindings = <&macro_show_desktop>, <&kp PSCRN>;
+            bindings = <&kp PSCRN>, <&macro_show_desktop>;
         };
     };
 
