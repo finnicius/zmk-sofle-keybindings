@@ -210,24 +210,24 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - ACUTE
+  - {t: '''', s: '"'}
   - {t: '`', s: '~'}
   - '~'
   - ^
   - '"'
   - {t: '$$mdi:transfer$$', type: trans}
-  - '&macro_a_acute'
-  - '&macro_e_acute'
-  - '&macro_i_acute'
-  - '&macro_o_acute'
-  - '&macro_u_acute'
+  - A
+  - E
+  - I
+  - O
+  - U
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - '&macro_a_grave'
-  - '&macro_a_tilde'
-  - '&macro_a_circ'
-  - '&macro_e_circ'
-  - '&macro_o_circ'
+  - A
+  - A
+  - A
+  - E
+  - O
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
