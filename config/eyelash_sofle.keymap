@@ -44,6 +44,7 @@
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp C>, <&macro_c_cedilha_min>, <&macro_c_cedilha_mai>;
+            display-name = "C/ç/Ç";
         };
         
         /* Tap-dance completo para vogais - Layer 0 */
@@ -53,6 +54,7 @@
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp A>, <&macro_a_acute>, <&macro_a_grave>, <&macro_a_tilde>;
+            display-name = "A/á/à/ã";
         };
         
         e_complete: e_complete {
@@ -61,6 +63,7 @@
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp E>, <&macro_e_acute>, <&macro_e_circ>;
+            display-name = "E/é/ê";
         };
         
         i_complete: i_complete {
@@ -69,6 +72,7 @@
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp I>, <&macro_i_acute>;
+            display-name = "I/í";
         };
         
         o_complete: o_complete {
@@ -77,6 +81,7 @@
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp O>, <&macro_o_acute>, <&macro_o_circ>;
+            display-name = "O/ó/ô";
         };
         
         u_complete: u_complete {
@@ -85,6 +90,7 @@
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp U>, <&macro_u_acute>;
+            display-name = "U/ú";
         };
         
         /* Hold-tap para Shift com toggle de Caps Lock */
@@ -95,6 +101,7 @@
             quick-tap-ms = <200>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kt>;
+            display-name = "Shift/Caps";
         };
         
         /* Hold-tap para Space/Escape */
@@ -105,6 +112,7 @@
             quick-tap-ms = <200>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
+            display-name = "Space/Esc";
         };
         
         /* Hold-tap para Page Up/Page Down */
@@ -115,6 +123,7 @@
             quick-tap-ms = <200>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
+            display-name = "PgUp/PgDn";
         };
         
         /* Hold-tap para CTRL+Print Screen + Mostrar Desktop */
@@ -125,6 +134,7 @@
             quick-tap-ms = <200>;
             flavor = "tap-preferred";
             bindings = <&macro_show_desktop>, <&macro_ctrl_prtscr>;
+            display-name = "PrtSc/Desktop";
         };
     };
 
