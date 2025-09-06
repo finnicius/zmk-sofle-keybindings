@@ -86,10 +86,10 @@ layers:
   - '*'
   - {t: /, s: '?'}
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
-  - LEFT PAREN
-  - RIGHT PAREN
-  - {t: '[', s: '{'}
-  - {t: ']', s: '}'}
+  - (
+  - )
+  - '{'
+  - '}'
   - +
   - _
   - {t: '$$mdi:transfer$$', type: trans}
