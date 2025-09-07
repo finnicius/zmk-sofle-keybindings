@@ -136,6 +136,15 @@
             bindings = <&macro_show_desktop>, <&macro_ctrl_prtscr>;
             display-name = "PrtSc/Desktop";
         };
+        
+        /* Mod-morph para / com ALT -> \ */
+        slash_backslash: slash_backslash {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp FSLH>, <&kp BSLH>;
+            mods = <(MOD_LALT|MOD_RALT)>;
+            display-name = "/ e \";
+        };
     };
 
     macros {
@@ -216,7 +225,7 @@
 &kp ESC		            &kp N1		&kp N2		&kp N3		&kp N4		            &kp N5		&kp UP_ARROW	    &kp N6		&kp N7		&kp N8		&kp N9		&kp N0		&kp BACKSPACE
 &kp TAB		            &kp Q		&kp W		&e_complete		&kp R		            &kp T		&kp DOWN_ARROW	    &kp Y		&u_complete		&i_complete		&o_complete		&kp P		&kp DEL
 &shift_caps LSHFT CAPS	&a_complete		&kp S		&kp D		&kp F		            &kp G		&kp LEFT_ARROW	    &kp H		&kp J		&kp K		&kp L		&kp SEMI	&kp APOS
-&kp LCTRL	            &kp Z		&kp X		&c_ced		&kp V		            &kp B		&kp RIGHT_ARROW	    &kp N		&kp M		&kp COMMA	&kp DOT		&kp FSLH	&kp RSHFT
+&kp LCTRL	            &kp Z		&kp X		&c_ced		&kp V		            &kp B		&kp RIGHT_ARROW	    &kp N		&kp M		&kp COMMA	&kp DOT		&slash_backslash	&kp RSHFT
 &kp C_MUTE	&kp LGUI	&kp LALT	&kp TAB		&mo 1		&space_escape ESC SPACE	            &kp ENTER           &kp SPACE   &kp ENTER   &mo 2		&kp BSPC	&prtscr_desktop 0 0
             >;
             /* Slider = volume */
