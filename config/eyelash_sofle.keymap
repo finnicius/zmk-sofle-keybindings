@@ -284,11 +284,11 @@
                 
                 /* Row 4 - Controles */
                 &trans      &trans            &trans            &trans            &trans            &trans             
-                &mkp LCLK        &trans           &trans           &trans           &trans           &trans
+                &macro_calculator &trans           &trans           &trans           &trans           &trans
             >;
             display-name = "layer_2";
-            /* Encoder = calculadora no clique, scroll na rotação */
-            sensor-bindings = <&macro_calculator>;
+            /* Encoder = scroll */
+            sensor-bindings = <&scroll_encoder>;
         };
     };
 }; 
