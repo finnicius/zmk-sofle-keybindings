@@ -231,7 +231,7 @@
                 /* Row 3 - Operadores e chaves */
                 &kp LCTRL		&kp FSLH	&kp EQUAL	    &kp UNDER	    &kp LBRC		&kp RBRC
                 &mmv MOVE_RIGHT
-                &kp LBRC		&kp RBRC	&kp UNDER	    &kp EQUAL	    &kp FSLH		&kp RCTRL
+                &kp LBRC		&kp RBRC	&kp UNDER	    &kp EQUAL	    &kp BACKSLASH	&kp RCTRL
 
                 /* Row 4 - Controles */
                 &kp C_MUTE

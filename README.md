@@ -359,14 +359,128 @@ Quando estiver no modo bootloader:
    - Cada camada é definida como um array `bindings`
    - As teclas são mapeadas em ordem específica (esquerda para direita, cima para baixo)
 
-2. **Entendendo os códigos ZMK:**
+2. **Template de Camada (Recomendado):**
+   
+   Para facilitar a criação e manutenção dos layouts, use este template com uma tecla por linha:
+
+```c
+layer_exemplo {
+    bindings = <
+        /* ========== LINHA 1 ========== */
+        /* Mão esquerda - Fileira 1 */
+        &kp ESC,           // Posição 1: ESC
+        &kp N1,            // Posição 2: 1
+        &kp N2,            // Posição 3: 2
+        &kp N3,            // Posição 4: 3
+        &kp N4,            // Posição 5: 4
+        &kp N5,            // Posição 6: 5
+        
+        /* Controle direcional - Movimento para cima */
+        &kp UP_ARROW,      // Posição 7: Seta para cima
+        
+        /* Mão direita - Fileira 1 */
+        &kp N6,            // Posição 8: 6
+        &kp N7,            // Posição 9: 7
+        &kp N8,            // Posição 10: 8
+        &kp N9,            // Posição 11: 9
+        &kp N0,            // Posição 12: 0
+        &kp BACKSPACE,     // Posição 13: Backspace
+        
+        /* ========== LINHA 2 ========== */
+        /* Mão esquerda - Fileira 2 */
+        &kp TAB,           // Posição 14: Tab
+        &kp Q,             // Posição 15: Q
+        &kp W,             // Posição 16: W
+        &kp E,             // Posição 17: E
+        &kp R,             // Posição 18: R
+        &kp T,             // Posição 19: T
+        
+        /* Controle direcional - Movimento para baixo */
+        &kp DOWN_ARROW,    // Posição 20: Seta para baixo
+        
+        /* Mão direita - Fileira 2 */
+        &kp Y,             // Posição 21: Y
+        &kp U,             // Posição 22: U
+        &kp I,             // Posição 23: I
+        &kp O,             // Posição 24: O
+        &kp P,             // Posição 25: P
+        &kp DEL,           // Posição 26: Delete
+        
+        /* ========== LINHA 3 ========== */
+        /* Mão esquerda - Fileira 3 */
+        &kp LSHFT,         // Posição 27: Shift esquerdo
+        &kp A,             // Posição 28: A
+        &kp S,             // Posição 29: S
+        &kp D,             // Posição 30: D
+        &kp F,             // Posição 31: F
+        &kp G,             // Posição 32: G
+        
+        /* Controle direcional - Movimento para esquerda */
+        &kp LEFT_ARROW,    // Posição 33: Seta para esquerda
+        
+        /* Mão direita - Fileira 3 */
+        &kp H,             // Posição 34: H
+        &kp J,             // Posição 35: J
+        &kp K,             // Posição 36: K
+        &kp L,             // Posição 37: L
+        &kp SEMI,          // Posição 38: Ponto e vírgula
+        &kp APOS,          // Posição 39: Aspas simples
+        
+        /* ========== LINHA 4 ========== */
+        /* Mão esquerda - Fileira 4 */
+        &kp LCTRL,         // Posição 40: Ctrl esquerdo
+        &kp Z,             // Posição 41: Z
+        &kp X,             // Posição 42: X
+        &kp C,             // Posição 43: C
+        &kp V,             // Posição 44: V
+        &kp B,             // Posição 45: B
+        
+        /* Controle direcional - Movimento para direita */
+        &kp RIGHT_ARROW,   // Posição 46: Seta para direita
+        
+        /* Mão direita - Fileira 4 */
+        &kp N,             // Posição 47: N
+        &kp M,             // Posição 48: M
+        &kp COMMA,         // Posição 49: Vírgula
+        &kp DOT,           // Posição 50: Ponto
+        &kp FSLH,          // Posição 51: Barra
+        &kp RSHFT,         // Posição 52: Shift direito
+        
+        /* ========== LINHA 5 ========== */
+        /* Encoder - Pressionamento do volume knob */
+        &kp C_MUTE,        // Posição 53: Pressionar encoder/volume knob
+        
+        /* Mão esquerda - Thumb cluster */
+        &kp LGUI,          // Posição 54: GUI esquerdo
+        &kp LALT,          // Posição 55: Alt esquerdo
+        &kp TAB,           // Posição 56: Tab
+        &mo 1,             // Posição 57: Momentâneo Layer 1
+        &space_escape ESC SPACE,  // Posição 58: Space/Escape (hold-tap)
+        
+        /* Controle direcional - Pressionamento do joystick */
+        &mkp LCLK,         // Posição 59: Pressionar controle direcional/joystick
+        
+        /* Mão direita - Thumb cluster */
+        &kp ENTER,         // Posição 60: Enter
+        &kp SPACE,         // Posição 61: Space
+        &mo 2,             // Posição 62: Momentâneo Layer 2
+        &kp BSPC,          // Posição 63: Backspace
+        &prtscr_desktop 0 0  // Posição 64: Print Screen/Desktop (hold-tap)
+    >;
+    display-name = "LAYER_EXEMPLO";
+    /* Encoder = volume */
+    sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
+};
+```
+
+3. **Entendendo os códigos ZMK:**
    - **Teclas padrão:** Use `&kp NOME_DA_TECLA` (ex: `&kp A`, `&kp ENTER`)
    - **Modificadores:** `&kp LCTRL`, `&kp LALT`, `&kp LSHFT`, `&kp LGUI`
    - **Mudança de camada:** `&mo NUMERO_DA_CAMADA` (momentâneo), `&to NUMERO_DA_CAMADA` (toggle)
    - **Funções especiais:** `&bt BT_SEL 0` (dispositivo Bluetooth), `&sys_reset` (reset)
    - **Mouse:** `&mkp LCLK` (clique esquerdo), `&mmv MOVE_UP` (movimento do mouse)
 
-3. **Recursos de documentação ZMK:**
+4. **Recursos de documentação ZMK:**
    - [Documentação de Keymaps ZMK](https://zmk.dev/docs/keymaps)
    - [Referência de Códigos de Tecla ZMK](https://zmk.dev/docs/keymaps/keycodes)
    - [Comportamentos ZMK](https://zmk.dev/docs/behaviors)
@@ -376,13 +490,13 @@ Quando estiver no modo bootloader:
    - [Hold-Tap ZMK](https://zmk.dev/docs/behaviors/hold-tap)
    - [Macros ZMK](https://zmk.dev/docs/behaviors/macros)
 
-4. **Estrutura das camadas:**
+5. **Estrutura das camadas:**
    - **Layer 0:** Camada principal de digitação (QWERTY)
    - **Layer 1:** Camada de símbolos/mouse (F1-F12, setas, mouse)
    - **Layer 2:** Camada de navegação/edição (Bluetooth, reset)
    - **Layer 3:** Camada de acentos (vazia para personalização)
 
-5. **Salve e teste:**
+6. **Salve e teste:**
    - Salve o arquivo
    - Faça commit e push para acionar GitHub Actions
    - Baixe os arquivos de firmware gerados
