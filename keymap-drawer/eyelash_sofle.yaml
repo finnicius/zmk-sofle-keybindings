@@ -66,7 +66,7 @@ layers:
   - {t: '$$mdi:backspace$$', type: backspace}
   - {t: '&macro_ctrl_prtscr', h: '&macro_show_desktop'}
   layer1:
-  - $$mdi:keyboard-esc$$
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '`', s: '~'}
   - {t: '''', s: '"'}
   - '@'
@@ -79,7 +79,7 @@ layers:
   - KP DIVIDE
   - KP MULTIPLY
   - {t: '$$mdi:backspace$$', type: backspace}
-  - $$mdi:keyboard-tab$$
+  - {t: '$$mdi:transfer$$', type: trans}
   - '~'
   - ^
   - '*'
@@ -92,7 +92,7 @@ layers:
   - KP PLUS
   - KP MINUS
   - $$mdi:backspace-reverse-outline$$
-  - $$mdi:apple-keyboard-shift$$
+  - {t: '$$mdi:transfer$$', type: trans}
   - +
   - {t: '-', s: _}
   - '%'
@@ -105,7 +105,7 @@ layers:
   - KP ENTER
   - KP EQUAL
   - {t: '''', s: '"'}
-  - $$mdi:apple-keyboard-control$$
+  - {t: '$$mdi:transfer$$', type: trans}
   - <
   - '>'
   - {t: /, s: '?'}
@@ -117,7 +117,7 @@ layers:
   - KP ENTER
   - $$mdi:keyboard-space$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
-  - $$mdi:apple-keyboard-shift$$
+  - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:volume-off$$
   - LGUI
   - $$mdi:apple-keyboard-option$$
