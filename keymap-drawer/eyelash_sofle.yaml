@@ -116,7 +116,7 @@ layers:
   - '}'
   - _
   - {t: '=', s: +}
-  - {t: /, s: '?'}
+  - {t: \, s: '|'}
   - $$mdi:apple-keyboard-control$$
   - $$mdi:volume-off$$
   - LGUI
