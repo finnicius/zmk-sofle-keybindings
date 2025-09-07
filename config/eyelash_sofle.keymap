@@ -244,11 +244,7 @@
                 /* Row 4 - Controles */
                 &kp C_MUTE		&kp LGUI	&kp LALT	&kp TAB		&mo 1		&space_escape ESC SPACE
                 &mkp LCLK
-                &space_escape ESC SPACE	&kp ENTER	&kp SPACE	&kp ENTER	&mo 2		&kp BSPC	&prtscr_desktop 0 0
-                
-                /* Row 5 - Controles extras */
-                &trans      &trans            &trans            &trans            &trans            &trans             
-                &trans      &trans            &trans            &trans            &trans            &trans
+                &space_escape ESC SPACE	&kp ENTER	&kp SPACE	&mo 2		&kp BSPC
             >;
             display-name = "layer_1";
             /* Encoder = scroll */
@@ -277,10 +273,6 @@
                 /* Row 4 - Controles */
                 &trans      &trans            &trans            &trans            &trans            &trans             
                 &kp C_AL_CALC    &trans           &trans           &trans           &trans           &trans
-                
-                /* Row 5 - Controles extras */
-                &trans      &trans            &trans            &trans            &trans            &trans             
-                &trans      &trans            &trans            &trans            &trans            &trans
             >;
             display-name = "layer_2";
             /* Encoder = scroll */
