@@ -189,7 +189,7 @@
         compatible = "zmk,combos";
         softoff {
             bindings = <&soft_off>;
-            key-positions = <29 30 31>; // Z + X + C
+            key-positions = <40 41 42>; // Z + X + C
         };
     };
 
