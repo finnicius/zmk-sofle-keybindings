@@ -440,20 +440,6 @@ pip install -r zephyr/scripts/requirements.txt
 - **Exemplos de Keymap:** [zmk.dev/docs/keymaps/examples](https://zmk.dev/docs/keymaps/examples)
 - **Contato:** [380465425@qq.com](mailto:380465425@qq.com)
 
-## Histórico de Atualizações
-
-- **2024/12/21**
-  1. Adicionado suporte para zmk-studio (apenas atualize o lado esquerdo para usar).
-- **2024/10/24**
-  1. Modificado modo de alimentação para reduzir consumo de energia.
-  2. Corrigida funcionalidade de desligamento automático para alimentação RGB.
-- **2025/8/22**
-  1. Atualizado o soft off. Quando você pressiona as teclas Q, S e Z simultaneamente e as segura por 2 segundos, o teclado entra em estado de sono profundo e não pode ser acordado pressionando teclas. Esta função pode ser usada ao transportá-lo. O método de ativação é pressionar o botão reset uma vez.
-  2. Este mês, também atualizei as versões ultra-finas dos cases corne e sofle. A moldura e a placa base foram espessadas, e a abertura do botão reset foi ajustada, para que o botão reset possa ser pressionado facilmente. Atualmente, ainda estamos conceituando como projetar a carcaça com um suporte inclinado. Se você examinar cuidadosamente uma PCB, notará que há interfaces reservadas para expansão IO. Eu me pergunto se alguém conseguiu utilizá-las, vou tentar!
-  3. As animações GIF na tela do teclado do lado direito foram removidas, o que reduzirá significativamente o consumo de energia do teclado do lado direito.
-
-> Se seu sofle foi atualizado antes de 2025/8/22, atualize para o firmware mais recente.
-
 ## Contato
 
 Para arquivos de modelo 3D impresso ou quaisquer problemas e mau funcionamento com o teclado, entre em contato [380465425@qq.com](mailto:380465425@qq.com)
