@@ -218,17 +218,17 @@
                 &kp KP_N7	    &kp KP_N8	&kp KP_N9	&kp KP_DIVIDE	&kp KP_MULTIPLY	&kp BACKSPACE
 
                 /* Row 1 - Operadores matemáticos | Numpad 4-6 */
-                &kp TAB		            &kp TILDE	&kp CARET	&kp STAR	&kp PLUS		        &kp MINUS
+                &kp TAB		            &kp TILDE	&kp CARET	&kp STAR	&kp LPAR		        &kp RPAR
                 &mmv MOVE_DOWN
                 &kp KP_N4	    &kp KP_N5	&kp KP_N6	&kp KP_PLUS	&kp KP_MINUS	&kp DEL
 
                 /* Row 2 - Pares de símbolos | Numpad 1-3 */
-                &kp LSHFT	            &kp LPAR	&kp RPAR	    &kp LBRC	&kp RBRC		        &kp LBRACE
+                &kp LSHFT	            &kp PLUS	&kp MINUS	&kp PERCENT	&kp LBRC		        &kp RBRC
                 &mmv MOVE_LEFT
                 &kp KP_N1	    &kp KP_N2	&kp KP_N3	&kp KP_ENTER	&kp KP_EQUAL	&kp APOS
 
-                /* Row 3 - Operadores e pontuação | Numpad 0 */
-                &kp LCTRL	            &kp LT		&kp GT		    &kp FSLH	&kp RBRACE		        &kp PERCENT
+                /* Row 3 - Operadores e chaves | Numpad 0 */
+                &kp LCTRL	            &kp LT		&kp GT		    &kp FSLH	&kp LBRACE		        &kp RBRACE
                 &mmv MOVE_RIGHT
                 &kp KP_N0	    &kp KP_DOT	&kp KP_ENTER	&kp SPACE	&kp ENTER	&kp RSHFT
 
