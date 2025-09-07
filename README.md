@@ -28,10 +28,10 @@ Este é um firmware personalizado para o teclado Sofle, otimizado especificament
 
 ```
 ESC  1  2  3  4  5    ↑    6  7  8  9  0  BACKSPACE
-TAB  Q  W  É  R  T    ↓    Y  Ú  Í  Ó  P  DEL
-SHIFT Á  S  D  F  G    ←    H  J  K  L  ;  '
-CTRL Z  X  Ç  V  B    →    N  M  ,  .  /  RCTRL
-MUTE GUI ALT APP L1   SPACE/ESC SPACE ENTER L2 PG_UP/DN BACKSPACE
+TAB  Q  W  E  R  T    ↓    Y  U  I  O  P  DEL
+SHIFT A  S  D  F  G    ←    H  J  K  L  ;  '
+CTRL Z  X  C  V  B    →    N  M  ,  .  /  RCTRL
+WIN ALT TAB L1 SPACE/ESC   SPACE ENTER L2 BSPC PRTSC/DESKTOP
 ```
 
 **Características especiais:**
@@ -42,23 +42,23 @@ MUTE GUI ALT APP L1   SPACE/ESC SPACE ENTER L2 PG_UP/DN BACKSPACE
   - **O**: 1 toque=O, 2 toques=ó, 3 toques=ô
   - **U**: 1 toque=U, 2 toques=ú
 - **Cedilha integrada**: Tecla C com tap-dance (C/ç/Ç)
-- **Shift inteligente**: Tap-dance para Shift (tap=Shift, double-tap=Caps Lock)
+- **Shift inteligente**: Hold-tap para Shift (tap=Shift, hold=Caps Lock)
 - **Space/Escape**: Hold-tap para Space (tap=Space, hold=Escape)
-- **Page Up/Down**: Hold-tap para navegação (tap=Page Up, hold=Page Down)
+- **Print Screen/Desktop**: Hold-tap para captura (tap=Print Screen, hold=Mostrar Desktop)
 - **Setas no centro**: Navegação sem sair da posição de digitação
 - **Controles de mídia**: Mute no canto inferior esquerdo
 - **Volume**: Controle via slider (encoder)
 - **Ergonomia otimizada**: Space e Enter lado a lado no polegar direito
 
-### Layer 1 - Símbolos e Números
+### Layer 1 - Símbolos e Mouse
 **Acesso rápido a símbolos e emulação de mouse:**
 
 ```
-`  1  2  3  4  5    ↑    6  7  8  9  0  trans
-    |  \  -  *  /    ↓    (  )  [  ]  +  _
-    trans trans trans trans trans  ←    {  }  :  ;  ?  "
-    trans trans trans trans trans  →    <  >  /  \  trans trans
-MUTE trans trans trans trans trans  LCLK trans trans trans trans trans
+ESC `  '  @  $  |    ↑    |  $  @  '  `  ESC
+TAB  ~  ^  *  (  )    ↓    (  )  *  ^  ~  TAB
+SHIFT +  -  %  [  ]    ←    [  ]  %  -  +  SHIFT
+CTRL /  =  _  {  }    →    {  }  _  =  \  CTRL
+MUTE GUI ALT TAB L1   SPACE/ESC SPACE ENTER SHIFT BSPC PRTSC/DESKTOP
 ```
 
 **Funcionalidades:**
@@ -66,41 +66,22 @@ MUTE trans trans trans trans trans  LCLK trans trans trans trans trans
 - **Mouse**: Movimento e clique esquerdo
 - **Scroll**: Encoder para rolagem
 
-### Layer 2 - Navegação e Edição
-**Ferramentas de produtividade:**
+### Layer 2 - Numpad Dedicado
+**Teclado numérico completo:**
 
 ```
-`  trans trans trans trans trans    ↑    HOME UP END PG_UP PSCRN trans
-   STICKY_CTRL STICKY_ALT STICKY_GUI STICKY_SHIFT trans  ↓    LEFT DOWN RIGHT trans PG_DN trans
-   CTRL ALT GUI SHIFT trans        ←    DEL BSPC CUT COPY PASTE UNDO
-   trans trans trans trans trans    →    BL_DEC BL_INC BL_TOG trans trans trans
+`  trans trans trans trans trans    ↑    7  8  9  /  *  BACKSPACE
+   trans trans trans trans trans    ↓    4  5  6  +  -  DEL
+   trans trans trans trans trans    ←    1  2  3  ENTER =  '
+   trans trans trans trans trans    →    0  .  ENTER SPACE ENTER trans
    trans trans trans trans trans    LCLK trans trans trans trans trans
 ```
 
 **Funcionalidades:**
-- **Navegação**: Home, End, Page Up/Down, Print Screen
-- **Edição**: Cut, Copy, Paste, Undo
-- **Sticky Keys**: Modificadores que ficam ativos
-- **Backlight**: Controle de brilho
-- **Mouse**: Movimento e clique
-
-### Layer 3 - Acentos PT-BR
-**Acentos completos para português brasileiro:**
-
-```
-trans trans trans trans trans trans    trans trans trans trans trans trans trans
-     '     `     ~     ^     "         á     é     í     ó     ú    trans
-     à     ã     â     ê     ô         trans trans trans trans trans trans trans
-     trans trans  Ç   trans trans      trans trans trans trans trans trans trans
-     trans trans trans trans trans      trans trans trans trans trans
-```
-
-**Acentos disponíveis:**
-- **Agudos**: á, é, í, ó, ú
-- **Graves**: à
-- **Tils**: ã
-- **Circunflexos**: â, ê, ô
-- **Cedilha**: Ç (tap-dance: C/ç/Ç)
+- **Numpad completo**: Todos os números e operadores
+- **Mouse**: Movimento e clique esquerdo
+- **Scroll**: Encoder para rolagem
+- **Layout ergonômico**: Numpad na mão direita, mouse no centro
 
 ## Comportamentos Especiais
 
@@ -126,8 +107,22 @@ Cada acento é uma macro que combina dead-key + letra:
 - **Tils**: ~ + letra (ã)
 - **Circunflexos**: ^ + letra (â, ê, ô)
 
+### Hold-Tap Behaviors
+
+**Shift/Caps Lock:**
+- **Tap**: Shift (modificador)
+- **Hold**: Caps Lock (toggle)
+
+**Space/Escape:**
+- **Tap**: Space
+- **Hold**: Escape
+
+**Print Screen/Desktop:**
+- **Tap**: Print Screen (captura de tela)
+- **Hold**: Mostrar Desktop (Windows+D)
+
 ### Combo de Soft Off
-**Q + S + Z** (segurados por 2 segundos):
+**Z + X + C** (segurados por 2 segundos):
 - Coloca o teclado em modo de sono profundo
 - Útil para transporte
 - Acordar: pressionar botão reset
@@ -145,9 +140,9 @@ Cada acento é uma macro que combina dead-key + letra:
 - **Scroll**: Encoder no Layer 1 e 2
 
 ### Mouse
-- **Movimento**: Setas no Layer 1 e 2
-- **Clique**: Tecla central inferior
-- **Scroll**: Encoder
+- **Movimento**: Setas direcionais no centro (Layer 1 e 2)
+- **Clique**: Pressionar o joystick/controle direcional
+- **Scroll**: Encoder (Layer 1 e 2)
 
 ## Vantagens para PT-BR
 
@@ -491,10 +486,10 @@ layer_exemplo {
    - [Macros ZMK](https://zmk.dev/docs/behaviors/macros)
 
 5. **Estrutura das camadas:**
-   - **Layer 0:** Camada principal de digitação (QWERTY)
-   - **Layer 1:** Camada de símbolos/mouse (F1-F12, setas, mouse)
-   - **Layer 2:** Camada de navegação/edição (Bluetooth, reset)
-   - **Layer 3:** Camada de acentos (vazia para personalização)
+   - **Layer 0:** Camada principal de digitação (QWERTY com acentos)
+   - **Layer 1:** Camada de símbolos e mouse (símbolos, mouse, scroll)
+   - **Layer 2:** Camada de numpad dedicado (números, operadores, mouse)
+   - **Layer 3:** Camada vazia (disponível para personalização)
 
 6. **Salve e teste:**
    - Salve o arquivo
@@ -547,6 +542,34 @@ pip install -r zephyr/scripts/requirements.txt
 - Use o lado esquerdo com suporte ZMK Studio para testes mais fáceis
 - Mantenha backups de configurações de keymap funcionais
 
+### Metades não se comunicam após update (ZMK split BLE)
+
+**Descrição curta do problema:**  
+Após atualizar o firmware, o lado direito liga, mas não envia teclas e **pressionar a tecla de layer no lado direito não altera o layer exibido no display do lado esquerdo**. Isso indica falta de comunicação entre as metades do split (BLE/internal link).
+
+**Causa provável:**  
+Inconsistência de *roles* (central/peripheral) e/ou *settings/bonds* BLE entre as metades — comum quando a mesma UF2 é gravada nos dois lados ou quando o reset só foi feito em um lado.
+
+#### Procedimento de recuperação
+1. **Reset (apagar settings/bonds) em ambos**
+   - `settings_reset_right` → desconectar e reiniciar
+   - `settings_reset_left`  → desconectar e reiniciar
+
+2. **Flash do firmware "normal" (binários distintos)**
+   - **Primeiro** o lado direito: `eyelash_sofle_right` (peripheral)
+   - **Depois** o lado esquerdo: `eyelash_sofle_left` (central)  
+     *(use a variante `..._studio_left` se quiser ZMK Studio)*
+
+3. **Boot e pareamento**
+   - Ligar **as duas metades** (o **right** deve conectar ao **left** automaticamente)
+   - Apagar pareamentos BLE antigos do **PC** com o teclado (se houver)
+   - Parear **apenas o lado esquerdo** com o computador
+
+4. **Teste funcional**
+   - Pressionar **layer key** no **lado direito** e confirmar que o **display do lado esquerdo** muda de layer
+   - Testar digitação no **lado direito** no host
+   - Se falhar, **repetir**: reset dos dois lados → flash *right* → flash *left* → pareamento
+
 ### Obtendo Ajuda
 
 - **Documentação ZMK:** [zmk.dev/docs](https://zmk.dev/docs)
@@ -558,6 +581,6 @@ pip install -r zephyr/scripts/requirements.txt
 
 Para arquivos de modelo 3D impresso ou quaisquer problemas e mau funcionamento com o teclado, entre em contato [380465425@qq.com](mailto:380465425@qq.com)
 
-## Layout do Sofle
+## Meu Layout Atual
 
-![Sofle键位图](keymap-drawer/eyelash_sofle.svg)
+![Layout atual da configuração](keymap-drawer/eyelash_sofle.svg)

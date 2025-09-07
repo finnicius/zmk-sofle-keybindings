@@ -1,6 +1,6 @@
 ---
 include:
-  # Firmwares “normais” (mesma versão para ambos)
+  # Firmwares “normais” (same version for both)
   - board: eyelash_sofle_left
     shield: nice_view
     artifact-name: eyelash_sofle_left
@@ -9,14 +9,14 @@ include:
     shield: nice_view
     artifact-name: eyelash_sofle_right
 
-  # Opcional: build com ZMK Studio (apenas no left, se for usar)
+  # Optional: build with ZMK Studio (only on left, if you want to use it)
   - board: eyelash_sofle_left
     shield: nice_view
     snippet: studio-rpc-usb-uart
     cmake-args: -DCONFIG_ZMK_STUDIO=y -DCONFIG_ZMK_STUDIO_LOCKING=n
     artifact-name: eyelash_sofle_studio_left
 
-  # Resets para os dois lados (apague settings/bonds de ambos)
+  # Resets for both sides (delete settings/bonds from both sides)
   - board: eyelash_sofle_left
     shield: settings_reset
     artifact-name: settings_reset_left
