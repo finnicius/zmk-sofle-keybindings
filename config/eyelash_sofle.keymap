@@ -241,7 +241,7 @@
                 
                 /* ========== LINHA 3 ========== */
                 /* Mão esquerda - Fileira 3 */
-                &shift_caps LSHFT CAPS,  // Posição 27: Shift/Caps (hold-tap)
+                &shift_caps LSHFT CAPS   // Posição 27: Shift/Caps (hold-tap)
                 &a_complete,       // Posição 28: A/á/à/ã (tap-dance)
                 &kp S,             // Posição 29: S
                 &kp D,             // Posição 30: D
@@ -287,8 +287,8 @@
                 &kp LGUI,          // Posição 54: GUI esquerdo
                 &kp LALT,          // Posição 55: Alt esquerdo
                 &kp TAB,           // Posição 56: Tab
-                &mo 1,             // Posição 57: Momentâneo Layer 1
-                &space_escape ESC SPACE,  // Posição 58: Space/Escape (hold-tap)
+                &mo 1              // Posição 57: Momentâneo Layer 1
+                &space_escape ESC SPACE   // Posição 58: Space/Escape (hold-tap)
                 
                 /* Controle direcional - Pressionamento do joystick */
                 &mkp LCLK,         // Posição 59: Pressionar controle direcional/joystick
@@ -296,9 +296,9 @@
                 /* Mão direita - Thumb cluster */
                 &kp ENTER,         // Posição 60: Enter
                 &kp SPACE,         // Posição 61: Space
-                &mo 2,             // Posição 62: Momentâneo Layer 2
+                &mo 2              // Posição 62: Momentâneo Layer 2
                 &kp BSPC,          // Posição 63: Backspace
-                &prtscr_desktop 0 0  // Posição 64: Print Screen/Desktop (hold-tap)
+                &prtscr_desktop 0 0   // Posição 64: Print Screen/Desktop (hold-tap)
             >;
             /* Slider = volume */
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
@@ -396,18 +396,18 @@
                 &kp LGUI,          // Posição 54: GUI esquerdo
                 &kp LALT,          // Posição 55: Alt esquerdo
                 &kp TAB,           // Posição 56: Tab
-                &mo 1,             // Posição 57: Momentâneo Layer 1
-                &space_escape ESC SPACE,  // Posição 58: Space/Escape (hold-tap)
+                &mo 1              // Posição 57: Momentâneo Layer 1
+                &space_escape ESC SPACE   // Posição 58: Space/Escape (hold-tap)
                 
                 /* Controle direcional - Pressionamento do joystick */
                 &mkp LCLK,         // Posição 59: Pressionar controle direcional/joystick
                 
                 /* Mão direita - Thumb cluster */
-                &space_escape ESC SPACE,  // Posição 60: Space/Escape (hold-tap)
+                &space_escape ESC SPACE   // Posição 60: Space/Escape (hold-tap)
                 &kp ENTER,         // Posição 61: Enter
                 &kp SPACE,         // Posição 62: Space
                 &kp BSPC,          // Posição 63: Backspace
-                &prtscr_desktop 0 0  // Posição 64: Print Screen/Desktop (hold-tap)
+                &prtscr_desktop 0 0   // Posição 64: Print Screen/Desktop (hold-tap)
             >;
             display-name = "layer_1";
             /* Encoder = scroll */
