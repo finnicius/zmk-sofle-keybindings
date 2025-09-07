@@ -59,9 +59,9 @@ layers:
   - $$mdi:keyboard-tab$$
   - layer_1
   - {t: '$$mdi:keyboard-space$$', h: '$$mdi:keyboard-esc$$'}
+  - $$mdi:mouse-left-click-outline$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - $$mdi:keyboard-space$$
-  - {t: '$$mdi:keyboard-return$$', type: enter}
   - layer_2
   - {t: '$$mdi:backspace$$', type: backspace}
   - {t: '&macro_ctrl_prtscr', h: '&macro_show_desktop'}
@@ -141,16 +141,16 @@ layers:
   - KP 7
   - KP 8
   - KP 9
-  - KP DIVIDE
+  - KP DIVIDE,
   - KP MULTIPLY
-  - {t: '$$mdi:backspace$$', type: backspace}
+  - BACKSPACE,
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
+  - '&mmv MOVE_DOWN,'
   - KP 4
   - KP 5
   - KP 6
@@ -163,7 +163,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
+  - '&mmv MOVE_LEFT,'
   - KP 1
   - KP 2
   - KP 3
