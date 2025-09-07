@@ -141,16 +141,16 @@ layers:
   - KP 7
   - KP 8
   - KP 9
-  - KP DIVIDE,
+  - KP DIVIDE
   - KP MULTIPLY
-  - BACKSPACE,
+  - {t: '$$mdi:backspace$$', type: backspace}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - '&mmv MOVE_DOWN,'
+  - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
   - KP 4
   - KP 5
   - KP 6
@@ -163,7 +163,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - '&mmv MOVE_LEFT,'
+  - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
   - KP 1
   - KP 2
   - KP 3
