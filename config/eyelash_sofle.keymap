@@ -213,19 +213,19 @@
         layer_1 {
             bindings = <
                 /* Row 0 - Símbolos | Numpad */
-                &kp GRAVE   &kp APOSTROPHE  &kp TILDE        &kp CARET        &kp DQT           &kp PIPE             
+                &kp ESC     &kp N1          &kp N2           &kp N3           &kp N4           &kp N5                          
                 &mmv MOVE_UP     &kp KP_N7           &kp KP_N8           &kp KP_N9           &kp KP_DIVIDE        &kp KP_MULTIPLY    &kp BACKSPACE
                 
                 /* Row 1 - Símbolos | Numpad */
-                &kp TAB      &kp LPAR        &kp RPAR         &kp LBRC         &kp RBRC          &kp BSLH           
+                &kp TAB      &kp GRAVE       &kp APOSTROPHE   &kp AT           &kp DOLLAR       &kp LPAR           &kp RPAR           
                 &mmv MOVE_DOWN   &kp KP_N4           &kp KP_N5           &kp KP_N6           &kp KP_PLUS         &kp KP_MINUS       &kp DEL
                 
                 /* Row 2 - Símbolos | Numpad */
-                &kp LSHFT   &kp LT          &kp GT           &kp COLON        &kp SEMI         &kp QMARK             
+                &kp LSHFT   &kp PIPE        &kp PERCENT      &kp STAR         &kp PLUS         &kp LBRC           &kp RBRC             
                 &mmv MOVE_LEFT   &kp KP_N1           &kp KP_N2           &kp KP_N3           &kp KP_ENTER        &kp KP_EQUAL       &kp RCTRL
                 
                 /* Row 3 - Símbolos | Numpad */
-                &kp LCTRL   &kp MINUS       &kp STAR         &kp PLUS         &kp UNDERSCORE   &kp FSLH             
+                &kp LCTRL   &kp MINUS       &kp LT           &kp GT           &kp FSLH         &kp LBRACE         &kp RBRACE             
                 &mmv MOVE_RIGHT  &kp KP_N0           &kp KP_DOT          &kp KP_ENTER       &kp SPACE           &kp ENTER          &kp RCTRL
                 
                 /* Row 4 - Transparente | Numpad */
