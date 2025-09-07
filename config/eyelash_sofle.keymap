@@ -213,24 +213,11 @@
         layer_1 {
             bindings = <
                 /* Row 0 - Símbolos | Numpad */
-                &kp ESC     &kp N1          &kp N2           &kp N3           &kp N4           &kp N5                          
-                &mmv MOVE_UP     &kp KP_N7           &kp KP_N8           &kp KP_N9           &kp KP_DIVIDE        &kp KP_MULTIPLY    &kp BACKSPACE
-                
-                /* Row 1 - Símbolos | Numpad */
-                &kp TAB      &kp GRAVE       &kp APOSTROPHE   &kp AT           &kp DOLLAR       &kp LPAR           &kp RPAR           
-                &mmv MOVE_DOWN   &kp KP_N4           &kp KP_N5           &kp KP_N6           &kp KP_PLUS         &kp KP_MINUS       &kp DEL
-                
-                /* Row 2 - Símbolos | Numpad */
-                &kp LSHFT   &kp PIPE        &kp PERCENT      &kp STAR         &kp PLUS         &kp LBRC           &kp RBRC             
-                &mmv MOVE_LEFT   &kp KP_N1           &kp KP_N2           &kp KP_N3           &kp KP_ENTER        &kp KP_EQUAL       &kp RCTRL
-                
-                /* Row 3 - Símbolos | Numpad */
-                &kp LCTRL   &kp MINUS       &kp LT           &kp GT           &kp FSLH         &kp LBRACE         &kp RBRACE             
-                &mmv MOVE_RIGHT  &kp KP_N0           &kp KP_DOT          &kp KP_ENTER       &kp SPACE           &kp ENTER          &kp RCTRL
-                
-                /* Row 4 - Transparente | Numpad */
-                &kp C_MUTE  &kp LGUI        &kp LALT         &kp TAB          &mo 1            &space_escape SPACE ESC             
-                &kp SPACE   &mo 2           &kp BSPC         &kp ENTER        &kp ENTER        &kp BSPC
+                &kp ESC		            &kp GRAVE	&kp APOSTROPHE	&kp AT		&kp DOLLAR		        &kp PIPE	&kp MOVE_UP	    &kp KP_N7	    &kp KP_N8	&kp KP_N9	&kp KP_DIVIDE	&kp KP_MULTIPLY	&kp BACKSPACE
+                &kp TAB		            &kp TILDE	&kp CARET	&kp STAR	&kp PLUS		        &kp MINUS	&kp MOVE_DOWN   &kp KP_N4	    &kp KP_N5	&kp KP_N6	&kp KP_PLUS	&kp KP_MINUS	&kp DEL
+                &kp LSHFT	            &kp LPAR	&kp RPAR	    &kp LBRC	&kp RBRC		        &kp LBRACE	&kp MOVE_LEFT   &kp KP_N1	    &kp KP_N2	&kp KP_N3	&kp KP_ENTER	&kp KP_EQUAL	&kp APOS
+                &kp LCTRL	            &kp LT		&kp GT		    &kp FSLH	&kp RBRACE		        &kp PERCENT	&kp MOVE_RIGHT  &kp KP_N0	    &kp KP_DOT	&kp KP_ENTER	&kp SPACE	&kp ENTER	&kp RSHFT
+                &kp C_MUTE	&kp LGUI	&kp LALT	&kp TAB		    &mo 1		&space_escape ESC SPACE	&kp KP_N0   &kp KP_DOT          &kp KP_ENTER    &mo 2		&kp BSPC	&prtscr_desktop 0 0
             >;
             display-name = "layer1";
             /* Encoder = scroll */
