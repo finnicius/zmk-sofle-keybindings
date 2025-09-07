@@ -66,13 +66,13 @@ layers:
   - {t: '$$mdi:backspace$$', type: backspace}
   - {t: '&macro_ctrl_prtscr', h: '&macro_show_desktop'}
   layer1:
+  - $$mdi:keyboard-esc$$
   - {t: '`', s: '~'}
   - {t: '''', s: '"'}
-  - '~'
-  - ^
-  - '"'
+  - '@'
+  - $
   - '|'
-  - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
+  - MOVE UP
   - KP 7
   - KP 8
   - KP 9
@@ -80,12 +80,12 @@ layers:
   - KP MULTIPLY
   - {t: '$$mdi:backspace$$', type: backspace}
   - $$mdi:keyboard-tab$$
-  - (
-  - )
-  - '{'
-  - '}'
-  - {t: \, s: '|'}
-  - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
+  - '~'
+  - ^
+  - '*'
+  - +
+  - {t: '-', s: _}
+  - MOVE DOWN
   - KP 4
   - KP 5
   - KP 6
@@ -93,43 +93,43 @@ layers:
   - KP MINUS
   - $$mdi:backspace-reverse-outline$$
   - $$mdi:apple-keyboard-shift$$
-  - <
-  - '>'
-  - ':'
-  - {t: ;, s: ':'}
-  - '?'
-  - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
+  - (
+  - )
+  - '{'
+  - '}'
+  - LBRACE
+  - MOVE LEFT
   - KP 1
   - KP 2
   - KP 3
   - KP ENTER
   - KP EQUAL
+  - {t: '''', s: '"'}
   - $$mdi:apple-keyboard-control$$
-  - $$mdi:apple-keyboard-control$$
-  - {t: '-', s: _}
-  - '*'
-  - +
-  - _
+  - <
+  - '>'
   - {t: /, s: '?'}
-  - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
+  - RBRACE
+  - '%'
+  - MOVE RIGHT
   - KP 0
   - KP DOT
   - KP ENTER
   - $$mdi:keyboard-space$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
-  - $$mdi:apple-keyboard-control$$
+  - $$mdi:apple-keyboard-shift$$
   - $$mdi:volume-off$$
   - LGUI
   - $$mdi:apple-keyboard-option$$
   - $$mdi:keyboard-tab$$
   - {t: layer1, type: held}
-  - {t: '$$mdi:keyboard-esc$$', h: '$$mdi:keyboard-space$$'}
-  - $$mdi:keyboard-space$$
+  - {t: '$$mdi:keyboard-space$$', h: '$$mdi:keyboard-esc$$'}
+  - KP 0
+  - KP DOT
+  - KP ENTER
   - layer2
   - {t: '$$mdi:backspace$$', type: backspace}
-  - {t: '$$mdi:keyboard-return$$', type: enter}
-  - {t: '$$mdi:keyboard-return$$', type: enter}
-  - {t: '$$mdi:backspace$$', type: backspace}
+  - {t: '&macro_ctrl_prtscr', h: '&macro_show_desktop'}
   layer2:
   - {t: '`', s: '~'}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -190,7 +190,7 @@ layers:
   - {type: held alternate}
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:mouse-left-click-outline$$
-  - {type: held alternate}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
