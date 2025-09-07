@@ -294,8 +294,8 @@
                 &mkp LCLK         // Posição 59: Pressionar controle direcional/joystick
                 
                 /* Mão direita - Thumb cluster */
-                &kp ENTER         // Posição 60: Enter
-                &kp SPACE         // Posição 61: Space
+                &kp SPACE         // Posição 60: Space
+                &kp ENTER         // Posição 61: Enter
                 &mo 2             // Posição 62: Momentâneo Layer 2
                 &kp BSPC          // Posição 63: Backspace
                 &prtscr_desktop 0 0   // Posição 64: Print Screen/Desktop (hold-tap)
@@ -403,9 +403,9 @@
                 &mkp LCLK         // Posição 59: Pressionar controle direcional/joystick
                 
                 /* Mão direita - Thumb cluster */
-                &space_escape ESC SPACE   // Posição 60: Space/Escape (hold-tap)
+                &kp SPACE   // Posição 60: Space
                 &kp ENTER         // Posição 61: Enter
-                &kp SPACE         // Posição 62: Space
+                &kp RSHFT         // Posição 62: Shift Direito
                 &kp BSPC          // Posição 63: Backspace
                 &prtscr_desktop 0 0   // Posição 64: Print Screen/Desktop (hold-tap)
             >;
