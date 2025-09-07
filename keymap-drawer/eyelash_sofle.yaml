@@ -124,9 +124,9 @@ layers:
   - $$mdi:keyboard-tab$$
   - {t: layer1, type: held}
   - {t: '$$mdi:keyboard-space$$', h: '$$mdi:keyboard-esc$$'}
-  - KP 0
-  - KP DOT
-  - KP ENTER
+  - $$mdi:mouse-left-click-outline$$
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - layer2
   - {t: '$$mdi:backspace$$', type: backspace}
   - {t: '&macro_ctrl_prtscr', h: '&macro_show_desktop'}
