@@ -17,18 +17,18 @@ layers:
   - $$mdi:keyboard-tab$$
   - Q
   - W
-  - E
+  - '&e_complete'
   - R
   - T
   - $$mdi:arrow-down-bold$$
   - Y
-  - U
-  - I
-  - O
+  - '&u_complete'
+  - '&i_complete'
+  - '&o_complete'
   - P
   - $$mdi:backspace-reverse-outline$$
   - {t: '$$mdi:apple-keyboard-caps$$', h: '$$mdi:apple-keyboard-shift$$'}
-  - A
+  - '&a_complete'
   - S
   - D
   - F
@@ -43,7 +43,7 @@ layers:
   - $$mdi:apple-keyboard-control$$
   - Z
   - X
-  - C
+  - '&c_ced'
   - V
   - B
   - $$mdi:arrow-right-bold$$
