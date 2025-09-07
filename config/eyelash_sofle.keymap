@@ -136,15 +136,6 @@
             bindings = <&macro_show_desktop>, <&macro_ctrl_prtscr>;
             display-name = "PrtSc/Desktop";
         };
-        
-        /* Mod-morph para / com ALT -> \ */
-        slash_backslash: slash_backslash {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp FSLH>, <&kp BSLH>;
-            mods = <(MOD_LALT|MOD_RALT)>;
-            display-name = "/ e \\";
-        };
     };
 
     macros {
@@ -210,7 +201,7 @@
 &kp ESC		            &kp N1		&kp N2		&kp N3		&kp N4		            &kp N5		&kp UP_ARROW	    &kp N6		&kp N7		&kp N8		&kp N9		&kp N0		&kp BACKSPACE
 &kp TAB		            &kp Q		&kp W		&e_complete		&kp R		            &kp T		&kp DOWN_ARROW	    &kp Y		&u_complete		&i_complete		&o_complete		&kp P		&kp DEL
 &shift_caps LSHFT CAPS	&a_complete		&kp S		&kp D		&kp F		            &kp G		&kp LEFT_ARROW	    &kp H		&kp J		&kp K		&kp L		&kp SEMI	&kp APOS
-&kp LCTRL	            &kp Z		&kp X		&c_ced		&kp V		            &kp B		&kp RIGHT_ARROW	    &kp N		&kp M		&kp COMMA	&kp DOT		&slash_backslash	&kp RSHFT
+&kp LCTRL	            &kp Z		&kp X		&c_ced		&kp V		            &kp B		&kp RIGHT_ARROW	    &kp N		&kp M		&kp COMMA	&kp DOT		&kp FSLH	&kp RSHFT
 &kp C_MUTE	&kp LGUI	&kp LALT	&kp TAB		&mo 1		&space_escape ESC SPACE	            &kp ENTER           &kp SPACE   &kp ENTER   &mo 2		&kp BSPC	&prtscr_desktop 0 0
             >;
             /* Slider = volume */
@@ -218,61 +209,61 @@
             display-name = "LAYER0";
         };
 
-        /* ===================== LAYER 1 — SIMBOLOS E OPERADORES ===================== */
+        /* ===================== LAYER 1 — SIMBOLOS + NUMPAD ===================== */
         layer_1 {
             bindings = <
-                /* Row 0 - Símbolos especiais (layout espelhado) */
-                &kp ESC		    &kp GRAVE	&kp APOSTROPHE	&kp AT		&kp DOLLAR		&kp PIPE
-                &mmv MOVE_UP
-                &kp PIPE		&kp DOLLAR	&kp AT		&kp APOSTROPHE	&kp GRAVE		&kp ESC
+                /* Row 0 - Símbolos especiais | Numpad 7-9 */
+                &trans		            &kp GRAVE	&kp APOSTROPHE	&kp AT		&kp DOLLAR		        &kp PIPE
+            	&mmv MOVE_UP
+                &kp KP_N7	    &kp KP_N8	&kp KP_N9	&kp KP_DIVIDE	&kp KP_MULTIPLY	&kp BACKSPACE
 
-                /* Row 1 - Operadores matemáticos */
-                &kp TAB		    &kp TILDE	&kp CARET	&kp STAR	&kp LPAR		&kp RPAR
+                /* Row 1 - Operadores matemáticos | Numpad 4-6 */
+                &trans		            &kp TILDE	&kp CARET	&kp STAR	&kp LPAR		        &kp RPAR
                 &mmv MOVE_DOWN
-                &kp RPAR		&kp LPAR	&kp STAR	&kp CARET	&kp TILDE		&kp TAB
+                &kp KP_N4	    &kp KP_N5	&kp KP_N6	&kp KP_PLUS	&kp KP_MINUS	&kp DEL
 
-                /* Row 2 - Operadores e colchetes */
-                &kp LSHFT		&kp PLUS	&kp MINUS	&kp PERCENT	&kp LBKT		&kp RBKT
+                /* Row 2 - Operadores e colchetes | Numpad 1-3 */
+                &trans		            &kp PLUS	&kp MINUS	&kp PERCENT	&kp LBKT		        &kp RBKT
                 &mmv MOVE_LEFT
-                &kp RBKT		&kp LBKT	&kp PERCENT	&kp MINUS	&kp PLUS		&kp RSHFT
+                &kp KP_N1	    &kp KP_N2	&kp KP_N3	&kp KP_ENTER	&kp KP_EQUAL	&kp APOS
 
-                /* Row 3 - Operadores e chaves */
-                &kp LCTRL		&kp FSLH	&kp EQUAL	&kp UNDER	&kp LBRC		&kp RBRC
+                /* Row 3 - Operadores e chaves | Numpad 0 */
+                &trans		&kp FSLH	&kp EQUAL	&kp UNDER	&kp LBRC	&kp RBRC
                 &mmv MOVE_RIGHT
-                &kp RBRC		&kp LBRC	&kp UNDER	&kp EQUAL	&kp FSLH		&kp RCTRL
+                &kp KP_N0	    &kp KP_DOT	&kp KP_ENTER	&kp SPACE	&kp ENTER	&trans
 
-                /* Row 4 - Controles */
-                &kp C_MUTE		&kp LGUI	&kp LALT	&kp TAB		&mo 1		&space_escape ESC SPACE
+                /* Row 4 - Controles | Transparente */
+                &kp C_MUTE	&kp LGUI	&trans		&kp TAB		    &mo 1		&space_escape ESC SPACE
                 &mkp LCLK
-                &space_escape ESC SPACE	&kp ENTER	&kp SPACE	&mo 2		&kp BSPC
+                &trans          &trans          &mo 2		&kp BSPC	&prtscr_desktop 0 0
             >;
             display-name = "layer_1";
             /* Encoder = scroll */
             sensor-bindings = <&scroll_encoder>;
         };
 
-        /* ===================== LAYER 2 — NUMPAD DEDICADO ===================== */
+        /* ===================== LAYER 2 — NAVEGACAO/EDICAO + BACKLIGHT + PRINT ===================== */
         layer_2 {
             bindings = <
-                /* Row 0 - Numpad superior */
+                /* Row 0 */
                 &kp GRAVE   &trans            &trans            &trans            &trans            &trans             
-                &mmv MOVE_UP     &kp KP_N7         &kp KP_N8        &kp KP_N9        &kp KP_DIVIDE    &kp KP_MULTIPLY   &kp BACKSPACE
+                &mmv MOVE_UP     &kp HOME         &kp UP           &kp END          &kp PG_UP        &kp PSCRN        &trans
                 
-                /* Row 1 - Numpad meio superior */
-                &trans      &trans            &trans            &trans            &trans            &trans             
-                &mmv MOVE_DOWN   &kp KP_N4         &kp KP_N5        &kp KP_N6        &kp KP_PLUS      &kp KP_MINUS      &kp DEL
+                /* Row 1 */
+                &trans      &sk LCTRL         &sk LALT          &sk LGUI          &sk LSHFT         &trans             
+                &mmv MOVE_DOWN   &kp LEFT         &kp DOWN         &kp RIGHT        &trans           &kp PG_DN        &trans
                 
-                /* Row 2 - Numpad meio inferior */
-                &trans      &trans            &trans            &trans            &trans            &trans             
-                &mmv MOVE_LEFT   &kp KP_N1         &kp KP_N2        &kp KP_N3        &kp KP_ENTER     &kp KP_EQUAL      &kp APOS
+                /* Row 2 */
+                &trans      &kp LCTRL         &kp LALT          &kp LGUI          &kp LSHFT         &trans             
+                &mmv MOVE_LEFT   &kp DEL          &kp BSPC         &kp K_CUT          &kp K_COPY         &kp K_PASTE        &kp K_UNDO
                 
-                /* Row 3 - Numpad inferior */
+                /* Row 3 */
                 &trans      &trans            &trans            &trans            &trans            &trans             
-                &mmv MOVE_RIGHT  &kp KP_N0         &kp KP_DOT       &kp KP_ENTER     &kp SPACE        &kp ENTER         &trans
+                &mmv MOVE_RIGHT  &bl BL_DEC       &bl BL_INC       &bl BL_TOG       &trans           &trans           &trans
                 
-                /* Row 4 - Controles */
+                /* Row 4 */
                 &trans      &trans            &trans            &trans            &trans            &trans             
-                &kp C_MUTE       &trans           &trans           &trans           &trans           &trans
+                &mkp LCLK        &trans           &trans           &trans           &trans           &trans
             >;
             display-name = "layer_2";
             /* Encoder = scroll */
