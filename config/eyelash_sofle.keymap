@@ -228,12 +228,12 @@
                 &kp KP_N1	    &kp KP_N2	&kp KP_N3	&kp KP_ENTER	&kp KP_EQUAL	&kp APOS
 
                 /* Row 3 - Operadores e chaves | Numpad 0 */
-                &trans		            &kp LT		&kp GT		    &kp FSLH	&kp LBRACE		        &kp RBRACE
+                &trans		            &kp FSLH	&kp LT		&kp GT		    &kp LBRACE		        &kp RBRACE
                 &mmv MOVE_RIGHT
                 &kp KP_N0	    &kp KP_DOT	&kp KP_ENTER	&kp SPACE	&kp ENTER	&trans
 
                 /* Row 4 - Controles | Transparente */
-                &kp C_MUTE	&kp LGUI	&kp LALT	&kp TAB		    &mo 1		&space_escape ESC SPACE
+                &kp C_MUTE	&kp LGUI	&trans		&kp TAB		    &mo 1		&space_escape ESC SPACE
                 &mkp LCLK
                 &trans          &trans          &mo 2		&kp BSPC	&prtscr_desktop 0 0
             >;
