@@ -141,7 +141,7 @@
         slash_backslash: slash_backslash {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp FSLH>, <&kp BSLH>;
+            bindings = <&kp SLASH>, <&kp NON_US_BSLH>;
             mods = <(MOD_LALT|MOD_RALT)>;
             display-name = "/ / \\";
         };
