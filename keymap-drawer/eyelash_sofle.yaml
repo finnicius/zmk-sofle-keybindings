@@ -96,8 +96,8 @@ layers:
   - +
   - {t: '-', s: _}
   - '%'
-  - '{'
-  - '}'
+  - {t: '[', s: '{'}
+  - {t: ']', s: '}'}
   - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
   - KP 1
   - KP 2
@@ -109,8 +109,8 @@ layers:
   - {t: /, s: '?'}
   - <
   - '>'
-  - LBRACE
-  - RBRACE
+  - '{'
+  - '}'
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
   - KP 0
   - KP DOT
