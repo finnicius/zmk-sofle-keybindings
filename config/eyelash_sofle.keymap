@@ -174,7 +174,7 @@
                        <&macro_tap &kp D>,
                        <&macro_release &kp LGUI>;
         };
-        
+          
         /* Macro para CTRL+Print Screen */
         macro_ctrl_prtscr: macro_ctrl_prtscr {
             compatible = "zmk,behavior-macro";
