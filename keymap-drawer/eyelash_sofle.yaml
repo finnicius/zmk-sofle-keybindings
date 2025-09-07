@@ -72,7 +72,7 @@ layers:
   - '@'
   - $
   - '|'
-  - MOVE UP
+  - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
   - KP 7
   - KP 8
   - KP 9
@@ -85,7 +85,7 @@ layers:
   - '*'
   - +
   - {t: '-', s: _}
-  - MOVE DOWN
+  - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
   - KP 4
   - KP 5
   - KP 6
@@ -98,7 +98,7 @@ layers:
   - '{'
   - '}'
   - LBRACE
-  - MOVE LEFT
+  - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
   - KP 1
   - KP 2
   - KP 3
@@ -111,7 +111,7 @@ layers:
   - {t: /, s: '?'}
   - RBRACE
   - '%'
-  - MOVE RIGHT
+  - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
   - KP 0
   - KP DOT
   - KP ENTER
