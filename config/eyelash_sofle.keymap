@@ -272,7 +272,7 @@
                 
                 /* Row 4 - Controles */
                 &trans      &trans            &trans            &trans            &trans            &trans             
-                &kp C_AL_CALC    &trans           &trans           &trans           &trans           &trans
+                &kp C_MUTE       &trans           &trans           &trans           &trans           &trans
             >;
             display-name = "layer_2";
             /* Encoder = scroll */
