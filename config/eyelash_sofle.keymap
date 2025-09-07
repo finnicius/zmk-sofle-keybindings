@@ -202,7 +202,7 @@
 &kp TAB		            &kp Q		&kp W		&kp E		&kp R		            &kp T		&kp DOWN_ARROW	&kp Y		&kp U		&kp I		&kp O		&kp P		&kp DEL
 &shift_caps LSHFT CAPS	&kp A		&kp S		&kp D		&kp F		            &kp G		&kp LEFT_ARROW	&kp H		&kp J		&kp K		&kp L		&kp SEMI	&kp APOS
 &kp LCTRL	            &kp Z		&kp X		&kp C		&kp V		            &kp B		&kp RIGHT_ARROW	&kp N		&kp M		&kp COMMA	&kp DOT		&kp FSLH	&kp RCTRL
-&kp C_MUTE	&kp LGUI	&kp LALT	&kp TAB		&mo 1		&space_escape SPACE ESC	&kp SPACE	&mo 2		&kp BSPC	&prtscr_desktop 0 0
+&kp C_MUTE	&kp LGUI	&kp LALT	&kp TAB		&mo 1		&space_escape SPACE ESC	&kp SPACE	&kp ENTER       &kp ENTER   &mo 2		&kp BSPC	&prtscr_desktop 0 0
             >;
             /* Slider = volume */
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
