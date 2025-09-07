@@ -201,103 +201,103 @@
             bindings = <
                 /* ========== LINHA 1 ========== */
                 /* Mão esquerda - Fileira 1 */
-                &kp ESC,           // Posição 1: ESC
-                &kp N1,            // Posição 2: 1
-                &kp N2,            // Posição 3: 2
-                &kp N3,            // Posição 4: 3
-                &kp N4,            // Posição 5: 4
-                &kp N5,            // Posição 6: 5
+                &kp ESC            // Posição 1: ESC
+                &kp N1             // Posição 2: 1
+                &kp N2             // Posição 3: 2
+                &kp N3             // Posição 4: 3
+                &kp N4             // Posição 5: 4
+                &kp N5             // Posição 6: 5
                 
                 /* Controle direcional - Movimento para cima */
-                &kp UP_ARROW,      // Posição 7: Seta para cima
+                &kp UP_ARROW       // Posição 7: Seta para cima
                 
                 /* Mão direita - Fileira 1 */
-                &kp N6,            // Posição 8: 6
-                &kp N7,            // Posição 9: 7
-                &kp N8,            // Posição 10: 8
-                &kp N9,            // Posição 11: 9
-                &kp N0,            // Posição 12: 0
-                &kp BACKSPACE,     // Posição 13: Backspace
+                &kp N6             // Posição 8: 6
+                &kp N7             // Posição 9: 7
+                &kp N8             // Posição 10: 8
+                &kp N9             // Posição 11: 9
+                &kp N0             // Posição 12: 0
+                &kp BACKSPACE      // Posição 13: Backspace
                 
                 /* ========== LINHA 2 ========== */
                 /* Mão esquerda - Fileira 2 */
-                &kp TAB,           // Posição 14: Tab
-                &kp Q,             // Posição 15: Q
-                &kp W,             // Posição 16: W
-                &e_complete,       // Posição 17: E/é/ê (tap-dance)
-                &kp R,             // Posição 18: R
-                &kp T,             // Posição 19: T
+                &kp TAB           // Posição 14: Tab
+                &kp Q             // Posição 15: Q
+                &kp W             // Posição 16: W
+                &e_complete       // Posição 17: E/é/ê (tap-dance)
+                &kp R             // Posição 18: R
+                &kp T             // Posição 19: T
                 
                 /* Controle direcional - Movimento para baixo */
-                &kp DOWN_ARROW,    // Posição 20: Seta para baixo
+                &kp DOWN_ARROW    // Posição 20: Seta para baixo
                 
                 /* Mão direita - Fileira 2 */
-                &kp Y,             // Posição 21: Y
-                &u_complete,       // Posição 22: U/ú (tap-dance)
-                &i_complete,       // Posição 23: I/í (tap-dance)
-                &o_complete,       // Posição 24: O/ó/ô (tap-dance)
-                &kp P,             // Posição 25: P
-                &kp DEL,           // Posição 26: Delete
+                &kp Y             // Posição 21: Y
+                &u_complete       // Posição 22: U/ú (tap-dance)
+                &i_complete       // Posição 23: I/í (tap-dance)
+                &o_complete       // Posição 24: O/ó/ô (tap-dance)
+                &kp P             // Posição 25: P
+                &kp DEL           // Posição 26: Delete
                 
                 /* ========== LINHA 3 ========== */
                 /* Mão esquerda - Fileira 3 */
                 &shift_caps LSHFT CAPS   // Posição 27: Shift/Caps (hold-tap)
-                &a_complete,       // Posição 28: A/á/à/ã (tap-dance)
-                &kp S,             // Posição 29: S
-                &kp D,             // Posição 30: D
-                &kp F,             // Posição 31: F
-                &kp G,             // Posição 32: G
+                &a_complete       // Posição 28: A/á/à/ã (tap-dance)
+                &kp S             // Posição 29: S
+                &kp D             // Posição 30: D
+                &kp F             // Posição 31: F
+                &kp G             // Posição 32: G
                 
                 /* Controle direcional - Movimento para esquerda */
-                &kp LEFT_ARROW,    // Posição 33: Seta para esquerda
+                &kp LEFT_ARROW    // Posição 33: Seta para esquerda
                 
                 /* Mão direita - Fileira 3 */
-                &kp H,             // Posição 34: H
-                &kp J,             // Posição 35: J
-                &kp K,             // Posição 36: K
-                &kp L,             // Posição 37: L
-                &kp SEMI,          // Posição 38: Ponto e vírgula
-                &kp APOS,          // Posição 39: Aspas simples
+                &kp H             // Posição 34: H
+                &kp J             // Posição 35: J
+                &kp K             // Posição 36: K
+                &kp L             // Posição 37: L
+                &kp SEMI          // Posição 38: Ponto e vírgula
+                &kp APOS          // Posição 39: Aspas simples
                 
                 /* ========== LINHA 4 ========== */
                 /* Mão esquerda - Fileira 4 */
-                &kp LCTRL,         // Posição 40: Ctrl esquerdo
-                &kp Z,             // Posição 41: Z
-                &kp X,             // Posição 42: X
-                &c_ced,            // Posição 43: C/ç/Ç (tap-dance)
-                &kp V,             // Posição 44: V
-                &kp B,             // Posição 45: B
+                &kp LCTRL         // Posição 40: Ctrl esquerdo
+                &kp Z             // Posição 41: Z
+                &kp X             // Posição 42: X
+                &c_ced            // Posição 43: C/ç/Ç (tap-dance)
+                &kp V             // Posição 44: V
+                &kp B             // Posição 45: B
                 
                 /* Controle direcional - Movimento para direita */
-                &kp RIGHT_ARROW,   // Posição 46: Seta para direita
+                &kp RIGHT_ARROW   // Posição 46: Seta para direita
                 
                 /* Mão direita - Fileira 4 */
-                &kp N,             // Posição 47: N
-                &kp M,             // Posição 48: M
-                &kp COMMA,         // Posição 49: Vírgula
-                &kp DOT,           // Posição 50: Ponto
-                &kp FSLH,          // Posição 51: Barra
-                &kp RSHFT,         // Posição 52: Shift direito
+                &kp N             // Posição 47: N
+                &kp M             // Posição 48: M
+                &kp COMMA         // Posição 49: Vírgula
+                &kp DOT           // Posição 50: Ponto
+                &kp FSLH          // Posição 51: Barra
+                &kp RSHFT         // Posição 52: Shift direito
                 
                 /* ========== LINHA 5 ========== */
                 /* Encoder - Pressionamento do volume knob */
-                &kp C_MUTE,        // Posição 53: Pressionar encoder/volume knob
+                &kp C_MUTE        // Posição 53: Pressionar encoder/volume knob
                 
                 /* Mão esquerda - Thumb cluster */
-                &kp LGUI,          // Posição 54: GUI esquerdo
-                &kp LALT,          // Posição 55: Alt esquerdo
-                &kp TAB,           // Posição 56: Tab
+                &kp LGUI           // Posição 54: GUI esquerdo
+                &kp LALT           // Posição 55: Alt esquerdo
+                &kp TAB            // Posição 56: Tab
                 &mo 1              // Posição 57: Momentâneo Layer 1
                 &space_escape ESC SPACE   // Posição 58: Space/Escape (hold-tap)
                 
                 /* Controle direcional - Pressionamento do joystick */
-                &mkp LCLK,         // Posição 59: Pressionar controle direcional/joystick
+                &mkp LCLK         // Posição 59: Pressionar controle direcional/joystick
                 
                 /* Mão direita - Thumb cluster */
-                &kp ENTER,         // Posição 60: Enter
-                &kp SPACE,         // Posição 61: Space
-                &mo 2              // Posição 62: Momentâneo Layer 2
-                &kp BSPC,          // Posição 63: Backspace
+                &kp ENTER         // Posição 60: Enter
+                &kp SPACE         // Posição 61: Space
+                &mo 2             // Posição 62: Momentâneo Layer 2
+                &kp BSPC          // Posição 63: Backspace
                 &prtscr_desktop 0 0   // Posição 64: Print Screen/Desktop (hold-tap)
             >;
             /* Slider = volume */
@@ -310,103 +310,103 @@
             bindings = <
                 /* ========== LINHA 1 ========== */
                 /* Mão esquerda - Fileira 1 */
-                &kp ESC,           // Posição 1: ESC
-                &kp GRAVE,         // Posição 2: Grave
-                &kp APOSTROPHE,    // Posição 3: Aspas simples
-                &kp AT,            // Posição 4: @
-                &kp DOLLAR,        // Posição 5: $
-                &kp PIPE,          // Posição 6: |
+                &kp ESC            // Posição 1: ESC
+                &kp GRAVE         // Posição 2: Grave
+                &kp APOSTROPHE    // Posição 3: Aspas simples
+                &kp AT            // Posição 4: @
+                &kp DOLLAR        // Posição 5: $
+                &kp PIPE          // Posição 6: |
                 
                 /* Controle direcional - Movimento para cima */
-                &mmv MOVE_UP,      // Posição 7: Mouse move up
+                &mmv MOVE_UP      // Posição 7: Mouse move up
                 
                 /* Mão direita - Fileira 1 */
-                &kp PIPE,          // Posição 8: |
-                &kp DOLLAR,        // Posição 9: $
-                &kp AT,            // Posição 10: @
-                &kp APOSTROPHE,    // Posição 11: Aspas simples
-                &kp GRAVE,         // Posição 12: Grave
-                &kp ESC,           // Posição 13: ESC
+                &kp PIPE          // Posição 8: |
+                &kp DOLLAR        // Posição 9: $
+                &kp AT            // Posição 10: @
+                &kp APOSTROPHE    // Posição 11: Aspas simples
+                &kp GRAVE         // Posição 12: Grave
+                &kp ESC            // Posição 13: ESC
                 
                 /* ========== LINHA 2 ========== */
                 /* Mão esquerda - Fileira 2 */
-                &kp TAB,           // Posição 14: Tab
-                &kp TILDE,         // Posição 15: ~
-                &kp CARET,         // Posição 16: ^
-                &kp STAR,          // Posição 17: *
-                &kp LPAR,          // Posição 18: (
-                &kp RPAR,          // Posição 19: )
+                &kp TAB            // Posição 14: Tab
+                &kp TILDE         // Posição 15: ~
+                &kp CARET         // Posição 16: ^
+                &kp STAR          // Posição 17: *
+                &kp LPAR          // Posição 18: (
+                &kp RPAR          // Posição 19: )
                 
                 /* Controle direcional - Movimento para baixo */
-                &mmv MOVE_DOWN,    // Posição 20: Mouse move down
+                &mmv MOVE_DOWN    // Posição 20: Mouse move down
                 
                 /* Mão direita - Fileira 2 */
-                &kp LPAR,          // Posição 21: (
-                &kp RPAR,          // Posição 22: )
-                &kp STAR,          // Posição 23: *
-                &kp CARET,         // Posição 24: ^
-                &kp TILDE,         // Posição 25: ~
-                &kp TAB,           // Posição 26: Tab
+                &kp LPAR          // Posição 21: (
+                &kp RPAR          // Posição 22: )
+                &kp STAR          // Posição 23: *
+                &kp CARET         // Posição 24: ^
+                &kp TILDE         // Posição 25: ~
+                &kp TAB            // Posição 26: Tab
                 
                 /* ========== LINHA 3 ========== */
                 /* Mão esquerda - Fileira 3 */
-                &kp LSHFT,         // Posição 27: Shift esquerdo
-                &kp PLUS,          // Posição 28: +
-                &kp MINUS,         // Posição 29: -
-                &kp PERCENT,       // Posição 30: %
-                &kp LBKT,          // Posição 31: [
-                &kp RBKT,          // Posição 32: ]
+                &kp LSHFT         // Posição 27: Shift esquerdo
+                &kp PLUS          // Posição 28: +
+                &kp MINUS         // Posição 29: -
+                &kp PERCENT       // Posição 30: %
+                &kp LBKT          // Posição 31: [
+                &kp RBKT          // Posição 32: ]
                 
                 /* Controle direcional - Movimento para esquerda */
-                &mmv MOVE_LEFT,    // Posição 33: Mouse move left
+                &mmv MOVE_LEFT    // Posição 33: Mouse move left
                 
                 /* Mão direita - Fileira 3 */
-                &kp LBKT,          // Posição 34: [
-                &kp RBKT,          // Posição 35: ]
-                &kp PERCENT,       // Posição 36: %
-                &kp MINUS,         // Posição 37: -
-                &kp PLUS,          // Posição 38: +
-                &kp RSHFT,         // Posição 39: Shift direito
+                &kp LBKT          // Posição 34: [
+                &kp RBKT          // Posição 35: ]
+                &kp PERCENT       // Posição 36: %
+                &kp MINUS         // Posição 37: -
+                &kp PLUS          // Posição 38: +
+                &kp RSHFT         // Posição 39: Shift direito
                 
                 /* ========== LINHA 4 ========== */
                 /* Mão esquerda - Fileira 4 */
-                &kp LCTRL,         // Posição 40: Ctrl esquerdo
-                &kp FSLH,          // Posição 41: /
-                &kp EQUAL,         // Posição 42: =
-                &kp UNDER,         // Posição 43: _
-                &kp LBRC,          // Posição 44: {
-                &kp RBRC,          // Posição 45: }
+                &kp LCTRL         // Posição 40: Ctrl esquerdo
+                &kp FSLH          // Posição 41: /
+                &kp EQUAL         // Posição 42: =
+                &kp UNDER         // Posição 43: _
+                &kp LBRC          // Posição 44: {
+                &kp RBRC          // Posição 45: }
                 
                 /* Controle direcional - Movimento para direita */
-                &mmv MOVE_RIGHT,   // Posição 46: Mouse move right
+                &mmv MOVE_RIGHT   // Posição 46: Mouse move right
                 
                 /* Mão direita - Fileira 4 */
-                &kp LBRC,          // Posição 47: {
-                &kp RBRC,          // Posição 48: }
-                &kp UNDER,         // Posição 49: _
-                &kp EQUAL,         // Posição 50: =
-                &kp BACKSLASH,     // Posição 51: \
-                &kp RCTRL,         // Posição 52: Ctrl direito
+                &kp LBRC          // Posição 47: {
+                &kp RBRC          // Posição 48: }
+                &kp UNDER         // Posição 49: _
+                &kp EQUAL         // Posição 50: =
+                &kp BACKSLASH     // Posição 51: \
+                &kp RCTRL         // Posição 52: Ctrl direito
                 
                 /* ========== LINHA 5 ========== */
                 /* Encoder - Pressionamento do volume knob */
-                &kp C_MUTE,        // Posição 53: Pressionar encoder/volume knob
+                &kp C_MUTE        // Posição 53: Pressionar encoder/volume knob
                 
                 /* Mão esquerda - Thumb cluster */
-                &kp LGUI,          // Posição 54: GUI esquerdo
-                &kp LALT,          // Posição 55: Alt esquerdo
-                &kp TAB,           // Posição 56: Tab
+                &kp LGUI          // Posição 54: GUI esquerdo
+                &kp LALT          // Posição 55: Alt esquerdo
+                &kp TAB            // Posição 56: Tab
                 &mo 1              // Posição 57: Momentâneo Layer 1
                 &space_escape ESC SPACE   // Posição 58: Space/Escape (hold-tap)
                 
                 /* Controle direcional - Pressionamento do joystick */
-                &mkp LCLK,         // Posição 59: Pressionar controle direcional/joystick
+                &mkp LCLK         // Posição 59: Pressionar controle direcional/joystick
                 
                 /* Mão direita - Thumb cluster */
                 &space_escape ESC SPACE   // Posição 60: Space/Escape (hold-tap)
-                &kp ENTER,         // Posição 61: Enter
-                &kp SPACE,         // Posição 62: Space
-                &kp BSPC,          // Posição 63: Backspace
+                &kp ENTER         // Posição 61: Enter
+                &kp SPACE         // Posição 62: Space
+                &kp BSPC          // Posição 63: Backspace
                 &prtscr_desktop 0 0   // Posição 64: Print Screen/Desktop (hold-tap)
             >;
             display-name = "layer_1";
@@ -419,103 +419,103 @@
             bindings = <
                 /* ========== LINHA 1 ========== */
                 /* Mão esquerda - Fileira 1 */
-                &kp GRAVE,         // Posição 1: Grave
-                &trans,            // Posição 2: Transparente
-                &trans,            // Posição 3: Transparente
-                &trans,            // Posição 4: Transparente
-                &trans,            // Posição 5: Transparente
-                &trans,            // Posição 6: Transparente
+                &kp GRAVE         // Posição 1: Grave
+                &trans            // Posição 2: Transparente
+                &trans            // Posição 3: Transparente
+                &trans            // Posição 4: Transparente
+                &trans            // Posição 5: Transparente
+                &trans            // Posição 6: Transparente
                 
                 /* Controle direcional - Movimento para cima */
-                &mmv MOVE_UP,      // Posição 7: Mouse move up
+                &mmv MOVE_UP      // Posição 7: Mouse move up
                 
                 /* Mão direita - Fileira 1 */
-                &kp KP_N7,         // Posição 8: Numpad 7
-                &kp KP_N8,         // Posição 9: Numpad 8
-                &kp KP_N9,         // Posição 10: Numpad 9
+                &kp KP_N7         // Posição 8: Numpad 7
+                &kp KP_N8         // Posição 9: Numpad 8
+                &kp KP_N9         // Posição 10: Numpad 9
                 &kp KP_DIVIDE,     // Posição 11: Numpad /
-                &kp KP_MULTIPLY,   // Posição 12: Numpad *
+                &kp KP_MULTIPLY   // Posição 12: Numpad *
                 &kp BACKSPACE,     // Posição 13: Backspace
                 
                 /* ========== LINHA 2 ========== */
                 /* Mão esquerda - Fileira 2 */
-                &trans,            // Posição 14: Transparente
-                &trans,            // Posição 15: Transparente
-                &trans,            // Posição 16: Transparente
-                &trans,            // Posição 17: Transparente
-                &trans,            // Posição 18: Transparente
-                &trans,            // Posição 19: Transparente
+                &trans            // Posição 14: Transparente
+                &trans            // Posição 15: Transparente
+                &trans            // Posição 16: Transparente
+                &trans            // Posição 17: Transparente
+                &trans            // Posição 18: Transparente
+                &trans            // Posição 19: Transparente
                 
                 /* Controle direcional - Movimento para baixo */
                 &mmv MOVE_DOWN,    // Posição 20: Mouse move down
                 
                 /* Mão direita - Fileira 2 */
-                &kp KP_N4,         // Posição 21: Numpad 4
-                &kp KP_N5,         // Posição 22: Numpad 5
-                &kp KP_N6,         // Posição 23: Numpad 6
-                &kp KP_PLUS,       // Posição 24: Numpad +
-                &kp KP_MINUS,      // Posição 25: Numpad -
-                &kp DEL,           // Posição 26: Delete
+                &kp KP_N4         // Posição 21: Numpad 4
+                &kp KP_N5         // Posição 22: Numpad 5
+                &kp KP_N6         // Posição 23: Numpad 6
+                &kp KP_PLUS       // Posição 24: Numpad +
+                &kp KP_MINUS      // Posição 25: Numpad -
+                &kp DEL            // Posição 26: Delete
                 
                 /* ========== LINHA 3 ========== */
                 /* Mão esquerda - Fileira 3 */
-                &trans,            // Posição 27: Transparente
-                &trans,            // Posição 28: Transparente
-                &trans,            // Posição 29: Transparente
-                &trans,            // Posição 30: Transparente
-                &trans,            // Posição 31: Transparente
-                &trans,            // Posição 32: Transparente
+                &trans            // Posição 27: Transparente
+                &trans            // Posição 28: Transparente
+                &trans            // Posição 29: Transparente
+                &trans            // Posição 30: Transparente
+                &trans            // Posição 31: Transparente
+                &trans            // Posição 32: Transparente
                 
                 /* Controle direcional - Movimento para esquerda */
                 &mmv MOVE_LEFT,    // Posição 33: Mouse move left
                 
                 /* Mão direita - Fileira 3 */
-                &kp KP_N1,         // Posição 34: Numpad 1
-                &kp KP_N2,         // Posição 35: Numpad 2
-                &kp KP_N3,         // Posição 36: Numpad 3
-                &kp KP_ENTER,      // Posição 37: Numpad Enter
-                &kp KP_EQUAL,      // Posição 38: Numpad =
-                &kp APOS,          // Posição 39: Aspas simples
+                &kp KP_N1         // Posição 34: Numpad 1
+                &kp KP_N2         // Posição 35: Numpad 2
+                &kp KP_N3         // Posição 36: Numpad 3
+                &kp KP_ENTER      // Posição 37: Numpad Enter
+                &kp KP_EQUAL      // Posição 38: Numpad =
+                &kp APOS          // Posição 39: Aspas simples
                 
                 /* ========== LINHA 4 ========== */
                 /* Mão esquerda - Fileira 4 */
-                &trans,            // Posição 40: Transparente
-                &trans,            // Posição 41: Transparente
-                &trans,            // Posição 42: Transparente
-                &trans,            // Posição 43: Transparente
-                &trans,            // Posição 44: Transparente
-                &trans,            // Posição 45: Transparente
+                &trans            // Posição 40: Transparente
+                &trans            // Posição 41: Transparente
+                &trans            // Posição 42: Transparente
+                &trans            // Posição 43: Transparente
+                &trans            // Posição 44: Transparente
+                &trans            // Posição 45: Transparente
                 
                 /* Controle direcional - Movimento para direita */
-                &mmv MOVE_RIGHT,   // Posição 46: Mouse move right
+                &mmv MOVE_RIGHT   // Posição 46: Mouse move right
                 
                 /* Mão direita - Fileira 4 */
-                &kp KP_N0,         // Posição 47: Numpad 0
-                &kp KP_DOT,        // Posição 48: Numpad .
-                &kp KP_ENTER,      // Posição 49: Numpad Enter
-                &kp SPACE,         // Posição 50: Space
-                &kp ENTER,         // Posição 51: Enter
-                &trans,            // Posição 52: Transparente
+                &kp KP_N0         // Posição 47: Numpad 0
+                &kp KP_DOT        // Posição 48: Numpad .
+                &kp KP_ENTER      // Posição 49: Numpad Enter
+                &kp SPACE         // Posição 50: Space
+                &kp ENTER         // Posição 51: Enter
+                &trans            // Posição 52: Transparente
                 
                 /* ========== LINHA 5 ========== */
                 /* Encoder - Pressionamento do volume knob */
-                &kp C_MUTE,        // Posição 53: Pressionar encoder/volume knob
+                &kp C_MUTE        // Posição 53: Pressionar encoder/volume knob
                 
                 /* Mão esquerda - Thumb cluster */
-                &trans,            // Posição 54: Transparente
-                &trans,            // Posição 55: Transparente
-                &trans,            // Posição 56: Transparente
-                &trans,            // Posição 57: Transparente
-                &trans,            // Posição 58: Transparente
+                &trans            // Posição 54: Transparente
+                &trans            // Posição 55: Transparente
+                &trans            // Posição 56: Transparente
+                &trans            // Posição 57: Transparente
+                &trans            // Posição 58: Transparente
                 
                 /* Controle direcional - Pressionamento do joystick */
-                &mkp LCLK,         // Posição 59: Pressionar controle direcional/joystick
+                &mkp LCLK         // Posição 59: Pressionar controle direcional/joystick
                 
                 /* Mão direita - Thumb cluster */
-                &trans,            // Posição 60: Transparente
-                &trans,            // Posição 61: Transparente
-                &trans,            // Posição 62: Transparente
-                &trans,            // Posição 63: Transparente
+                &trans            // Posição 60: Transparente
+                &trans            // Posição 61: Transparente
+                &trans            // Posição 62: Transparente
+                &trans            // Posição 63: Transparente
                 &trans             // Posição 64: Transparente
             >;
             display-name = "layer_2";
