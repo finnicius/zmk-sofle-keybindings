@@ -201,8 +201,8 @@
 &kp ESC		            &kp N1		&kp N2		&kp N3		&kp N4		            &kp N5		&kp UP_ARROW	    &kp N6		&kp N7		&kp N8		&kp N9		&kp N0		&kp BACKSPACE
 &kp TAB		            &kp Q		&kp W		&e_complete		&kp R		            &kp T		&kp DOWN_ARROW	    &kp Y		&u_complete		&i_complete		&o_complete		&kp P		&kp DEL
 &shift_caps LSHFT CAPS	&a_complete		&kp S		&kp D		&kp F		            &kp G		&kp LEFT_ARROW	    &kp H		&kp J		&kp K		&kp L		&kp SEMI	&kp APOS
-&kp LCTRL	            &kp Z		&kp X		&c_ced		&kp V		            &kp B		&kp RIGHT_ARROW	    &kp N		&kp M		&kp COMMA	&kp DOT		&kp FSLH	&kp RCTRL
-&kp C_MUTE	&kp LGUI	&kp LALT	&kp TAB		&mo 1		&space_escape SPACE ESC	            &kp ENTER           &kp SPACE   &kp ENTER   &mo 2		&kp BSPC	&prtscr_desktop 0 0
+&kp LCTRL	            &kp Z		&kp X		&c_ced		&kp V		            &kp B		&kp RIGHT_ARROW	    &kp N		&kp M		&kp COMMA	&kp DOT		&kp FSLH	&kp RSHFT
+&kp C_MUTE	&kp LGUI	&kp LALT	&kp TAB		&mo 1		&space_escape ESC SPACE	            &kp ENTER           &kp SPACE   &kp ENTER   &mo 2		&kp BSPC	&prtscr_desktop 0 0
             >;
             /* Slider = volume */
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
@@ -263,32 +263,6 @@
             display-name = "layer2";
             /* Encoder = scroll */
             sensor-bindings = <&scroll_encoder>;
-        };
-
-        /* ===================== LAYER 3 — ACENTOS (opcional) ===================== */
-        layer_3 {
-            bindings = <
-                /* Row 0 */
-                &trans      &trans           &trans           &trans           &trans           &trans             
-                &trans           &trans           &trans           &trans           &trans           &trans           &trans
-                
-                /* Row 1 */
-                &trans      &kp APOSTROPHE        &kp GRAVE        &kp TILDE        &kp CARET        &kp DQT            
-                &trans           &macro_a_acute   &macro_e_acute   &macro_i_acute   &macro_o_acute   &macro_u_acute   &trans
-                
-                /* Row 2 */
-                &trans      &macro_a_grave   &macro_a_tilde   &macro_a_circ    &macro_e_circ    &macro_o_circ      
-                &trans           &trans           &trans           &trans           &trans           &trans           &trans
-                
-                /* Row 3 */
-                &trans      &trans           &trans           &c_ced           &trans           &trans             
-                &trans           &trans           &trans           &trans           &trans           &trans           &trans
-                
-                /* Row 4 */
-                &trans      &trans           &trans           &trans           &trans           &trans             
-                &trans           &trans           &trans           &trans           &trans           &trans
-            >;
-            display-name = "layer3";
         };
     };
 }; 
