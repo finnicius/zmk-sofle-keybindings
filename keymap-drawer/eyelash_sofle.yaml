@@ -59,8 +59,8 @@ layers:
   - $$mdi:keyboard-tab$$
   - layer1
   - {t: '$$mdi:keyboard-esc$$', h: '$$mdi:keyboard-space$$'}
-  - $$mdi:keyboard-space$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
+  - $$mdi:keyboard-space$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - layer2
   - {t: '$$mdi:backspace$$', type: backspace}
