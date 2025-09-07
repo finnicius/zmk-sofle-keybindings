@@ -433,9 +433,9 @@
                 &kp KP_N7         // Posição 8: Numpad 7
                 &kp KP_N8         // Posição 9: Numpad 8
                 &kp KP_N9         // Posição 10: Numpad 9
-                &kp KP_DIVIDE,     // Posição 11: Numpad /
+                &kp KP_DIVIDE     // Posição 11: Numpad /
                 &kp KP_MULTIPLY   // Posição 12: Numpad *
-                &kp BACKSPACE,     // Posição 13: Backspace
+                &kp BACKSPACE     // Posição 13: Backspace
                 
                 /* ========== LINHA 2 ========== */
                 /* Mão esquerda - Fileira 2 */
@@ -447,7 +447,7 @@
                 &trans            // Posição 19: Transparente
                 
                 /* Controle direcional - Movimento para baixo */
-                &mmv MOVE_DOWN,    // Posição 20: Mouse move down
+                &mmv MOVE_DOWN    // Posição 20: Mouse move down
                 
                 /* Mão direita - Fileira 2 */
                 &kp KP_N4         // Posição 21: Numpad 4
@@ -467,7 +467,7 @@
                 &trans            // Posição 32: Transparente
                 
                 /* Controle direcional - Movimento para esquerda */
-                &mmv MOVE_LEFT,    // Posição 33: Mouse move left
+                &mmv MOVE_LEFT    // Posição 33: Mouse move left
                 
                 /* Mão direita - Fileira 3 */
                 &kp KP_N1         // Posição 34: Numpad 1
