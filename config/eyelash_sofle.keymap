@@ -228,7 +228,7 @@
                 &kp KP_N1	    &kp KP_N2	&kp KP_N3	&kp KP_ENTER	&kp KP_EQUAL	&kp APOS
 
                 /* Row 3 - Operadores e chaves | Numpad 0 */
-                &trans		&kp FSLH	&kp LT	&kp GT	&kp LBRC	&kp RBRC
+                &trans		&kp FSLH	&kp EQUAL	&kp UNDER	&kp LBRC	&kp RBRC
                 &mmv MOVE_RIGHT
                 &kp KP_N0	    &kp KP_DOT	&kp KP_ENTER	&kp SPACE	&kp ENTER	&trans
 
@@ -237,7 +237,7 @@
                 &mkp LCLK
                 &trans          &trans          &mo 2		&kp BSPC	&prtscr_desktop 0 0
             >;
-            display-name = "layer1";
+            display-name = "layer_1";
             /* Encoder = scroll */
             sensor-bindings = <&scroll_encoder>;
         };
@@ -265,7 +265,7 @@
                 &trans      &trans            &trans            &trans            &trans            &trans             
                 &mkp LCLK        &trans           &trans           &trans           &trans           &trans
             >;
-            display-name = "layer2";
+            display-name = "layer_2";
             /* Encoder = scroll */
             sensor-bindings = <&scroll_encoder>;
         };
