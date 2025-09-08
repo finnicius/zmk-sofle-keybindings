@@ -8,8 +8,8 @@ draw_config:
   combo_h: 28.0
   key_rx: 8.0
   key_ry: 8.0
-  inner_pad_w: 4.0
-  inner_pad_h: 4.0
+  inner_pad_w: 6.0
+  inner_pad_h: 6.0
   outer_pad_w: 50.0
   outer_pad_h: 65.0
   line_spacing: 1.4
@@ -42,54 +42,25 @@ draw_config:
       stroke: none;
     }
 
-    /* Modifier keys with colors - using class-based approach */
-    rect.key.modifier-ctrl {
-      fill: #fef3c7 !important;
+    /* Simple colored borders for modifier keys */
+    rect.key[data-key*="ctrl"], rect.key[data-key*="control"] {
       stroke: #f59e0b !important;
-      stroke-width: 2 !important;
+      stroke-width: 3 !important;
     }
 
-    rect.key.modifier-alt {
-      fill: #f0fdf4 !important;
+    rect.key[data-key*="alt"] {
       stroke: #10b981 !important;
-      stroke-width: 2 !important;
+      stroke-width: 3 !important;
     }
 
-    rect.key.modifier-shift {
-      fill: #fdf2f8 !important;
+    rect.key[data-key*="shift"] {
       stroke: #ec4899 !important;
-      stroke-width: 2 !important;
+      stroke-width: 3 !important;
     }
 
-    rect.key.modifier-gui {
-      fill: #ede9fe !important;
+    rect.key[data-key*="gui"], rect.key[data-key*="LGUI"], rect.key[data-key*="RGUI"] {
       stroke: #8b5cf6 !important;
-      stroke-width: 2 !important;
-    }
-
-    /* Alternative approach using text content */
-    rect.key:has(text:contains("Ctrl")) {
-      fill: #fef3c7 !important;
-      stroke: #f59e0b !important;
-      stroke-width: 2 !important;
-    }
-
-    rect.key:has(text:contains("Alt")) {
-      fill: #f0fdf4 !important;
-      stroke: #10b981 !important;
-      stroke-width: 2 !important;
-    }
-
-    rect.key:has(text:contains("Shift")) {
-      fill: #fdf2f8 !important;
-      stroke: #ec4899 !important;
-      stroke-width: 2 !important;
-    }
-
-    rect.key:has(text:contains("LGUI")) {
-      fill: #ede9fe !important;
-      stroke: #8b5cf6 !important;
-      stroke-width: 2 !important;
+      stroke-width: 3 !important;
     }
 
     /* Clean key styling without inner effects */
@@ -165,8 +136,18 @@ draw_config:
       fill: #000000;
     }
 
-    /* Specific styling for Windows icon */
+    /* Windows icon styling */
+    .windows-icon {
+      fill: #0078d4 !important;
+    }
+
+    /* Specific styling for Windows icon in LGUI */
     text:contains("microsoft-windows") {
+      fill: #0078d4 !important;
+    }
+
+    /* Alternative approach for Windows icon */
+    svg text[data-icon*="windows"] {
       fill: #0078d4 !important;
     }
 
@@ -177,9 +158,9 @@ draw_config:
       stroke-width: 2;
     }
 
-    /* Enhanced positioning for better alignment */
+    /* Better vertical centering for stacked content */
     .sym_sub_text.tap {
-      translate: -8px -8px;
+      translate: -8px -12px;
       font-size: 18px;
       font-weight: 600;
       text-anchor: middle;
@@ -187,7 +168,7 @@ draw_config:
       fill: #1f2937;
     }
     .sym_sub_text.shifted {
-      translate: 8px 8px;
+      translate: 8px 12px;
       font-size: 12px;
       opacity: 0.8;
       text-anchor: middle;
@@ -195,31 +176,39 @@ draw_config:
       fill: #6b7280;
     }
 
-    /* Better positioning for tap/hold behaviors */
+    /* Better positioning for tap/hold behaviors with vertical centering */
     .tap_dance.tap {
-      translate: -8px -8px;
+      translate: -8px -12px;
       font-size: 14px;
       font-weight: 600;
       fill: #059669;
+      text-anchor: middle;
+      dominant-baseline: central;
     }
     .tap_dance.shifted {
-      translate: 8px 8px;
+      translate: 8px 12px;
       font-size: 12px;
       fill: #dc2626;
       font-weight: 600;
+      text-anchor: middle;
+      dominant-baseline: central;
     }
 
-    /* Improved toggle positioning */
+    /* Improved toggle positioning with vertical centering */
     .toggle.shifted {
-      translate: -10px 10px;
+      translate: -10px 12px;
       font-size: 12px;
       fill: #6b7280;
+      text-anchor: middle;
+      dominant-baseline: central;
     }
     .toggle.hold {
-      translate: 10px -10px;
+      translate: 10px -12px;
       font-size: 12px;
       fill: #dc2626;
       font-weight: 600;
+      text-anchor: middle;
+      dominant-baseline: central;
     }
 
   shrink_wide_legends: 8
@@ -262,7 +251,7 @@ parse_config:
     # Home rows
     "&hm LEFT_GUI A":
       tap: "A"
-      shifted: $$mdi:apple-keyboard-command$$
+      shifted: $$mdi:microsoft-windows$$
     "&hm LEFT_ALT S":
       tap: "S"
       shifted: $$mdi:apple-keyboard-option$$
@@ -285,6 +274,10 @@ parse_config:
     "&hm LG(LS(V)) P":
       tap: "P"
       shifted: $$mdi:content-copy$$
+
+    # LGUI key mapping
+    "&kp LGUI":
+      tap: $$mdi:microsoft-windows$$
     # Mouse
     "&msc SCRL_UP":
       tap: $$mdi:pan-up$$
@@ -531,6 +524,7 @@ parse_config:
     LCMD: $$mdi:apple-keyboard-command$$
     LG: $$mdi:microsoft-windows$$
     LEFT_GUI: $$mdi:microsoft-windows$$
+    LGUI: $$mdi:microsoft-windows$$
     LEFT_COMMAND: $$mdi:apple-keyboard-command$$
     RCTRL: $$mdi:apple-keyboard-control$$
     RIGHT_CONTROL: $$mdi:apple-keyboard-control$$
@@ -541,6 +535,7 @@ parse_config:
     RSHFT: $$mdi:apple-keyboard-shift$$
     RCMD: $$mdi:apple-keyboard-command$$
     RG: $$mdi:microsoft-windows$$
+    RGUI: $$mdi:microsoft-windows$$
     PSCRN: $$mdi:printer-outline$$
     RIGHT_COMMAND: $$mdi:apple-keyboard-command$$
     PAGE_UP:
