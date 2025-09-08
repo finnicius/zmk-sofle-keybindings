@@ -54,7 +54,7 @@ layers:
   - {t: /, s: '?'}
   - $$mdi:apple-keyboard-shift$$
   - $$mdi:volume-off$$
-  - LGUI
+  - $$mdi:microsoft-windows$$
   - $$mdi:apple-keyboard-option$$
   - $$mdi:keyboard-tab$$
   - layer_1
@@ -119,7 +119,7 @@ layers:
   - {t: \, s: '|'}
   - $$mdi:apple-keyboard-control$$
   - $$mdi:volume-off$$
-  - LGUI
+  - $$mdi:microsoft-windows$$
   - $$mdi:apple-keyboard-option$$
   - $$mdi:keyboard-tab$$
   - {t: layer_1, type: held}
