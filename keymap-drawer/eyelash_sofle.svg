@@ -199,7 +199,7 @@ path.combo {
 
 /* Main SVG styling with light theme */
 svg.keymap {
-  font-family: IBM Plex Mono, Ubuntu Mono, Inconsolata, Consolas, Liberation Mono, Menlo, monospace;
+  font-family:'JetBrains Mono', 'IBM Plex Mono', 'Ubuntu Mono', 'Inconsolata', 'Consolas', 'Liberation Mono', 'Menlo', monospace;
   font-size: 12px;
   font-weight: bold;
   text-rendering: optimizeLegibility;
