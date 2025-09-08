@@ -66,47 +66,52 @@ Este é um firmware personalizado para o teclado Eyelash Sofle, otimizado especi
 
 ### Tap-Dance para Acentos PT-BR
 
-- **A**: 1 toque=A, 2 toques=á, 3 toques=à, 4 toques=ã
-- **E**: 1 toque=E, 2 toques=é, 3 toques=ê
-- **I**: 1 toque=I, 2 toques=í
-- **O**: 1 toque=O, 2 toques=ó, 3 toques=ô
-- **U**: 1 toque=U, 2 toques=ú
-- **C**: 1 toque=c, 2 toques=ç, 3 toques=Ç
+| Tecla | 1 Toque | 2 Toques | 3 Toques | 4 Toques |
+|-------|---------|----------|----------|----------|
+| **A** | A | á | à | ã |
+| **E** | E | é | ê | - |
+| **I** | I | í | - | - |
+| **O** | O | ó | ô | - |
+| **U** | U | ú | - | - |
+| **C** | c | ç | Ç | - |
 
 ### Hold-Tap Behaviors
 
-**Shift/Caps Lock:**
-- **Tap**: Shift (modificador)
-- **Tap duplo**: Caps Lock (toggle)
-
-**Space/Escape Esquerdo:**
-- **Tap**: Space
-- **Hold**: Escape
-
-**Print Screen/Desktop:**
-- **Tap**: Print Screen (captura de tela)
-- **Hold**: Mostrar Desktop (Windows+D)
+| Tecla | Tap | Hold | Tap Duplo |
+|-------|-----|------|-----------|
+| **Shift/Caps Lock** | Shift (modificador) | - | Caps Lock (toggle) |
+| **Space/Escape Esquerdo** | Space | Escape | - |
+| **Print Screen/Desktop** | Print Screen (captura de tela) | Mostrar Desktop (Windows+D) | - |
 
 ### Combo de Soft Off
-**Z + X + C** (segurados por 2 segundos):
-- Coloca o teclado em modo de sono profundo
-- Útil para transporte
-- Acordar: pressionar botão reset
+
+| Combinação | Tempo | Ação | Como Acordar |
+|------------|-------|------|--------------|
+| **Z + X + C** | 2 segundos | Coloca o teclado em modo de sono profundo | Pressionar botão reset |
 
 ### Acesso às Camadas
-- **Layer 1**: Segurar tecla inferior esquerda (L1)
-- **Layer 2**: Segurar tecla inferior direita (L2)
-- **Layer 3**: L1 + L2 (momentaneamente)
+
+| Camada | Ativação | Tipo |
+|--------|----------|------|
+| **Layer 1** | Segurar tecla inferior esquerda (L1) | Momentâneo |
+| **Layer 2** | Segurar tecla inferior direita (L2) | Momentâneo |
+| **Layer 3** | L1 + L2 | Momentâneo |
 
 ### Controles de Mídia
-- **Mute**: Pressionar o knob de volume (Layer 0)
-- **Volume**: Girar o knob no lado direito
-- **Scroll**: Girar o knob (Layer 1 e 2)
+
+| Controle | Ação | Localização |
+|----------|------|-------------|
+| **Mute** | Pressionar o knob de volume | Layer 0 |
+| **Volume** | Girar o knob | Lado direito |
+| **Scroll** | Girar o knob | Layer 1 e 2 |
 
 ### Mouse
-- **Movimento**: Setas direcionais no centro (Layer 1 e 2)
-- **Clique**: Pressionar o joystick/controle direcional
-- **Scroll**: Girar o knob (Layer 1 e 2)
+
+| Função | Controle | Localização |
+|--------|----------|-------------|
+| **Movimento** | Setas direcionais no centro | Layer 1 e 2 |
+| **Clique** | Pressionar o joystick/controle direcional | Layer 1 e 2 |
+| **Scroll** | Girar o knob | Layer 1 e 2 |
 
 ## Instalação Rápida
 
