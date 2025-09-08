@@ -33,7 +33,6 @@ draw_config:
       fill: #ffffff;
       stroke: #d1d5db;
       stroke-width: 1.5;
-      filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.1));
     }
 
     /* Remove inner padding effect */
@@ -42,26 +41,7 @@ draw_config:
       stroke: none;
     }
 
-    /* Simple colored borders for modifier keys */
-    rect.key[data-key*="ctrl"], rect.key[data-key*="control"] {
-      stroke: #f59e0b !important;
-      stroke-width: 3 !important;
-    }
-
-    rect.key[data-key*="alt"] {
-      stroke: #10b981 !important;
-      stroke-width: 3 !important;
-    }
-
-    rect.key[data-key*="shift"] {
-      stroke: #ec4899 !important;
-      stroke-width: 3 !important;
-    }
-
-    rect.key[data-key*="gui"], rect.key[data-key*="LGUI"], rect.key[data-key*="RGUI"] {
-      stroke: #8b5cf6 !important;
-      stroke-width: 3 !important;
-    }
+    /* Removed colored borders for cleaner look */
 
     /* Clean key styling without inner effects */
 
@@ -72,11 +52,9 @@ draw_config:
       fill: #1f2937;
     }
 
-    /* Held keys */
+    /* Color accent for held keys */
     rect.held, rect.combo.held {
-      fill: #4f46e5;
-      stroke: #4f46e5;
-      stroke-width: 2;
+        fill: #ffc;
     }
 
     /* Text styling improvements with better centering */
@@ -115,47 +93,13 @@ draw_config:
       dominant-baseline: central;
     }
 
-    /* Enhanced icon colors for light theme */
-    .icon-modifier {
-      fill: #3b82f6;
-    }
-
-    .icon-navigation {
-      fill: #06b6d4;
-    }
-
-    .icon-media {
-      fill: #f59e0b;
-    }
-
-    .icon-windows {
-      fill: #0078d4;
-    }
-
-    .icon-mac {
-      fill: #000000;
-    }
-
-    /* Windows icon styling */
-    .windows-icon {
-      fill: #0078d4 !important;
-    }
-
-    /* Specific styling for Windows icon in LGUI */
-    text:contains("microsoft-windows") {
-      fill: #0078d4 !important;
-    }
-
-    /* Alternative approach for Windows icon */
-    svg text[data-icon*="windows"] {
-      fill: #0078d4 !important;
-    }
+    /* Simplified icon colors for cleaner look */
 
     /* Combo styling for light theme */
     rect.combo {
-      fill: #fef3c7;
-      stroke: #f59e0b;
-      stroke-width: 2;
+      fill: #ffffff;
+      stroke: #d1d5db;
+      stroke-width: 1.5;
     }
 
     /* Better vertical centering for stacked content */
