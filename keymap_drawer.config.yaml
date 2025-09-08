@@ -8,8 +8,8 @@ draw_config:
   combo_h: 28.0
   key_rx: 8.0
   key_ry: 8.0
-  inner_pad_w: 3.0
-  inner_pad_h: 3.0
+  inner_pad_w: 0.0
+  inner_pad_h: 0.0
   outer_pad_w: 45.0
   outer_pad_h: 60.0
   line_spacing: 1.3
@@ -45,19 +45,25 @@ draw_config:
       box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
     }
 
-    /* Key styling with modern appearance */
+    /* Key styling with clean, modern appearance */
     rect.key, rect.combo {
       fill: var(--key-bg);
       stroke: var(--key-border);
-      stroke-width: 1.5;
-      filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+      stroke-width: 1;
+      filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.15));
       transition: all 0.2s ease;
     }
 
     rect.key:hover, rect.combo:hover {
       fill: #4a4a4a;
       stroke: var(--accent-primary);
-      stroke-width: 2;
+      stroke-width: 1.5;
+    }
+
+    /* Remove inner padding effect that creates double squares */
+    rect.key > rect, rect.combo > rect {
+      fill: none;
+      stroke: none;
     }
 
     /* Layer headers with gradient */
@@ -105,11 +111,78 @@ draw_config:
       font-size: 11px;
     }
 
-    /* Combo styling */
+    /* Colored icons for better visual hierarchy */
+    .icon-modifier {
+      fill: var(--accent-primary) !important;
+    }
+
+    .icon-function {
+      fill: #7c3aed !important;
+    }
+
+    .icon-special {
+      fill: var(--success) !important;
+    }
+
+    .icon-media {
+      fill: #f59e0b !important;
+    }
+
+    .icon-navigation {
+      fill: var(--accent-secondary) !important;
+    }
+
+    .icon-system {
+      fill: #ef4444 !important;
+    }
+
+    /* Specific icon color mappings */
+    text[data-icon="apple-keyboard-command"],
+    text[data-icon="apple-keyboard-control"],
+    text[data-icon="apple-keyboard-option"],
+    text[data-icon="apple-keyboard-shift"] {
+      fill: var(--accent-primary) !important;
+    }
+
+    text[data-icon="arrow-up-bold"],
+    text[data-icon="arrow-down-bold"],
+    text[data-icon="arrow-left-bold"],
+    text[data-icon="arrow-right-bold"] {
+      fill: var(--accent-secondary) !important;
+    }
+
+    text[data-icon="volume-off"],
+    text[data-icon="volume-high"],
+    text[data-icon="volume-low"],
+    text[data-icon="skip-next"],
+    text[data-icon="skip-previous"],
+    text[data-icon="play-pause"] {
+      fill: #f59e0b !important;
+    }
+
+    text[data-icon="bluetooth"],
+    text[data-icon="bluetooth-connect"],
+    text[data-icon="bluetooth-off"] {
+      fill: #3b82f6 !important;
+    }
+
+    text[data-icon="backup-restore"],
+    text[data-icon="progress-download"] {
+      fill: #ef4444 !important;
+    }
+
+    /* Combo styling with cleaner appearance */
     rect.combo {
       fill: linear-gradient(135deg, #f59e0b 0%, #fbbf24 100%);
       stroke: #f59e0b;
-      stroke-width: 2;
+      stroke-width: 1.5;
+      filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.15));
+    }
+
+    /* Remove inner padding from combos too */
+    rect.combo > rect {
+      fill: none;
+      stroke: none;
     }
 
     /* Enhanced positioning for better readability */
@@ -196,6 +269,49 @@ draw_config:
       filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.3));
     }
 
+    /* Enhanced icon styling with better colors */
+    svg.keymap text {
+      transition: fill 0.2s ease;
+    }
+
+    /* Specific color coding for different icon types */
+    text:contains("keyboard-esc"),
+    text:contains("keyboard-tab"),
+    text:contains("keyboard-return"),
+    text:contains("keyboard-space") {
+      fill: #6b7280 !important;
+    }
+
+    text:contains("mouse"),
+    text:contains("pan-"),
+    text:contains("menu-") {
+      fill: #8b5cf6 !important;
+    }
+
+    text:contains("brightness") {
+      fill: #fbbf24 !important;
+    }
+
+    text:contains("power") {
+      fill: #ef4444 !important;
+    }
+
+    text:contains("lock") {
+      fill: #10b981 !important;
+    }
+
+    /* Layer indicators with special styling */
+    text:contains("layer") {
+      fill: var(--accent-primary) !important;
+      font-weight: 700;
+    }
+
+    /* Macro indicators with distinct color */
+    text:contains("&") {
+      fill: #f59e0b !important;
+      font-style: italic;
+    }
+
     /* Animation for interactive elements */
     @keyframes pulse {
       0% { opacity: 1; }
@@ -212,6 +328,17 @@ draw_config:
       display: flex;
       align-items: center;
       justify-content: center;
+    }
+
+    /* Better contrast for readability */
+    rect.key {
+      fill: #f8fafc;
+      stroke: #e2e8f0;
+    }
+
+    rect.key:hover {
+      fill: #f1f5f9;
+      stroke: var(--accent-primary);
     }
 
   shrink_wide_legends: 8

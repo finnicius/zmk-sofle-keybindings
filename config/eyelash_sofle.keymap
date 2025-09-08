@@ -239,7 +239,7 @@
                 &kp P             // Posição 25: P
                 &kp DEL           // Posição 26: Delete
                 
-                /* ========== LINHA 3 ========== */
+                /* ========== LINHA 3 ======== == */
                 /* Mão esquerda - Fileira 3 */
                 &kp LCTRL         // Posição 27: Ctrl esquerdo
                 &a_complete       // Posição 28: A/á/à/ã (tap-dance)
