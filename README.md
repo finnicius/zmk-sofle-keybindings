@@ -1,15 +1,6 @@
-# Eyelash Sofle - Teclado para Português Brasileiro (pt-br)
+# Eyelash Sofle - Teclado Português Brasileiro (`pt-br`)
 
 Este é um firmware personalizado para o teclado Eyelash Sofle, otimizado especificamente para **digitação em português brasileiro**. O layout foi projetado para permitir digitação completa em PT-BR com acesso fácil a acentos, cedilhas e caracteres especiais.
-
-## ✨ Características Principais
-
-- **Digitação completa em PT-BR**: Acentos, cedilhas e caracteres especiais integrados
-- **Tap-dance inteligente**: C/ç/Ç e vogais acentuadas com um único botão
-- **Layout ergonômico**: Teclado dividido com navegação central
-- **Mouse integrado**: Emulação de mouse e scroll
-- **Controles de mídia**: Volume e mute integrados
-- **Numpad dedicado**: Teclado numérico completo
 
 ## 🎨 Layout Atual
 
