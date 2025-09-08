@@ -288,7 +288,7 @@ rect.combo {
 
 /* Better vertical centering for stacked content */
 .sym_sub_text.tap {
-  translate: -5px -6px;
+  translate: -5px 0px;
   font-size: 20px;
   font-weight: 600;
   text-anchor: middle;
@@ -296,7 +296,7 @@ rect.combo {
   fill: #1f2937;
 }
 .sym_sub_text.shifted {
-  translate: 10px 6px;
+  translate: 10px 0px;
   font-size: 10px;
   opacity: 1.0;
   text-anchor: middle;
@@ -304,17 +304,17 @@ rect.combo {
   fill: #6b7280;
 }
 .combo.sym_sub_text.tap {
-  translate: -1px -3px;
+  translate: -1px 1px;
 }
 .combo.sym_sub_text.shifted {
-  translate: 7px 3px;
+  translate: 7px 5px;
   font-size: 10px;
   opacity: 1.0;
 }
 
 /* Better positioning for tap/hold behaviors with vertical centering */
 .tap_dance.tap {
-  translate: -7px -8px;
+  translate: -7px 0px;
   font-size: 12px;
   font-weight: 600;
   fill: #059669;
@@ -322,7 +322,7 @@ rect.combo {
   dominant-baseline: central;
 }
 .tap_dance.shifted {
-  translate: 7px 8px;
+  translate: 7px 0px;
   font-size: 12px;
   fill: #dc2626;
   font-weight: 600;
@@ -333,14 +333,14 @@ rect.combo {
 
 /* Improved toggle positioning with vertical centering */
 .toggle.shifted {
-  translate: -10px -8px;
+  translate: -10px 0px;
   font-size: 12px;
   fill: #6b7280;
   text-anchor: middle;
   dominant-baseline: central;
 }
 .toggle.hold {
-  translate: 13px 8px;
+  translate: 13px 0px;
   font-size: 12px;
   fill: #dc2626;
   font-weight: 600;
