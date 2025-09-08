@@ -241,7 +241,7 @@
                 
                 /* ========== LINHA 3 ========== */
                 /* Mão esquerda - Fileira 3 */
-                &shift_caps LSHFT CAPS   // Posição 27: Shift/Caps (hold-tap)
+                &kp LCTRL         // Posição 27: Ctrl esquerdo
                 &a_complete       // Posição 28: A/á/à/ã (tap-dance)
                 &kp S             // Posição 29: S
                 &kp D             // Posição 30: D
@@ -261,7 +261,7 @@
                 
                 /* ========== LINHA 4 ========== */
                 /* Mão esquerda - Fileira 4 */
-                &kp LCTRL         // Posição 40: Ctrl esquerdo
+                &shift_caps LSHFT CAPS   // Posição 40: Shift/Caps (hold-tap)
                 &kp Z             // Posição 41: Z
                 &kp X             // Posição 42: X
                 &c_ced            // Posição 43: C/ç/Ç (tap-dance)
