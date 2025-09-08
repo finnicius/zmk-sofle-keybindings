@@ -53,23 +53,20 @@ Este é um firmware personalizado para o teclado Eyelash Sofle, otimizado especi
 
 ### Layer 0 - Digitação Principal (QWERTY + Acentos PT-BR)
 
-**Layout base QWERTY com acentos integrados:**
 - **Acentos completos**: Vogais com tap-dance múltiplo
 - **Cedilha integrada**: Tecla C com tap-dance (C/ç/Ç)
 - **Navegação central**: Setas direcionais no centro
 - **Controles de mídia**: Volume via knob, mute ao pressionar
 - **Ergonomia otimizada**: Space e Enter lado a lado no polegar direito
 
-### Layer 1 - Símbolos e Mouse
+### Layer 1 - Símbolos e Emulação de Mouse
 
-**Acesso rápido a símbolos e emulação de mouse:**
 - **Símbolos**: Parênteses, colchetes, chaves, operadores
 - **Mouse**: Movimento e clique esquerdo
 - **Scroll**: Encoder para rolagem
 
 ### Layer 2 - Numpad Dedicado
 
-**Teclado numérico completo:**
 - **Numpad completo**: Todos os números e operadores
 - **Mouse**: Movimento e clique esquerdo
 - **Scroll**: Encoder para rolagem
@@ -79,25 +76,20 @@ Este é um firmware personalizado para o teclado Eyelash Sofle, otimizado especi
 
 ### Tap-Dance para Acentos PT-BR
 
-**Vogais com acentos completos:**
 - **A**: 1 toque=A, 2 toques=á, 3 toques=à, 4 toques=ã
 - **E**: 1 toque=E, 2 toques=é, 3 toques=ê
 - **I**: 1 toque=I, 2 toques=í
 - **O**: 1 toque=O, 2 toques=ó, 3 toques=ô
 - **U**: 1 toque=U, 2 toques=ú
-
-**Cedilha:**
-- **1 toque**: C
-- **2 toques**: ç (cedilha minúscula)
-- **3 toques**: Ç (cedilha maiúscula)
+- **C**: 1 toque=c, 2 toques=ç, 3 toques=Ç
 
 ### Hold-Tap Behaviors
 
 **Shift/Caps Lock:**
 - **Tap**: Shift (modificador)
-- **Hold**: Caps Lock (toggle)
+- **Tap duplo**: Caps Lock (toggle)
 
-**Space/Escape:**
+**Space/Escape Esquerdo:**
 - **Tap**: Space
 - **Hold**: Escape
 
@@ -338,23 +330,6 @@ Para gerar uma representação visual do seu keymap:
 1. Faça push das mudanças para o GitHub
 2. A GitHub Action gerará automaticamente um SVG em `keymap-drawer/eyelash_sofle.svg`
 
-## ✅ Vantagens para Português Brasileiro
-
-### 🚀 Digitação Eficiente
-- **Cedilha integrada**: Sem necessidade de combinações complexas
-- **Acentos rápidos**: Tap-dance com macros otimizadas
-- **Layout familiar**: QWERTY com melhorias para PT-BR
-
-### 🎯 Produtividade
-- **Navegação central**: Setas sem mover as mãos
-- **Mouse integrado**: Sem necessidade de mouse externo
-- **Controles de mídia**: Volume e mute acessíveis
-
-### 🏥 Ergonomia
-- **Teclado dividido**: Reduz tensão nos ombros
-- **Thumb clusters otimizados**: Space e Enter lado a lado
-- **Escape acessível**: Hold no Space esquerdo
-- **Camadas lógicas**: Organização intuitiva
 
 ## Solução de Problemas
 
