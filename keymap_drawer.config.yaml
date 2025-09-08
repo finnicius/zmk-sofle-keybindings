@@ -19,30 +19,61 @@ draw_config:
   svg_extra_style: |
     /* Modern styling for beautiful keymap visualization */
 
-    /* Main SVG styling */
+    /* Main SVG styling with light theme */
     svg.keymap {
-      font-family: 'Inter', 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      font-size: 13px;
-      font-weight: 600;
+      font-family: 'SF Pro Display', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
       text-rendering: optimizeLegibility;
-      background: #1a1a1a;
+      background: #ffffffff;
     }
 
-    /* Key styling with clean, modern appearance */
+    /* Key styling with light theme */
     rect.key, rect.combo {
-      fill: #f8fafc;
-      stroke: #e2e8f0;
-      stroke-width: 1;
-      filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.15));
+      fill: #ffffff;
+      stroke: #d1d5db;
+      stroke-width: 1.5;
+      filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.1));
+    }
+
+    /* Modifier keys with colors */
+    rect.key.modifier {
+      fill: #dbeafe;
+      stroke: #3b82f6;
+      stroke-width: 2;
+    }
+
+    rect.key.control {
+      fill: #fef3c7;
+      stroke: #f59e0b;
+      stroke-width: 2;
+    }
+
+    rect.key.alt {
+      fill: #f0fdf4;
+      stroke: #10b981;
+      stroke-width: 2;
+    }
+
+    rect.key.shift {
+      fill: #fdf2f8;
+      stroke: #ec4899;
+      stroke-width: 2;
+    }
+
+    rect.key.gui {
+      fill: #ede9fe;
+      stroke: #8b5cf6;
+      stroke-width: 2;
     }
 
     /* Clean key styling without inner effects */
 
     /* Layer headers */
     text.layer-header {
-      font-size: 16px;
-      font-weight: 700;
-      fill: #ffffff;
+      font-size: 18px;
+      font-weight: 600;
+      fill: #1f2937;
     }
 
     /* Held keys */
@@ -55,17 +86,43 @@ draw_config:
     /* Text styling improvements */
     text.key-label {
       fill: #1f2937;
-      font-weight: 600;
+      font-weight: 500;
+      text-anchor: middle;
+      dominant-baseline: central;
     }
 
     text.key-label.shifted {
       fill: #6b7280;
-      font-size: 11px;
+      font-size: 12px;
+      text-anchor: middle;
+      dominant-baseline: central;
     }
 
-    /* Simple icon colors */
+    /* Better alignment for stacked text */
+    text.key-label.tap {
+      text-anchor: middle;
+      dominant-baseline: central;
+    }
+
+    text.key-label.hold {
+      text-anchor: middle;
+      dominant-baseline: central;
+    }
+
+    /* Highlight tap/hold behaviors */
+    text.key-label.hold {
+      fill: #dc2626;
+      font-weight: 600;
+    }
+
+    text.key-label.tap {
+      fill: #059669;
+      font-weight: 600;
+    }
+
+    /* Enhanced icon colors for light theme */
     .icon-modifier {
-      fill: #4f46e5;
+      fill: #3b82f6;
     }
 
     .icon-navigation {
@@ -76,23 +133,62 @@ draw_config:
       fill: #f59e0b;
     }
 
-    /* Combo styling */
-    rect.combo {
-      fill: #f59e0b;
-      stroke: #f59e0b;
-      stroke-width: 1.5;
+    .icon-windows {
+      fill: #0078d4;
     }
 
-    /* Basic positioning */
+    .icon-mac {
+      fill: #000000;
+    }
+
+    /* Combo styling for light theme */
+    rect.combo {
+      fill: #fef3c7;
+      stroke: #f59e0b;
+      stroke-width: 2;
+    }
+
+    /* Enhanced positioning for better alignment */
     .sym_sub_text.tap {
-      translate: -6px 3px;
-      font-size: 22px;
-      font-weight: 700;
+      translate: -6px 0px;
+      font-size: 20px;
+      font-weight: 600;
+      text-anchor: middle;
+      dominant-baseline: central;
     }
     .sym_sub_text.shifted {
-      translate: 12px 15px;
-      font-size: 11px;
-      opacity: 0.9;
+      translate: 6px 12px;
+      font-size: 12px;
+      opacity: 0.8;
+      text-anchor: middle;
+      dominant-baseline: central;
+    }
+
+    /* Better positioning for tap/hold behaviors */
+    .tap_dance.tap {
+      translate: -8px -8px;
+      font-size: 14px;
+      font-weight: 600;
+      fill: #059669;
+    }
+    .tap_dance.shifted {
+      translate: 8px 8px;
+      font-size: 12px;
+      fill: #dc2626;
+      font-weight: 600;
+    }
+
+    /* Improved toggle positioning */
+    .toggle.shifted {
+      translate: -10px 10px;
+      font-size: 12px;
+      fill: #6b7280;
+    }
+    .toggle.hold {
+      translate: 10px -10px;
+      font-size: 12px;
+      fill: #dc2626;
+      font-weight: 600;
     }
 
   shrink_wide_legends: 8
@@ -402,8 +498,8 @@ parse_config:
     LEFT_SHIFT: $$mdi:apple-keyboard-shift$$
     LSHFT: $$mdi:apple-keyboard-shift$$
     LCMD: $$mdi:apple-keyboard-command$$
-    LG: $$mdi:apple-keyboard-command$$
-    LEFT_GUI: $$mdi:apple-keyboard-command$$
+    LG: $$mdi:microsoft-windows$$
+    LEFT_GUI: $$mdi:microsoft-windows$$
     LEFT_COMMAND: $$mdi:apple-keyboard-command$$
     RCTRL: $$mdi:apple-keyboard-control$$
     RIGHT_CONTROL: $$mdi:apple-keyboard-control$$
@@ -413,7 +509,7 @@ parse_config:
     RIGHT_SHIFT: $$mdi:apple-keyboard-shift$$
     RSHFT: $$mdi:apple-keyboard-shift$$
     RCMD: $$mdi:apple-keyboard-command$$
-    RG: $$mdi:apple-keyboard-command$$
+    RG: $$mdi:microsoft-windows$$
     PSCRN: $$mdi:printer-outline$$
     RIGHT_COMMAND: $$mdi:apple-keyboard-command$$
     PAGE_UP:
@@ -494,28 +590,28 @@ parse_config:
     # Command +
     LG(A):
       tap: "A"
-      hold: $$mdi:apple-keyboard-command$$
+      hold: $$mdi:microsoft-windows$$
     LG(S):
       tap: "S"
-      hold: $$mdi:apple-keyboard-command$$
+      hold: $$mdi:microsoft-windows$$
     LG(D):
       tap: "D"
-      hold: $$mdi:apple-keyboard-command$$
+      hold: $$mdi:microsoft-windows$$
     LG(F):
       tap: "F"
-      hold: $$mdi:apple-keyboard-command$$
+      hold: $$mdi:microsoft-windows$$
     LG(Z):
       tap: "Z"
-      hold: $$mdi:apple-keyboard-command$$
+      hold: $$mdi:microsoft-windows$$
     LG(X):
       tap: "X"
-      hold: $$mdi:apple-keyboard-command$$
+      hold: $$mdi:microsoft-windows$$
     LG(C):
       tap: "C"
-      hold: $$mdi:apple-keyboard-command$$
+      hold: $$mdi:microsoft-windows$$
     LG(V):
       tap: "V"
-      hold: $$mdi:apple-keyboard-command$$
+      hold: $$mdi:microsoft-windows$$
     # Zoom - Enhanced icons
     RG(RS(A)):
       tap: $$mdi:microphone$$
