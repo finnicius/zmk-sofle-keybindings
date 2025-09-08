@@ -92,6 +92,12 @@ draw_config:
       text-anchor: middle;
       dominant-baseline: central;
     }
+    
+    /* Force vertical centering for all key content */
+    text.key-label, text.sym_sub_text, text.tap_dance, text.toggle {
+      dominant-baseline: central !important;
+      text-anchor: middle !important;
+    }
 
     /* Simplified icon colors for cleaner look */
 
@@ -104,7 +110,7 @@ draw_config:
 
     /* Better vertical centering for stacked content */
     .sym_sub_text.tap {
-      translate: -5px 2px;
+      translate: -5px 0px;
       font-size: 20px;
       font-weight: 600;
       text-anchor: middle;
@@ -112,7 +118,7 @@ draw_config:
       fill: #1f2937;
     }
     .sym_sub_text.shifted {
-      translate: 10px 13px;
+      translate: 10px 0px;
       font-size: 10px;
       opacity: 1.0;
       text-anchor: middle;
@@ -138,7 +144,7 @@ draw_config:
       dominant-baseline: central;
     }
     .tap_dance.shifted {
-      translate: 7px 17px;
+      translate: 7px 0px;
       font-size: 12px;
       fill: #dc2626;
       font-weight: 600;
@@ -149,14 +155,14 @@ draw_config:
 
     /* Improved toggle positioning with vertical centering */
     .toggle.shifted {
-      translate: -10px 12px;
+      translate: -10px 0px;
       font-size: 12px;
       fill: #6b7280;
       text-anchor: middle;
       dominant-baseline: central;
     }
     .toggle.hold {
-      translate: 13px -23px;
+      translate: 13px 0px;
       font-size: 12px;
       fill: #dc2626;
       font-weight: 600;
