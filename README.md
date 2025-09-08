@@ -1,107 +1,83 @@
-# Sofle - Teclado Mecânico para Português Brasileiro
+# Eyelash Sofle - Teclado para Português Brasileiro (pt-br)
 
-- [Português](README.md)
-- [English](README_EN.md)
+Este é um firmware personalizado para o teclado Eyelash Sofle, otimizado especificamente para **digitação em português brasileiro**. O layout foi projetado para permitir digitação completa em PT-BR com acesso fácil a acentos, cedilhas e caracteres especiais.
+
+## ✨ Características Principais
+
+- **Digitação completa em PT-BR**: Acentos, cedilhas e caracteres especiais integrados
+- **Tap-dance inteligente**: C/ç/Ç e vogais acentuadas com um único botão
+- **Layout ergonômico**: Teclado dividido com navegação central
+- **Mouse integrado**: Emulação de mouse e scroll
+- **Controles de mídia**: Volume e mute integrados
+- **Numpad dedicado**: Teclado numérico completo
+
+## 🎨 Layout Atual
+
+![Layout atual da configuração](keymap-drawer/eyelash_sofle.svg)
 
 ## 📋 Índice
 
-- [Visão Geral](#visão-geral)
-- [Características Principais](#características-principais)
-- [Layout das Camadas](#layout-das-camadas)
+- [Primeiros Passos](#primeiros-passos)
+- [Estrutura das Camadas](#estrutura-das-camadas)
+- [Comportamentos Especiais](#comportamentos-especiais)
 - [Instalação Rápida](#instalação-rápida)
 - [Flashing do Firmware](#flashing-do-firmware)
 - [Personalização](#personalização)
+- [Vantagens para PT-BR](#vantagens-para-pt-br)
 - [Solução de Problemas](#solução-de-problemas)
+- [Contato](#contato)
 
-## Visão Geral
+## 🚀 Primeiros Passos
 
-Este é um firmware personalizado para o teclado Sofle, otimizado especificamente para **digitação em português brasileiro**. O layout foi projetado para permitir digitação completa em PT-BR com acesso fácil a acentos, cedilhas e caracteres especiais.
+1. **Clone o repositório:**
+   ```bash
+   git clone https://github.com/finnicius/zmk-sofle-keybindings
+   cd zmk-sofle-keybindings
+   ```
 
-## Características Principais
+2. **Baixe o firmware:**
+   - Vá para a aba **Actions** no GitHub
+   - Aguarde o build completar (5-15 minutos)
+   - Baixe os arquivos `.uf2` na seção "Artifacts"
 
-### ✨ Digitação Completa em PT-BR
-- **Layer 0**: Layout QWERTY padrão com cedilha (Ç) integrada
-- **Layer 3**: Acentos completos (á, é, í, ó, ú, à, ã, â, ê, ô)
-- **Tap-dance**: C/ç/Ç com um único botão
-- **Macros**: Acentos automáticos para digitação rápida
+3. **Faça flash no teclado:**
+   - Pressione duas vezes o botão RESET
+   - Copie o arquivo `.uf2` para o drive que apareceu
+   - Aguarde o teclado reiniciar
 
-### 🎯 Layout Otimizado
-- **Navegação**: Setas direcionais no centro do teclado
-- **Mídia**: Controles de volume no slider
-- **Mouse**: Emulação de mouse integrada
-- **Backlight**: Controle de brilho da iluminação
+4. **Teste os acentos PT-BR:**
+   - **A**: 1 toque=A, 2 toques=á, 3 toques=à, 4 toques=ã
+   - **C**: 1 toque=C, 2 toques=ç, 3 toques=Ç
 
-## Estrutura das Camadas
+## 📚 Estrutura das Camadas
 
-### Layer 0 - Base (Digitação Principal)
-**Layout QWERTY com modificações para PT-BR:**
+### Layer 0 - Digitação Principal (QWERTY + Acentos PT-BR)
 
-```
-ESC  1  2  3  4  5    ↑    6  7  8  9  0  BACKSPACE
-TAB  Q  W  E  R  T    ↓    Y  U  I  O  P  DEL
-SHIFT A  S  D  F  G    ←    H  J  K  L  ;  '
-CTRL Z  X  C  V  B    →    N  M  ,  .  /  RCTRL
-WIN ALT TAB L1 SPACE/ESC   SPACE ENTER L2 BSPC PRTSC/DESKTOP
-```
-
-**Características especiais:**
-- **Acentos completos**: Vogais com tap-dance múltiplo:
-  - **A**: 1 toque=A, 2 toques=á, 3 toques=à, 4 toques=ã
-  - **E**: 1 toque=E, 2 toques=é, 3 toques=ê
-  - **I**: 1 toque=I, 2 toques=í
-  - **O**: 1 toque=O, 2 toques=ó, 3 toques=ô
-  - **U**: 1 toque=U, 2 toques=ú
+**Layout base QWERTY com acentos integrados:**
+- **Acentos completos**: Vogais com tap-dance múltiplo
 - **Cedilha integrada**: Tecla C com tap-dance (C/ç/Ç)
-- **Shift inteligente**: Hold-tap para Shift (tap=Shift, hold=Caps Lock)
-- **Space/Escape**: Hold-tap para Space (tap=Space, hold=Escape)
-- **Print Screen/Desktop**: Hold-tap para captura (tap=Print Screen, hold=Mostrar Desktop)
-- **Setas no centro**: Navegação sem sair da posição de digitação
-- **Controles de mídia**: Mute no canto inferior esquerdo
-- **Volume**: Controle via slider (encoder)
+- **Navegação central**: Setas direcionais no centro
+- **Controles de mídia**: Volume via knob, mute ao pressionar
 - **Ergonomia otimizada**: Space e Enter lado a lado no polegar direito
 
 ### Layer 1 - Símbolos e Mouse
+
 **Acesso rápido a símbolos e emulação de mouse:**
-
-```
-ESC `  '  @  $  |    ↑    |  $  @  '  `  ESC
-TAB  ~  ^  *  (  )    ↓    (  )  *  ^  ~  TAB
-SHIFT +  -  %  [  ]    ←    [  ]  %  -  +  SHIFT
-CTRL /  =  _  {  }    →    {  }  _  =  \  CTRL
-MUTE GUI ALT TAB L1   SPACE/ESC SPACE ENTER SHIFT BSPC PRTSC/DESKTOP
-```
-
-**Funcionalidades:**
 - **Símbolos**: Parênteses, colchetes, chaves, operadores
 - **Mouse**: Movimento e clique esquerdo
 - **Scroll**: Encoder para rolagem
 
 ### Layer 2 - Numpad Dedicado
+
 **Teclado numérico completo:**
-
-```
-`  trans trans trans trans trans    ↑    7  8  9  /  *  BACKSPACE
-   trans trans trans trans trans    ↓    4  5  6  +  -  DEL
-   trans trans trans trans trans    ←    1  2  3  ENTER =  '
-   trans trans trans trans trans    →    0  .  ENTER SPACE ENTER trans
-   trans trans trans trans trans    LCLK trans trans trans trans trans
-```
-
-**Funcionalidades:**
 - **Numpad completo**: Todos os números e operadores
 - **Mouse**: Movimento e clique esquerdo
 - **Scroll**: Encoder para rolagem
 - **Layout ergonômico**: Numpad na mão direita, mouse no centro
 
-## Comportamentos Especiais
+## 🎯 Comportamentos Especiais
 
-### Tap-Dance Completo para Acentos
-As vogais no Layer 0 possuem comportamentos especiais:
-
-**Cedilha:**
-- **1 toque**: C
-- **2 toques**: ç (cedilha minúscula)
-- **3 toques**: Ç (cedilha maiúscula)
+### Tap-Dance para Acentos PT-BR
 
 **Vogais com acentos completos:**
 - **A**: 1 toque=A, 2 toques=á, 3 toques=à, 4 toques=ã
@@ -110,12 +86,10 @@ As vogais no Layer 0 possuem comportamentos especiais:
 - **O**: 1 toque=O, 2 toques=ó, 3 toques=ô
 - **U**: 1 toque=U, 2 toques=ú
 
-### Macros de Acentos
-Cada acento é uma macro que combina dead-key + letra:
-- **Acentos agudos**: ' + letra (á, é, í, ó, ú)
-- **Acentos graves**: ` + letra (à)
-- **Tils**: ~ + letra (ã)
-- **Circunflexos**: ^ + letra (â, ê, ô)
+**Cedilha:**
+- **1 toque**: C
+- **2 toques**: ç (cedilha minúscula)
+- **3 toques**: Ç (cedilha maiúscula)
 
 ### Hold-Tap Behaviors
 
@@ -137,42 +111,20 @@ Cada acento é uma macro que combina dead-key + letra:
 - Útil para transporte
 - Acordar: pressionar botão reset
 
-## Configuração e Uso
-
 ### Acesso às Camadas
 - **Layer 1**: Segurar tecla inferior esquerda (L1)
 - **Layer 2**: Segurar tecla inferior direita (L2)
 - **Layer 3**: L1 + L2 (momentaneamente)
 
 ### Controles de Mídia
-- **Mute**: Tecla inferior esquerda (Layer 0)
-- **Volume**: Slider (encoder) no lado direito
-- **Scroll**: Encoder no Layer 1 e 2
+- **Mute**: Pressionar o knob de volume (Layer 0)
+- **Volume**: Girar o knob no lado direito
+- **Scroll**: Girar o knob (Layer 1 e 2)
 
 ### Mouse
 - **Movimento**: Setas direcionais no centro (Layer 1 e 2)
 - **Clique**: Pressionar o joystick/controle direcional
-- **Scroll**: Encoder (Layer 1 e 2)
-
-## Vantagens para PT-BR
-
-### ✅ Digitação Eficiente
-- **Cedilha integrada**: Sem necessidade de combinações complexas
-- **Acentos rápidos**: Layer dedicado com macros otimizadas
-- **Layout familiar**: QWERTY com melhorias
-
-### ✅ Produtividade
-- **Navegação central**: Setas sem mover as mãos
-- **Sticky keys**: Modificadores que ficam ativos
-- **Mouse integrado**: Sem necessidade de mouse externo
-
-### ✅ Ergonomia
-- **Teclado dividido**: Reduz tensão nos ombros
-- **Thumb clusters otimizados**: Space e Enter lado a lado no polegar direito
-- **Escape acessível**: Hold no Space esquerdo (sem esticar mindinho)
-- **Page Up/Down no polegar**: Navegação sem mover as mãos
-- **Backspace no polegar**: Edição confortável
-- **Camadas lógicas**: Organização intuitiva
+- **Scroll**: Girar o knob (Layer 1 e 2)
 
 ## Instalação Rápida
 
@@ -281,18 +233,13 @@ O UF2 é o método mais confiável para fazer flash do firmware em ambos os lado
 
 **Método mais simples:**
 1. **Desconecte** o teclado do USB
-2. **Segure** o botão reset (geralmente na parte inferior)
-3. **Conecte** o USB mantendo o botão pressionado
-4. **Solte** o botão reset
-5. **Aguarde** 2-3 segundos
-
-**Alternativas:**
-- **Duplo reset**: Pressione o botão reset duas vezes rapidamente
-- **Combinação de teclas**: Layer 2 + tecla BT (Bluetooth)
+2. **Pressione duas vezes o botão RESET** (na lateral do teclado)
+3. **Confirme** que a luz azul começou a piscar
+4. **Conecte** o USB
 
 #### **Passo 2: Fazer Flash**
 
-1. **Verifique** que apareceu um novo drive USB (ex: "SOFLEBOOT")
+1. **Verifique** que apareceu um novo drive USB (ex: "NICENANO")
 2. **Copie** o arquivo `.uf2` correto para o drive:
    - **Lado esquerdo**: `eyelash_sofle_left-nice_view-zmk.uf2`
    - **Lado direito**: `eyelash_sofle_right-nice_view-zmk.uf2`
@@ -337,36 +284,7 @@ O UF2 é o método mais confiável para fazer flash do firmware em ambos os lado
 
 ### 🆕 Criando uma Nova Camada
 
-**Use uma das camadas existentes como template:**
-
-```c
-// Template baseado na layer_1 (símbolos)
-layer_3 {
-    bindings = <
-        /* ========== LINHA 1 ========== */
-        &kp ESC            // Posição 1: ESC
-        &kp N1             // Posição 2: 1
-        &kp N2             // Posição 3: 2
-        &kp N3             // Posição 4: 3
-        &kp N4             // Posição 5: 4
-        &kp N5             // Posição 6: 5
-        
-        &kp UP_ARROW       // Posição 7: Seta para cima
-        
-        &kp N6             // Posição 8: 6
-        &kp N7             // Posição 9: 7
-        &kp N8             // Posição 10: 8
-        &kp N9             // Posição 11: 9
-        &kp N0             // Posição 12: 0
-        &kp BACKSPACE      // Posição 13: Backspace
-        
-        /* Continue mapeando todas as 64 posições... */
-        /* Use &trans para posições que herdam da camada base */
-    >;
-    display-name = "layer_3";
-    sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
-};
-```
+**Use uma das camadas existentes no config/eyelash_sofle.keymap** como ponto de partida, e edite as teclas
 
 **Dicas importantes:**
 - **Use `&trans`** para posições que devem herdar da camada base
@@ -420,6 +338,24 @@ Para gerar uma representação visual do seu keymap:
 1. Faça push das mudanças para o GitHub
 2. A GitHub Action gerará automaticamente um SVG em `keymap-drawer/eyelash_sofle.svg`
 
+## ✅ Vantagens para Português Brasileiro
+
+### 🚀 Digitação Eficiente
+- **Cedilha integrada**: Sem necessidade de combinações complexas
+- **Acentos rápidos**: Tap-dance com macros otimizadas
+- **Layout familiar**: QWERTY com melhorias para PT-BR
+
+### 🎯 Produtividade
+- **Navegação central**: Setas sem mover as mãos
+- **Mouse integrado**: Sem necessidade de mouse externo
+- **Controles de mídia**: Volume e mute acessíveis
+
+### 🏥 Ergonomia
+- **Teclado dividido**: Reduz tensão nos ombros
+- **Thumb clusters otimizados**: Space e Enter lado a lado
+- **Escape acessível**: Hold no Space esquerdo
+- **Camadas lógicas**: Organização intuitiva
+
 ## Solução de Problemas
 
 ### 🔧 Problemas Comuns
@@ -460,6 +396,3 @@ Para gerar uma representação visual do seu keymap:
 
 Para arquivos de modelo 3D impresso ou problemas com o teclado: [380465425@qq.com](mailto:380465425@qq.com)
 
-## 🎨 Layout Atual
-
-![Layout atual da configuração](keymap-drawer/eyelash_sofle.svg)
