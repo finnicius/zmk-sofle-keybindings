@@ -323,7 +323,7 @@ rect.combo {
 
 /* Better positioning for tap/hold behaviors with vertical centering */
 .tap_dance.tap {
-  translate: -5px -5px;
+  translate: -4px -2px;
   font-size: 12px;
   font-weight: 600;
   fill: #059669;
@@ -331,7 +331,7 @@ rect.combo {
   dominant-baseline: central;
 }
 .tap_dance.shifted {
-  translate: 5px 5px;
+  translate: 4px 2px;
   font-size: 12px;
   fill: #dc2626;
   font-weight: 600;
@@ -342,14 +342,14 @@ rect.combo {
 
 /* Improved toggle positioning with vertical centering */
 .toggle.shifted {
-  translate: -6px -4px;
+  translate: -4px -2px;
   font-size: 12px;
   fill: #6b7280;
   text-anchor: middle;
   dominant-baseline: central;
 }
 .toggle.hold {
-  translate: 6px 4px;
+  translate: 4px 2px;
   font-size: 12px;
   fill: #dc2626;
   font-weight: 600;
