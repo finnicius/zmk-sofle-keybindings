@@ -217,6 +217,53 @@ parse_config:
     type: trans
 
   raw_binding_map:
+    # Tap-dance para acentos PT-BR
+    "&a_complete":
+      tap: "A"
+      shifted: "á"
+      hold: "à"
+      type: tap_dance
+    "&e_complete":
+      tap: "E"
+      shifted: "é"
+      hold: "ê"
+      type: tap_dance
+    "&i_complete":
+      tap: "I"
+      shifted: "í"
+      type: tap_dance
+    "&o_complete":
+      tap: "O"
+      shifted: "ó"
+      hold: "ô"
+      type: tap_dance
+    "&u_complete":
+      tap: "U"
+      shifted: "ú"
+      type: tap_dance
+    "&c_ced":
+      tap: "C"
+      shifted: "ç"
+      hold: "Ç"
+      type: tap_dance
+    
+    # Hold-tap behaviors
+    "&shift_caps":
+      tap: $$mdi:apple-keyboard-shift$$
+      hold: $$mdi:apple-keyboard-caps$$
+      type: toggle
+    "&space_escape":
+      tap: $$mdi:keyboard-space$$
+      hold: $$mdi:keyboard-esc$$
+      type: toggle
+    "&prtscr_desktop":
+      tap: $$mdi:printer-outline$$
+      hold: $$mdi:desktop-classic$$
+      type: toggle
+    "&soft_off":
+      tap: $$mdi:power-standby$$
+      type: none
+    
     # Layers
     "&ltq 1 BACKSPACE":
       tap: $$mdi:backspace$$
