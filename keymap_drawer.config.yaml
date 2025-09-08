@@ -355,23 +355,23 @@ parse_config:
       tap: "5"
       hold: 5
     "&out OUT_TOG":
-      shifted: $$mdi:usb-cable$$
-      tap: $$mdi:toggle-switch-variant$$
-      hold: $$mdi:bluetooth-settings$$
+      shifted: $$mdi:usb$$
+      tap: $$mdi:toggle-switch$$
+      hold: $$mdi:bluetooth$$
     "&bt BT_PRV":
       shifted: $$mdi:bluetooth-connect$$
-      tap: $$mdi:chevron-up$$
+      tap: $$mdi:arrow-up-bold$$
       hold: $$mdi:arrow-up-bold$$
     "&bt BT_NXT":
       shifted: $$mdi:bluetooth-connect$$
-      tap: $$mdi:chevron-down$$
+      tap: $$mdi:arrow-down-bold$$
       hold: $$mdi:arrow-down-bold$$
     # Reset - Enhanced icons
     "&sys_reset":
       type: bootloader
-      tap: $$mdi:restart-alert$$
+      tap: $$mdi:backup-restore$$
     "&bootloader":
-      tap: $$mdi:download-circle$$
+      tap: $$mdi:progress-download$$
 
   # ZMK
   zmk_keycode_map:
@@ -583,33 +583,33 @@ parse_config:
     CAPS: $$mdi:apple-keyboard-caps$$
 
     # Sound - Enhanced icons
-    C_MUTE: $$mdi:volume-off-variant$$
-    C_VOL_UP: $$mdi:volume-plus$$
-    C_VOL_DN: $$mdi:volume-minus$$
-    C_VOLUME_UP: $$mdi:volume-plus$$
-    C_VOLUME_DOWN: $$mdi:volume-minus$$
+    C_MUTE: $$mdi:volume-off$$
+    C_VOL_UP: $$mdi:volume-high$$
+    C_VOL_DN: $$mdi:volume-low$$
+    C_VOLUME_UP: $$mdi:volume-high$$
+    C_VOLUME_DOWN: $$mdi:volume-low$$
 
     # Media - Enhanced icons
-    C_NEXT: $$mdi:skip-next-circle$$
-    C_PREV: $$mdi:skip-previous-circle$$
-    C_PP: $$mdi:play-pause-circle$$
+    C_NEXT: $$mdi:skip-next$$
+    C_PREV: $$mdi:skip-previous$$
+    C_PP: $$mdi:play-pause$$
 
     # Bluetooth - Enhanced icons
-    BT_CLR: $$mdi:bluetooth-off-variant$$
-    BT_SEL: $$mdi:bluetooth-settings$$
+    BT_CLR: $$mdi:bluetooth-off$$
+    BT_SEL: $$mdi:bluetooth-connect$$
 
     # Settings - Enhanced icons
-    C_BRI_UP: $$mdi:brightness-6$$
-    C_BRIGHTNESS_INC: $$mdi:brightness-6$$
-    C_BRI_DN: $$mdi:brightness-4$$
-    C_BRI_DEC: $$mdi:brightness-4$$
-    C_BRIGHTNESS_DEC: $$mdi:brightness-4$$
+    C_BRI_UP: $$mdi:brightness-5$$
+    C_BRIGHTNESS_INC: $$mdi:brightness-5$$
+    C_BRI_DN: $$mdi:brightness-7$$
+    C_BRI_DEC: $$mdi:brightness-7$$
+    C_BRIGHTNESS_DEC: $$mdi:brightness-7$$
 
     # System - Enhanced icons
-    C_POWER: $$mdi:power-cycle$$
-    C_AL_LOCK: $$mdi:lock-alert$$
-    K_CANCEL: $$mdi:close-circle$$
-    K_FIND: $$mdi:magnify$$
+    C_POWER: $$mdi:power-standby$$
+    C_AL_LOCK: $$mdi:lock$$
+    K_CANCEL: $$mdi:close-box$$
+    K_FIND: $$mdi:apple-finder$$
     # Command +
     LG(A):
       tap: "A"
@@ -637,10 +637,10 @@ parse_config:
       hold: $$mdi:apple-keyboard-command$$
     # Zoom - Enhanced icons
     RG(RS(A)):
-      tap: $$mdi:microphone-variant$$
+      tap: $$mdi:microphone$$
       hold: zoom
     RG(RS(V)):
-      tap: $$mdi:video-variant$$
+      tap: $$mdi:video$$
       hold: zoom
 
   zmk_combos:
