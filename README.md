@@ -23,7 +23,6 @@ Este é um firmware personalizado para o teclado Eyelash Sofle, otimizado especi
 - [Instalação Rápida](#instalação-rápida)
 - [Flashing do Firmware](#flashing-do-firmware)
 - [Personalização](#personalização)
-- [Vantagens para PT-BR](#vantagens-para-pt-br)
 - [Solução de Problemas](#solução-de-problemas)
 - [Contato](#contato)
 
