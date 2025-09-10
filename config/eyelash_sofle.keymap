@@ -37,14 +37,14 @@
     };
 
     behaviors {
-        /* Tap-dance: C -> c ; double-tap -> c cedilha ; triple-tap -> C cedilha (Alt codes no Windows) */
+        /* Tap-dance: C -> c ; double-tap -> c cedilha */
         c_ced: c_ced {
             compatible = "zmk,behavior-tap-dance";
             label = "C_CED_TD";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp C>, <&macro_c_cedilha_min>, <&macro_c_cedilha_mai>;
-            display-name = "C/ç/Ç";
+            tapping-term-ms = <300>;
+            bindings = <&kp C>, <&macro_c_cedilha_min>;
+            display-name = "C/ç";
         };
         
         /* Tap-dance completo para vogais - Layer 0 */
@@ -52,16 +52,16 @@
             compatible = "zmk,behavior-tap-dance";
             label = "A_COMPLETE";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp A>, <&macro_a_acute>, <&macro_a_grave>, <&macro_a_tilde>;
-            display-name = "A/á/à/ã";
+            tapping-term-ms = <300>;
+            bindings = <&kp A>, <&macro_a_acute>, <&macro_a_tilde>, <&macro_a_grave>;
+            display-name = "A/á/ã/à";
         };
         
         e_complete: e_complete {
             compatible = "zmk,behavior-tap-dance";
             label = "E_COMPLETE";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <300>;
             bindings = <&kp E>, <&macro_e_acute>, <&macro_e_circ>;
             display-name = "E/é/ê";
         };
@@ -70,7 +70,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "I_COMPLETE";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <300>;
             bindings = <&kp I>, <&macro_i_acute>;
             display-name = "I/í";
         };
@@ -79,16 +79,16 @@
             compatible = "zmk,behavior-tap-dance";
             label = "O_COMPLETE";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp O>, <&macro_o_acute>, <&macro_o_circ>;
-            display-name = "O/ó/ô";
+            tapping-term-ms = <300>;
+            bindings = <&kp O>, <&macro_o_acute>, <&macro_o_circ>, <&macro_o_tilde>;
+            display-name = "O/ó/ô/õ";
         };
         
         u_complete: u_complete {
             compatible = "zmk,behavior-tap-dance";
             label = "U_COMPLETE";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <300>;
             bindings = <&kp U>, <&macro_u_acute>;
             display-name = "U/ú";
         };
@@ -151,19 +151,13 @@
         macro_a_circ:  macro_a_circ  { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <40>; tap-ms = <40>; bindings = <&kp CARET>, <&kp A>; };
         macro_e_circ:  macro_e_circ  { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <40>; tap-ms = <40>; bindings = <&kp CARET>, <&kp E>; };
         macro_o_circ:  macro_o_circ  { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <40>; tap-ms = <40>; bindings = <&kp CARET>, <&kp O>; };
-        /* Cedilha (Windows) — Alt+0231 e Alt+0199 */
+        macro_o_tilde: macro_o_tilde { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <40>; tap-ms = <40>; bindings = <&kp TILDE>, <&kp O>; };
+        /* Cedilha (Windows) — Alt+0231 */
         macro_c_cedilha_min: macro_c_cedilha_min {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>; wait-ms = <40>; tap-ms = <40>;
             bindings = <&macro_press &kp LALT>,
                        <&macro_tap &kp KP_N0 &kp KP_N2 &kp KP_N3 &kp KP_N1>,
-                       <&macro_release &kp LALT>;
-        };
-        macro_c_cedilha_mai: macro_c_cedilha_mai {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>; wait-ms = <40>; tap-ms = <40>;
-            bindings = <&macro_press &kp LALT>,
-                       <&macro_tap &kp KP_N0 &kp KP_N1 &kp KP_N9 &kp KP_N9>,
                        <&macro_release &kp LALT>;
         };
         
