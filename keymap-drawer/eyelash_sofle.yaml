@@ -17,18 +17,18 @@ layers:
   - $$mdi:keyboard-tab$$
   - Q
   - W
-  - '&e_complete'
+  - {t: E, h: ê, s: é, type: tap_dance}
   - R
   - T
   - $$mdi:arrow-down-bold$$
   - Y
-  - '&u_complete'
-  - '&i_complete'
-  - '&o_complete'
+  - {t: U, s: ú, type: tap_dance}
+  - {t: I, s: í, type: tap_dance}
+  - {t: O, h: ô, s: ó, type: tap_dance}
   - P
   - $$mdi:backspace-reverse-outline$$
   - $$mdi:apple-keyboard-control$$
-  - '&a_complete'
+  - {t: A, h: à, s: á, type: tap_dance}
   - S
   - D
   - F
@@ -40,10 +40,10 @@ layers:
   - L
   - {t: ;, s: ':'}
   - {t: '''', s: '"'}
-  - {t: '$$mdi:apple-keyboard-caps$$', h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: '$$mdi:apple-keyboard-shift$$', h: '$$mdi:apple-keyboard-caps$$', type: toggle}
   - Z
   - X
-  - '&c_ced'
+  - {t: C, h: Ç, s: ç, type: tap_dance}
   - V
   - B
   - $$mdi:arrow-right-bold$$
@@ -54,17 +54,17 @@ layers:
   - {t: /, s: '?'}
   - $$mdi:apple-keyboard-shift$$
   - $$mdi:volume-off$$
-  - LGUI
+  - $$mdi:microsoft-windows$$
   - $$mdi:apple-keyboard-option$$
   - $$mdi:keyboard-tab$$
   - layer_1
-  - {t: '$$mdi:keyboard-space$$', h: '$$mdi:keyboard-esc$$'}
+  - {t: '$$mdi:keyboard-space$$', h: '$$mdi:keyboard-esc$$', type: toggle}
   - $$mdi:mouse-left-click-outline$$
   - $$mdi:keyboard-space$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - layer_2
   - {t: '$$mdi:backspace$$', type: backspace}
-  - {t: '&macro_ctrl_prtscr', h: '&macro_show_desktop'}
+  - {t: '$$mdi:printer-outline$$', h: '$$mdi:desktop-classic$$', type: toggle}
   layer_1:
   - $$mdi:keyboard-esc$$
   - {t: '`', s: '~'}
@@ -119,17 +119,17 @@ layers:
   - {t: \, s: '|'}
   - $$mdi:apple-keyboard-control$$
   - $$mdi:volume-off$$
-  - LGUI
+  - $$mdi:microsoft-windows$$
   - $$mdi:apple-keyboard-option$$
   - $$mdi:keyboard-tab$$
   - {t: layer_1, type: held}
-  - {t: '$$mdi:keyboard-space$$', h: '$$mdi:keyboard-esc$$'}
+  - {t: '$$mdi:keyboard-space$$', h: '$$mdi:keyboard-esc$$', type: toggle}
   - $$mdi:mouse-left-click-outline$$
   - $$mdi:keyboard-space$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - $$mdi:apple-keyboard-shift$$
   - {t: '$$mdi:backspace$$', type: backspace}
-  - {t: '&macro_ctrl_prtscr', h: '&macro_show_desktop'}
+  - {t: '$$mdi:printer-outline$$', h: '$$mdi:desktop-classic$$', type: toggle}
   layer_2:
   - {t: '`', s: '~'}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -197,4 +197,4 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
 combos:
 - p: [40, 41, 42]
-  k: '&soft_off'
+  k: {t: '$$mdi:power-standby$$', type: none}

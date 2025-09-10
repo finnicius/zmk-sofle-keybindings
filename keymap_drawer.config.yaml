@@ -1,29 +1,29 @@
 draw_config:
   n_columns: 1
   draw_key_sides: true
-  key_w: 65.0
-  key_h: 60.0
-  split_gap: 40.0
-  combo_w: 32.0
-  combo_h: 28.0
-  key_rx: 8.0
-  key_ry: 8.0
-  inner_pad_w: 6.0
-  inner_pad_h: 6.0
-  outer_pad_w: 50.0
-  outer_pad_h: 65.0
-  line_spacing: 1.4
-  arc_radius: 8.0
+  key_w: 60.0
+  key_h: 56.0
+  split_gap: 30.0
+  combo_w: 28.0
+  combo_h: 26.0
+  key_rx: 6.0
+  key_ry: 6.0
+  inner_pad_w: 0.0
+  inner_pad_h: 0.0
+  outer_pad_w: 40.0
+  outer_pad_h: 56.0
+  line_spacing: 1.2
+  arc_radius: 6.0
   append_colon_to_layer_header: true
-  small_pad: 4.0
+  small_pad: 2.0
   svg_extra_style: |
     /* Modern styling for beautiful keymap visualization */
 
     /* Main SVG styling with light theme */
     svg.keymap {
-      font-family: 'SF Pro Display', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
-      font-size: 14px;
-      font-weight: 500;
+      font-family:'JetBrains Mono', 'IBM Plex Mono', 'Ubuntu Mono', 'Inconsolata', 'Consolas', 'Liberation Mono', 'Menlo', monospace;
+      font-size: 12px;
+      font-weight: bold;
       text-rendering: optimizeLegibility;
       background: #ffffffff;
     }
@@ -33,7 +33,6 @@ draw_config:
       fill: #ffffff;
       stroke: #d1d5db;
       stroke-width: 1.5;
-      filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.1));
     }
 
     /* Remove inner padding effect */
@@ -42,26 +41,7 @@ draw_config:
       stroke: none;
     }
 
-    /* Simple colored borders for modifier keys */
-    rect.key[data-key*="ctrl"], rect.key[data-key*="control"] {
-      stroke: #f59e0b !important;
-      stroke-width: 3 !important;
-    }
-
-    rect.key[data-key*="alt"] {
-      stroke: #10b981 !important;
-      stroke-width: 3 !important;
-    }
-
-    rect.key[data-key*="shift"] {
-      stroke: #ec4899 !important;
-      stroke-width: 3 !important;
-    }
-
-    rect.key[data-key*="gui"], rect.key[data-key*="LGUI"], rect.key[data-key*="RGUI"] {
-      stroke: #8b5cf6 !important;
-      stroke-width: 3 !important;
-    }
+    /* Removed colored borders for cleaner look */
 
     /* Clean key styling without inner effects */
 
@@ -72,11 +52,9 @@ draw_config:
       fill: #1f2937;
     }
 
-    /* Held keys */
+    /* Color accent for held keys */
     rect.held, rect.combo.held {
-      fill: #4f46e5;
-      stroke: #4f46e5;
-      stroke-width: 2;
+        fill: #ffc;
     }
 
     /* Text styling improvements with better centering */
@@ -114,96 +92,86 @@ draw_config:
       text-anchor: middle;
       dominant-baseline: central;
     }
-
-    /* Enhanced icon colors for light theme */
-    .icon-modifier {
-      fill: #3b82f6;
+    
+    /* Force vertical centering for all key content */
+    text.key-label, text.sym_sub_text, text.tap_dance, text.toggle {
+      dominant-baseline: central !important;
+      text-anchor: middle !important;
     }
 
-    .icon-navigation {
-      fill: #06b6d4;
-    }
-
-    .icon-media {
-      fill: #f59e0b;
-    }
-
-    .icon-windows {
-      fill: #0078d4;
-    }
-
-    .icon-mac {
-      fill: #000000;
-    }
-
-    /* Windows icon styling */
-    .windows-icon {
-      fill: #0078d4 !important;
-    }
-
-    /* Specific styling for Windows icon in LGUI */
-    text:contains("microsoft-windows") {
-      fill: #0078d4 !important;
-    }
-
-    /* Alternative approach for Windows icon */
-    svg text[data-icon*="windows"] {
-      fill: #0078d4 !important;
-    }
+    /* Simplified icon colors for cleaner look */
 
     /* Combo styling for light theme */
     rect.combo {
-      fill: #fef3c7;
-      stroke: #f59e0b;
-      stroke-width: 2;
+      fill: #ffffff;
+      stroke: #d1d5db;
+      stroke-width: 1.5;
     }
 
     /* Better vertical centering for stacked content */
     .sym_sub_text.tap {
-      translate: -8px -12px;
-      font-size: 18px;
+      translate: -4px -4px;
+      font-size: 20px;
       font-weight: 600;
       text-anchor: middle;
       dominant-baseline: central;
       fill: #1f2937;
     }
     .sym_sub_text.shifted {
-      translate: 8px 12px;
-      font-size: 12px;
-      opacity: 0.8;
+      translate: 4px 4px;
+      font-size: 10px;
+      opacity: 1.0;
       text-anchor: middle;
       dominant-baseline: central;
       fill: #6b7280;
     }
+    .combo.sym_sub_text.tap {
+      translate: -1px 1px;
+    }
+    .combo.sym_sub_text.shifted {
+      translate: 7px 5px;
+      font-size: 10px;
+      opacity: 1.0;
+    }
 
     /* Better positioning for tap/hold behaviors with vertical centering */
     .tap_dance.tap {
-      translate: -8px -12px;
-      font-size: 14px;
+      translate: -4px -2px;
+      font-size: 12px;
       font-weight: 600;
       fill: #059669;
       text-anchor: middle;
       dominant-baseline: central;
     }
     .tap_dance.shifted {
-      translate: 8px 12px;
+      translate: 4px 2px;
       font-size: 12px;
       fill: #dc2626;
       font-weight: 600;
       text-anchor: middle;
       dominant-baseline: central;
+      opacity: 1.0;
+    }
+    .tap_dance.hold {
+      translate: 4px -8px;
+      font-size: 12px;
+      fill: #6b7280;
+      font-weight: 600;
+      text-anchor: middle;
+      dominant-baseline: central;
+      opacity: 1.0;
     }
 
     /* Improved toggle positioning with vertical centering */
     .toggle.shifted {
-      translate: -10px 12px;
+      translate: -4px -2px;
       font-size: 12px;
       fill: #6b7280;
       text-anchor: middle;
       dominant-baseline: central;
     }
     .toggle.hold {
-      translate: 10px -12px;
+      translate: 4px -8px;
       font-size: 12px;
       fill: #dc2626;
       font-weight: 600;
@@ -211,10 +179,36 @@ draw_config:
       dominant-baseline: central;
     }
 
-  shrink_wide_legends: 8
-  glyph_tap_size: 20
-  glyph_hold_size: 16
-  glyph_shifted_size: 14
+    /* Variant for symbol next to symbol */
+    .sym_by_sym.tap {
+      translate: -6px 0px;
+    }
+    .sym_by_sym.shifted {
+      translate: 10px 12px;
+      opacity: 1.0;
+    }
+
+    .combo.sym_by_sym.tap {
+      translate: -35px 0px;
+    }
+    .combo.sym_by_sym.shifted {
+      translate: 35px 20px;
+      opacity: 1.0;
+    }
+
+    .combo.sym_by_sym.hold {
+      visibility: hidden;
+    }
+
+    /* hide hold box for combo sym_by_sym */
+    .combo.sym_by_sym.hold > path[stroke="none"][fill="none"] {
+      visibility: hidden;
+    }
+
+  shrink_wide_legends: 6
+  glyph_tap_size: 18
+  glyph_hold_size: 15
+  glyph_shifted_size: 15
   glyphs: {}
   glyph_urls:
     tabler: https://unpkg.com/@tabler/icons/icons/outline/{}.svg
@@ -232,6 +226,53 @@ parse_config:
     type: trans
 
   raw_binding_map:
+    # Tap-dance para acentos PT-BR
+    "&a_complete":
+      tap: "A"
+      shifted: "á"
+      hold: "à"
+      type: tap_dance
+    "&e_complete":
+      tap: "E"
+      shifted: "é"
+      hold: "ê"
+      type: tap_dance
+    "&i_complete":
+      tap: "I"
+      shifted: "í"
+      type: tap_dance
+    "&o_complete":
+      tap: "O"
+      shifted: "ó"
+      hold: "ô"
+      type: tap_dance
+    "&u_complete":
+      tap: "U"
+      shifted: "ú"
+      type: tap_dance
+    "&c_ced":
+      tap: "C"
+      shifted: "ç"
+      hold: "Ç"
+      type: tap_dance
+    
+    # Hold-tap behaviors
+    "&shift_caps":
+      tap: $$mdi:apple-keyboard-shift$$
+      hold: $$mdi:apple-keyboard-caps$$
+      type: toggle
+    "&space_escape":
+      tap: $$mdi:keyboard-space$$
+      hold: $$mdi:keyboard-esc$$
+      type: toggle
+    "&prtscr_desktop":
+      tap: $$mdi:printer-outline$$
+      hold: $$mdi:desktop-classic$$
+      type: toggle
+    "&soft_off":
+      tap: $$mdi:power-standby$$
+      type: none
+    
     # Layers
     "&ltq 1 BACKSPACE":
       tap: $$mdi:backspace$$
@@ -337,23 +378,23 @@ parse_config:
     # Bluetooth - Enhanced icons
     "&bt BT_SEL 0":
       shifted: $$mdi:bluetooth-connect$$
-      tap: "1"
+      tap: ""
       hold: 1
     "&bt BT_SEL 1":
       shifted: $$mdi:bluetooth-connect$$
-      tap: "2"
+      tap: ""
       hold: 2
     "&bt BT_SEL 2":
       shifted: $$mdi:bluetooth-connect$$
-      tap: "3"
+      tap: ""
       hold: 3
     "&bt BT_SEL 3":
       shifted: $$mdi:bluetooth-connect$$
-      tap: "4"
+      tap: ""
       hold: 4
     "&bt BT_SEL 4":
       shifted: $$mdi:bluetooth-connect$$
-      tap: "5"
+      tap: ""
       hold: 5
     "&out OUT_TOG":
       shifted: $$mdi:usb$$
@@ -361,11 +402,11 @@ parse_config:
       hold: $$mdi:bluetooth$$
     "&bt BT_PRV":
       shifted: $$mdi:bluetooth-connect$$
-      tap: $$mdi:arrow-up-bold$$
+      tap: ""
       hold: $$mdi:arrow-up-bold$$
     "&bt BT_NXT":
       shifted: $$mdi:bluetooth-connect$$
-      tap: $$mdi:arrow-down-bold$$
+      tap: ""
       hold: $$mdi:arrow-down-bold$$
     # Reset - Enhanced icons
     "&sys_reset":
