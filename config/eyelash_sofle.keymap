@@ -42,7 +42,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "C_CED_TD";
             #binding-cells = <0>;
-            tapping-term-ms = <300>;
+            tapping-term-ms = <250>;
             bindings = <&kp C>, <&macro_c_cedilha_min>;
             display-name = "C/ç";
         };
@@ -52,7 +52,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "A_COMPLETE";
             #binding-cells = <0>;
-            tapping-term-ms = <300>;
+            tapping-term-ms = <250>;
             bindings = <&kp A>, <&macro_a_acute>, <&macro_a_tilde>, <&macro_a_grave>;
             display-name = "A/á/ã/à";
         };
@@ -61,7 +61,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "E_COMPLETE";
             #binding-cells = <0>;
-            tapping-term-ms = <300>;
+            tapping-term-ms = <250>;
             bindings = <&kp E>, <&macro_e_acute>, <&macro_e_circ>;
             display-name = "E/é/ê";
         };
@@ -70,7 +70,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "I_COMPLETE";
             #binding-cells = <0>;
-            tapping-term-ms = <300>;
+            tapping-term-ms = <250>;
             bindings = <&kp I>, <&macro_i_acute>;
             display-name = "I/í";
         };
@@ -79,7 +79,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "O_COMPLETE";
             #binding-cells = <0>;
-            tapping-term-ms = <300>;
+            tapping-term-ms = <250>;
             bindings = <&kp O>, <&macro_o_acute>, <&macro_o_circ>, <&macro_o_tilde>;
             display-name = "O/ó/ô/õ";
         };
@@ -88,7 +88,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "U_COMPLETE";
             #binding-cells = <0>;
-            tapping-term-ms = <300>;
+            tapping-term-ms = <250>;
             bindings = <&kp U>, <&macro_u_acute>;
             display-name = "U/ú";
         };
@@ -97,9 +97,11 @@
         shift_caps: shift_caps {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <200>;
-            flavor = "tap-preferred";
+            tapping-term-ms = <250>;
+            quick-tap-ms = <150>;
+            flavor = "balanced";
+            hold-trigger-key-positions = <40 41 42 43 44 45 46 47 48 49 50 51 52>;
+            hold-trigger-on-release;
             bindings = <&kp>, <&kt>;
             display-name = "Shift/Caps";
         };
