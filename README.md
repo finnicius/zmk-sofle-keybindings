@@ -36,8 +36,12 @@ Este é um firmware personalizado para o teclado Eyelash Sofle, otimizado especi
    - Aguarde o teclado reiniciar
 
 4. **Teste os acentos PT-BR:**
-   - **A**: 1 toque=A, 2 toques=á, 3 toques=à, 4 toques=ã
-   - **C**: 1 toque=C, 2 toques=ç, 3 toques=Ç
+   - **A**: 1 toque=A, 2 toques=á, 3 toques=ã, 4 toques=à
+   - **E**: 1 toque=E, 2 toques=é, 3 toques=ê
+   - **I**: 1 toque=I, 2 toques=í
+   - **O**: 1 toque=O, 2 toques=ó, 3 toques=ô, 4 toques=õ
+   - **U**: 1 toque=U, 2 toques=ú
+   - **C**: 1 toque=C, 2 toques=ç
 
 ## 📚 Estrutura das Camadas
 
@@ -68,12 +72,12 @@ Este é um firmware personalizado para o teclado Eyelash Sofle, otimizado especi
 
 | Tecla | 1 Toque | 2 Toques | 3 Toques | 4 Toques |
 |-------|---------|----------|----------|----------|
-| **A** | A | á | à | ã |
+| **A** | A | á | ã | à |
 | **E** | E | é | ê | - |
 | **I** | I | í | - | - |
-| **O** | O | ó | ô | - |
+| **O** | O | ó | ô | õ |
 | **U** | U | ú | - | - |
-| **C** | c | ç | Ç | - |
+| **C** | C | ç | - | - |
 
 ### Hold-Tap Behaviors
 
@@ -82,6 +86,14 @@ Este é um firmware personalizado para o teclado Eyelash Sofle, otimizado especi
 | **Shift/Caps Lock** | Shift (modificador) | - | Caps Lock (toggle) |
 | **Space/Escape Esquerdo** | Space | Escape | - |
 | **Print Screen/Desktop** | Print Screen (captura de tela) | Mostrar Desktop (Windows+D) | - |
+
+### ⚡ Comportamento Otimizado do Shift
+
+**Nova implementação com mod-tap aninhado:**
+- **Shift segurado + tecla rápida**: Gera maiúscula imediatamente, sem delay
+- **Tap-dance normal**: Continua funcionando (A → á → ã → à)
+- **Timing perfeito**: Resposta imediata para digitação rápida
+- **Compatibilidade total**: Funciona com todas as vogais e C com cedilha
 
 ### Combo de Soft Off
 
@@ -302,6 +314,19 @@ O UF2 é o método mais confiável para fazer flash do firmware em ambos os lado
 - **Função:** Ação ativada quando múltiplas teclas são pressionadas simultaneamente
 - **Exemplo:** Z+X+C = Soft Off (desligar teclado)
 - **Uso comum:** Funções especiais, atalhos de emergência
+
+### 🔧 Implementação Técnica
+
+**Solução de Mod-Tap Aninhado:**
+- **Problema resolvido**: Timing entre Shift segurado e tap-dance
+- **Solução**: Mod-tap aninhado dentro do tap-dance (recomendação oficial ZMK)
+- **Benefícios**: Resposta imediata, sem delay, compatibilidade total
+- **Configuração**: `hold-trigger-key-positions` para detectar Shift ativo
+
+**Behaviors utilizados:**
+- `mt_shift_a`, `mt_shift_e`, `mt_shift_i`, `mt_shift_o`, `mt_shift_u`, `mt_shift_c`
+- `flavor = "balanced"` para melhor detecção de modificadores
+- `hold-trigger-on-release` para combinação de múltiplos modificadores
 
 ### 📚 Recursos de Documentação ZMK
 
