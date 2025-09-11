@@ -93,16 +93,13 @@
             display-name = "U/ú";
         };
         
-        /* Hold-tap para Shift com toggle de Caps Lock */
-        shift_caps: shift_caps {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
+        /* Tap-dance para Shift/Caps Lock */
+        shift_caps_td: shift_caps_td {
+            compatible = "zmk,behavior-tap-dance";
+            label = "SHIFT_CAPS_TD";
+            #binding-cells = <0>;
             tapping-term-ms = <250>;
-            quick-tap-ms = <150>;
-            flavor = "balanced";
-            hold-trigger-key-positions = <40 41 42 43 44 45 46 47 48 49 50 51 52>;
-            hold-trigger-on-release;
-            bindings = <&kp>, <&kt>;
+            bindings = <&kp LSHFT>, <&kt CAPS>;
             display-name = "Shift/Caps";
         };
         
@@ -257,7 +254,7 @@
                 
                 /* ========== LINHA 4 ========== */
                 /* Mão esquerda - Fileira 4 */
-                &shift_caps LSHFT CAPS   // Posição 40: Shift/Caps (hold-tap)
+                &shift_caps_td    // Posição 40: Shift/Caps (tap-dance: 1º=Shift, 2º=Caps)
                 &kp Z             // Posição 41: Z
                 &kp X             // Posição 42: X
                 &c_ced            // Posição 43: C/ç/Ç (tap-dance)
@@ -273,7 +270,7 @@
                 &kp COMMA         // Posição 49: Vírgula
                 &kp DOT           // Posição 50: Ponto
                 &kp FSLH          // Posição 51: Barra
-                &kp RSHFT         // Posição 52: Shift direito
+                &shift_caps_td    // Posição 52: Shift/Caps (tap-dance: 1º=Shift, 2º=Caps)
                 
                 /* ========== LINHA 5 ========== */
                 /* Encoder - Pressionamento do volume knob */
