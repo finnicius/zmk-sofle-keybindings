@@ -37,15 +37,40 @@
     };
 
     behaviors {
+        /* Mod-tap para Shift/C com cedilha */
+        mt_shift_c: mt_shift_c {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <150>;
+            hold-trigger-key-positions = <40 52>;
+            hold-trigger-on-release;
+            bindings = <&kp>, <&kp>;
+            display-name = "Shift/C";
+        };
+        
         /* Tap-dance: C -> c ; double-tap -> c cedilha */
         c_ced: c_ced {
             compatible = "zmk,behavior-tap-dance";
             label = "C_CED_TD";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            hold-trigger-key-positions = <40 52>;
-            bindings = <&kp C>, <&macro_c_cedilha_min>;
+            bindings = <&mt_shift_c LSHFT C>, <&macro_c_cedilha_min>;
             display-name = "C/ç";
+        };
+        
+        /* Mod-tap para Shift/A */
+        mt_shift_a: mt_shift_a {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <150>;
+            hold-trigger-key-positions = <40 52>;
+            hold-trigger-on-release;
+            bindings = <&kp>, <&kp>;
+            display-name = "Shift/A";
         };
         
         /* Tap-dance completo para vogais - Layer 0 */
@@ -54,9 +79,21 @@
             label = "A_COMPLETE";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            hold-trigger-key-positions = <40 52>;
-            bindings = <&kp A>, <&macro_a_acute>, <&macro_a_tilde>, <&macro_a_grave>;
+            bindings = <&mt_shift_a LSHFT A>, <&macro_a_acute>, <&macro_a_tilde>, <&macro_a_grave>;
             display-name = "A/á/ã/à";
+        };
+        
+        /* Mod-tap para Shift/E */
+        mt_shift_e: mt_shift_e {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <150>;
+            hold-trigger-key-positions = <40 52>;
+            hold-trigger-on-release;
+            bindings = <&kp>, <&kp>;
+            display-name = "Shift/E";
         };
         
         e_complete: e_complete {
@@ -64,9 +101,21 @@
             label = "E_COMPLETE";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            hold-trigger-key-positions = <40 52>;
-            bindings = <&kp E>, <&macro_e_acute>, <&macro_e_circ>;
+            bindings = <&mt_shift_e LSHFT E>, <&macro_e_acute>, <&macro_e_circ>;
             display-name = "E/é/ê";
+        };
+        
+        /* Mod-tap para Shift/I */
+        mt_shift_i: mt_shift_i {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <150>;
+            hold-trigger-key-positions = <40 52>;
+            hold-trigger-on-release;
+            bindings = <&kp>, <&kp>;
+            display-name = "Shift/I";
         };
         
         i_complete: i_complete {
@@ -74,9 +123,21 @@
             label = "I_COMPLETE";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            hold-trigger-key-positions = <40 52>;
-            bindings = <&kp I>, <&macro_i_acute>;
+            bindings = <&mt_shift_i LSHFT I>, <&macro_i_acute>;
             display-name = "I/í";
+        };
+        
+        /* Mod-tap para Shift/O */
+        mt_shift_o: mt_shift_o {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <150>;
+            hold-trigger-key-positions = <40 52>;
+            hold-trigger-on-release;
+            bindings = <&kp>, <&kp>;
+            display-name = "Shift/O";
         };
         
         o_complete: o_complete {
@@ -84,9 +145,21 @@
             label = "O_COMPLETE";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            hold-trigger-key-positions = <40 52>;
-            bindings = <&kp O>, <&macro_o_acute>, <&macro_o_circ>, <&macro_o_tilde>;
+            bindings = <&mt_shift_o LSHFT O>, <&macro_o_acute>, <&macro_o_circ>, <&macro_o_tilde>;
             display-name = "O/ó/ô/õ";
+        };
+        
+        /* Mod-tap para Shift/U */
+        mt_shift_u: mt_shift_u {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <150>;
+            hold-trigger-key-positions = <40 52>;
+            hold-trigger-on-release;
+            bindings = <&kp>, <&kp>;
+            display-name = "Shift/U";
         };
         
         u_complete: u_complete {
@@ -94,8 +167,7 @@
             label = "U_COMPLETE";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            hold-trigger-key-positions = <40 52>;
-            bindings = <&kp U>, <&macro_u_acute>;
+            bindings = <&mt_shift_u LSHFT U>, <&macro_u_acute>;
             display-name = "U/ú";
         };
         
