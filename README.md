@@ -52,7 +52,7 @@ Este é um firmware personalizado para o teclado Eyelash Sofle, otimizado especi
 ### Layer 0 - Digitação Principal (QWERTY + Acentos PT-BR)
 
 - **Acentos completos**: Vogais com tap-dance múltiplo
-- **Cedilha integrada**: Tecla C com tap-dance (C/ç/Ç)
+- **Cedilha integrada**: Tecla C com tap-dance (C/ç)
 - **Navegação central**: Setas direcionais no centro
 - **Controles de mídia**: Volume via knob, mute ao pressionar
 - **Ergonomia otimizada**: Space e Enter lado a lado no polegar direito
@@ -91,13 +91,11 @@ Este é um firmware personalizado para o teclado Eyelash Sofle, otimizado especi
 | **Space/Escape Esquerdo** | Space | Escape | - |
 | **Print Screen/Desktop** | Print Screen (captura de tela) | Mostrar Desktop (Windows+D) | - |
 
-### ⚡ Comportamento Simplificado do Shift
+### ⚡ Comportamento do Shift
 
-**Implementação otimizada:**
-- **Shift normal**: Comportamento padrão e confiável
-- **Resposta imediata**: Sem conflitos de timing
-- **Tap-dance compatível**: Funciona perfeitamente com vogais (A → á → ã → à)
 - **Maiúsculas temporárias**: Shift + letra (comportamento tradicional)
+- **Compatível com acentos**: Funciona perfeitamente com tap-dance das vogais
+- **Resposta imediata**: Comportamento padrão e confiável
 
 ### Combos Especiais
 
@@ -325,19 +323,6 @@ O UF2 é o método mais confiável para fazer flash do firmware em ambos os lado
   - ESC+TAB = Caps Lock (toggle maiúsculas)
 - **Uso comum:** Funções especiais, atalhos de emergência, modificadores alternativos
 
-### 🔧 Implementação Técnica
-
-**Solução Simplificada e Otimizada:**
-- **Problema resolvido**: Conflitos de timing entre Shift e tap-dance
-- **Solução**: Shift normal + combo ESC+TAB para Caps Lock
-- **Benefícios**: Comportamento previsível, sem conflitos, fácil de usar
-- **Configuração**: Tap-dance simples com `tapping-term-ms = <300>`
-
-**Behaviors utilizados:**
-- **Tap-dance**: `a_complete`, `e_complete`, `i_complete`, `o_complete`, `u_complete`, `c_ced`
-- **Combos**: `softoff` (Z+X+C), `capslock` (ESC+TAB)
-- **Timing otimizado**: 300ms para tap-dance, sem mod-tap aninhados
-- **Shift**: Comportamento padrão `&kp LSHFT` e `&kp RSHFT`
 
 ### 📚 Recursos de Documentação ZMK
 
