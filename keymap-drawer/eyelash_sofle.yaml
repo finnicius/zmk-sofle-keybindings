@@ -198,5 +198,5 @@ layers:
 combos:
 - p: [40, 41, 42]
   k: {t: '$$mdi:power-standby$$', type: none}
-- p: [1, 14]
+- p: [0, 13]
   k: {t: '$$mdi:apple-keyboard-caps$$', h: toggle}

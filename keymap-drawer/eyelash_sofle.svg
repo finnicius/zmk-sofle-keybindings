@@ -751,9 +751,9 @@ rect.combo {
 <use href="#mdi:power-standby" xlink:href="#mdi:power-standby" x="131" y="199" height="18" width="18.0" class="combo none tap glyph mdi:power-standby"/>
 </g>
 <g class="combo combopos-1">
-<rect rx="6" ry="6" x="70" y="71" width="28" height="26" class="combo"/>
-<use href="#mdi:apple-keyboard-caps" xlink:href="#mdi:apple-keyboard-caps" x="75" y="75" height="18" width="18.0" class="combo tap glyph mdi:apple-keyboard-caps"/>
-<text x="84" y="95" class="combo hold">toggle</text>
+<rect rx="6" ry="6" x="14" y="71" width="28" height="26" class="combo"/>
+<use href="#mdi:apple-keyboard-caps" xlink:href="#mdi:apple-keyboard-caps" x="19" y="75" height="18" width="18.0" class="combo tap glyph mdi:apple-keyboard-caps"/>
+<text x="28" y="95" class="combo hold">toggle</text>
 </g>
 </g>
 </g>
@@ -1108,9 +1108,9 @@ rect.combo {
 <use href="#mdi:power-standby" xlink:href="#mdi:power-standby" x="131" y="199" height="18" width="18.0" class="combo none tap glyph mdi:power-standby"/>
 </g>
 <g class="combo combopos-1">
-<rect rx="6" ry="6" x="70" y="71" width="28" height="26" class="combo"/>
-<use href="#mdi:apple-keyboard-caps" xlink:href="#mdi:apple-keyboard-caps" x="75" y="75" height="18" width="18.0" class="combo tap glyph mdi:apple-keyboard-caps"/>
-<text x="84" y="95" class="combo hold">toggle</text>
+<rect rx="6" ry="6" x="14" y="71" width="28" height="26" class="combo"/>
+<use href="#mdi:apple-keyboard-caps" xlink:href="#mdi:apple-keyboard-caps" x="19" y="75" height="18" width="18.0" class="combo tap glyph mdi:apple-keyboard-caps"/>
+<text x="28" y="95" class="combo hold">toggle</text>
 </g>
 </g>
 </g>
@@ -1485,9 +1485,9 @@ rect.combo {
 <use href="#mdi:power-standby" xlink:href="#mdi:power-standby" x="131" y="199" height="18" width="18.0" class="combo none tap glyph mdi:power-standby"/>
 </g>
 <g class="combo combopos-1">
-<rect rx="6" ry="6" x="70" y="71" width="28" height="26" class="combo"/>
-<use href="#mdi:apple-keyboard-caps" xlink:href="#mdi:apple-keyboard-caps" x="75" y="75" height="18" width="18.0" class="combo tap glyph mdi:apple-keyboard-caps"/>
-<text x="84" y="95" class="combo hold">toggle</text>
+<rect rx="6" ry="6" x="14" y="71" width="28" height="26" class="combo"/>
+<use href="#mdi:apple-keyboard-caps" xlink:href="#mdi:apple-keyboard-caps" x="19" y="75" height="18" width="18.0" class="combo tap glyph mdi:apple-keyboard-caps"/>
+<text x="28" y="95" class="combo hold">toggle</text>
 </g>
 </g>
 </g>
