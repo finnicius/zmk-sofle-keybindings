@@ -178,7 +178,7 @@
         };
         capslock {
             bindings = <&kt CAPS>;
-            key-positions = <0 14>; // ESC + TAB
+            key-positions = <1 14>; // ESC + TAB
         };
     };
 
