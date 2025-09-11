@@ -40,7 +40,7 @@ layers:
   - L
   - {t: ;, s: ':'}
   - {t: '''', s: '"'}
-  - {t: '$$mdi:apple-keyboard-shift$$', h: '$$mdi:apple-keyboard-caps$$', type: toggle}
+  - '&shift_caps_td'
   - Z
   - X
   - {t: C, h: Ç, s: ç, type: tap_dance}
@@ -52,7 +52,7 @@ layers:
   - {t: ',', s: <}
   - {t: ., s: '>'}
   - {t: /, s: '?'}
-  - $$mdi:apple-keyboard-shift$$
+  - '&shift_caps_td'
   - $$mdi:volume-off$$
   - $$mdi:microsoft-windows$$
   - $$mdi:apple-keyboard-option$$
