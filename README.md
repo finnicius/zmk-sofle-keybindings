@@ -43,6 +43,10 @@ Este é um firmware personalizado para o teclado Eyelash Sofle, otimizado especi
    - **U**: 1 toque=U, 2 toques=ú
    - **C**: 1 toque=C, 2 toques=ç
 
+5. **Teste os combos especiais:**
+   - **ESC + TAB**: Ativa/desativa Caps Lock
+   - **Z + X + C**: Desliga o teclado (Soft Off)
+
 ## 📚 Estrutura das Camadas
 
 ### Layer 0 - Digitação Principal (QWERTY + Acentos PT-BR)
@@ -83,23 +87,27 @@ Este é um firmware personalizado para o teclado Eyelash Sofle, otimizado especi
 
 | Tecla | Tap | Hold | Tap Duplo |
 |-------|-----|------|-----------|
-| **Shift/Caps Lock** | Shift (modificador) | - | Caps Lock (toggle) |
+| **Shift** | Shift (modificador) | - | - |
 | **Space/Escape Esquerdo** | Space | Escape | - |
 | **Print Screen/Desktop** | Print Screen (captura de tela) | Mostrar Desktop (Windows+D) | - |
 
-### ⚡ Comportamento Otimizado do Shift
+### ⚡ Comportamento Simplificado do Shift
 
-**Nova implementação com mod-tap aninhado:**
-- **Shift segurado + tecla rápida**: Gera maiúscula imediatamente, sem delay
-- **Tap-dance normal**: Continua funcionando (A → á → ã → à)
-- **Timing perfeito**: Resposta imediata para digitação rápida
-- **Compatibilidade total**: Funciona com todas as vogais e C com cedilha
+**Implementação otimizada:**
+- **Shift normal**: Comportamento padrão e confiável
+- **Resposta imediata**: Sem conflitos de timing
+- **Tap-dance compatível**: Funciona perfeitamente com vogais (A → á → ã → à)
+- **Maiúsculas temporárias**: Shift + letra (comportamento tradicional)
 
-### Combo de Soft Off
+### Combos Especiais
 
-| Combinação | Tempo | Ação | Como Acordar |
-|------------|-------|------|--------------|
-| **Z + X + C** | 2 segundos | Coloca o teclado em modo de sono profundo | Pressionar botão reset |
+| Combinação | Ação | Descrição |
+|------------|------|-----------|
+| **Z + X + C** | Soft Off | Coloca o teclado em modo de sono profundo (2 segundos) |
+| **ESC + TAB** | Caps Lock | Toggle Caps Lock (maiúsculas permanentes) |
+
+### Como Acordar o Teclado
+- **Após Soft Off**: Pressionar botão reset
 
 ### Acesso às Camadas
 
@@ -312,21 +320,24 @@ O UF2 é o método mais confiável para fazer flash do firmware em ambos os lado
 
 #### **Combos**
 - **Função:** Ação ativada quando múltiplas teclas são pressionadas simultaneamente
-- **Exemplo:** Z+X+C = Soft Off (desligar teclado)
-- **Uso comum:** Funções especiais, atalhos de emergência
+- **Exemplos:** 
+  - Z+X+C = Soft Off (desligar teclado)
+  - ESC+TAB = Caps Lock (toggle maiúsculas)
+- **Uso comum:** Funções especiais, atalhos de emergência, modificadores alternativos
 
 ### 🔧 Implementação Técnica
 
-**Solução de Mod-Tap Aninhado:**
-- **Problema resolvido**: Timing entre Shift segurado e tap-dance
-- **Solução**: Mod-tap aninhado dentro do tap-dance (recomendação oficial ZMK)
-- **Benefícios**: Resposta imediata, sem delay, compatibilidade total
-- **Configuração**: `hold-trigger-key-positions` para detectar Shift ativo
+**Solução Simplificada e Otimizada:**
+- **Problema resolvido**: Conflitos de timing entre Shift e tap-dance
+- **Solução**: Shift normal + combo ESC+TAB para Caps Lock
+- **Benefícios**: Comportamento previsível, sem conflitos, fácil de usar
+- **Configuração**: Tap-dance simples com `tapping-term-ms = <300>`
 
 **Behaviors utilizados:**
-- `mt_shift_a`, `mt_shift_e`, `mt_shift_i`, `mt_shift_o`, `mt_shift_u`, `mt_shift_c`
-- `flavor = "balanced"` para melhor detecção de modificadores
-- `hold-trigger-on-release` para combinação de múltiplos modificadores
+- **Tap-dance**: `a_complete`, `e_complete`, `i_complete`, `o_complete`, `u_complete`, `c_ced`
+- **Combos**: `softoff` (Z+X+C), `capslock` (ESC+TAB)
+- **Timing otimizado**: 300ms para tap-dance, sem mod-tap aninhados
+- **Shift**: Comportamento padrão `&kp LSHFT` e `&kp RSHFT`
 
 ### 📚 Recursos de Documentação ZMK
 
